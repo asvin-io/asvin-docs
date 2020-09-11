@@ -9,11 +9,13 @@ The documentation is generated for each commit in the master branch. Therefore, 
 
 1. Download and install latest version of Python from [here](https://www.python.org/downloads/)
 2. Clone the repo
-
+   ```
+   git clone https://github.com/Asvin-io/documentation.git
+   ```
 3. Install dependencies
 
    ```
-   cd Framework/docs
+   cd documentation/docs
    pip3 install -r requirements.txt
    ```
 
@@ -22,7 +24,7 @@ The documentation is generated for each commit in the master branch. Therefore, 
 Make your changes and run following commands to generate html documentation.
 
 ```
-cd Framework/docs
+cd documentation/docs
 make html
 ```
 

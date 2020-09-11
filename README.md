@@ -19,7 +19,7 @@ Please find further information about the architecture, getting started and tuto
 
 # Contributing
 
-IoTCrawler is an Open Souce, community driven reseacrch project. We welcome your [contribution](https://asvin.readthedocs.io/en/latest/contributing/contributing.html) in the project.
+Asvin is an Open Souce project. We welcome your [contribution](https://asvin.readthedocs.io/en/latest/contributing/contributing.html) in the project.
 
 # License
 
