@@ -1,66 +1,20 @@
-Version Controller REST API
-===========================
-This section shows the basic entity requests used in the REST API of the Version Controller Repository.
+Version Controller APIs
+=======================
+This section shows the basic entity requests used in the APIs of the Version Controller.
 
 .. contents:: Table of contents
    :local:
    :backlinks: none
    :depth: 3
 
-Add entity
-++++++++++
+Register Device
++++++++++++++++
 
-.. http:post:: /ngsi-ld/v1/entities/
+.. http:post:: /api/device/register
 
-   Add a new entity.
+   Register a device.
 
-   :reqheader Content-Type: application/ld+json
-
-   **Example request**:
-
-   .. tabs::
-
-      .. code-tab:: bash
- 
-         $ curl --location --request POST 'http://{{broker-host}}/ngsi-ld/v1/entities/' \
-                --header 'Content-Type: application/ld+json' \
-                --data-raw '{
-                  "@context":[
-                        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
-                        {
-                            "Vehicle": "http://example.org/vehicle/Vehicle",
-                            "brandName": "http://example.org/vehicle/brandName",
-                            "speed": "http://example.org/vehicle/speed"
-                        }
-                  ],
-                  "id":"urn:ngsi-ld:Vehicle:TEST1",
-                  "type":"Vehicle",
-                  "brandName":{
-                    "type":"Property",
-                    "value":"Mercedes"
-                  },
-                  "speed":{
-                    "type":"Property",
-                    "value":80
-                  },
-                  "location": {
-                        "type": "GeoProperty",
-                        "value": { "type": "Point", "coordinates": [ -1.1336517, 37.9894006 ] }
-                  }
-                }'
-
-      
-   :statuscode 201: Created
-
-
-Obtain entities by type
-+++++++++++++++++++++++
-
-.. http:get:: /ngsi-ld/v1/entities
-
-   Retrieve a list of all the entities.
-
-   :query string type: entity type code as ``http://example.org/vehicle/Vehicle``, ``http://www.w3.org/2003/01/geo/wgs84_pos%23Point``, ``indexing``, etc.
+   :reqheader Content-Type: application/json
 
    **Example request**:
 
@@ -68,181 +22,124 @@ Obtain entities by type
 
       .. code-tab:: bash
  
-         $ curl --location --request GET 'http://{{broker-host}}/ngsi-ld/v1/entities/?type=http://example.org/vehicle/Vehicle'
- 
-      .. code-tab:: python
- 
-         import requests
-         url = "http://metadata-repository-scorpiobroker.35.241.228.250.nip.io/ngsi-ld/v1/entities/?type=indexing"
-         payload = {}
-         headers= {}
-         response = requests.request("GET", url, headers=headers, data = payload)
-         print(response.text.encode('utf8'))
-     
+         $ curl --location --request POST 'https://vc-server/api/device/register' \
+          --header 'Content-Type: application/json' \
+          --data-raw '{
+            "mac": "AC:12:CC:22:34:D3",
+            "firmware_version": "1.0",
+            "customer_key": "3c2ecv57d6d3ee718ec4e4695ae271ad",
+            "device_key": "9db3e154bv1788db1acb158f9cca20f47e1dd3b2c669365fcd19333118bc65fa",
+            "name": "Hello World",
+            "class": "class1",
+            "serial_number": "12212112212",
+            "f1": "f1",
+            "f2": "f2",
+            "f3": "f3",
+            "f4": "f4",
+            "f5": "f5",
+            "f6": "f6",
+            "f7": "f7",
+            "f8": "f8",
+            "f9": "f9",
+            "f10": "f10"
+          }'
+
       .. code-tab:: js
- 
+
          var request = require('request');
          var options = {
-           'method': 'GET',
-           'url': 'http://metadata-repository-scorpiobroker.35.241.228.250.nip.io/ngsi-ld/v1/entities/?type=indexing',
+           'method': 'POST',
+           'url': 'https://vc-server/api/device/register',
            'headers': {
-           }
+             'Content-Type': 'application/json'
+           },
+           body: JSON.stringify({"mac":"AC:12:CC:22:34:D3","firmware_version":"1.0","customer_key":"3c2eb557d6d3ee718ec4e4695ae271ad","device_key":"9db3e1546c1788db1acb158f9cca20f47e1dd3b2c669365fcd19333118bc65fa","name":"Hello World","class":"class1","serial_number":"12212112212","f1":"f1","f2":"f2","f3":"f3","f4":"f4","f5":"f5","f6":"f6","f7":"f7","f8":"f8","f9":"f9","f10":"f10"})
+
          };
          request(options, function (error, response) {
            if (error) throw new Error(error);
            console.log(response.body);
          });
 
-   **Example response**:
+      .. code-tab:: python
 
-   .. sourcecode:: json
-
-      [
-        {
-          "id": "urn:ngsi-ld:Vehicle:TEST1",
-          "type": "http://example.org/vehicle/Vehicle",
-          "http://example.org/vehicle/brandName": {
-            "type": "Property",
-            "value": "Mercedes"
-          },
-          "http://example.org/vehicle/speed": {
-            "type": "Property",
-            "value": 80
-          },
-          "location": {
-            "type": "GeoProperty",
-            "value": {
-              "type": "Point",
-              "coordinates": [
-                -1.1336517,
-                37.9894006
-              ]
-            }
-          },
-          "@context": [
-            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
-          ]
-        }
-      ]
-
-   :resheader Content-Type: application/ld+json
-      
-   :statuscode 200: no error
-
-Obtain entity by id
-+++++++++++++++++++
-
-.. http:get:: /ngsi-ld/v1/entities/(str:get_id)
-
-   Retrieve an entity by identifier.
-
-   :param get_id: get's unique id
-   :type get_id: str
-
-   **Example request**:
-
-   .. tabs::
-
-      .. code-tab:: bash
+         import requests
+         url = "https://vc-server/api/device/register"
+         payload = "{\n\t\"mac\": \"AC:12:CC:22:34:D3\",\n\t\"firmware_version\": \"1.0\",\n\t\"customer_key\": \"3c2eb557d6d3ee718ec4e4695ae271ad\",\n\t\"device_key\": \"9db3e1546c1788db1acb158f9cca20f47e1dd3b2c669365fcd19333118bc65fa\",\n\t\"name\": \"Hello World\",\n\t\"class\": \"class1\",\n\t\"serial_number\": \"12212112212\",\n\t\"f1\": \"f1\",\n\t\"f2\": \"f2\",\n\t\"f3\": \"f3\",\n\t\"f4\": \"f4\",\n\t\"f5\": \"f5\",\n\t\"f6\": \"f6\",\n\t\"f7\": \"f7\",\n\t\"f8\": \"f8\",\n\t\"f9\": \"f9\",\n\t\"f10\": \"f10\"\n}"
+         headers = {
+           'Content-Type': 'application/json'
+         }
  
-         $ curl --location --request GET 'http://{{broker-host}}/ngsi-ld/v1/entities/urn:ngsi-ld:Vehicle:TEST1'
+         response = requests.request("POST", url, headers=headers, data = payload)
+         print(response.text.encode('utf8'))
 
+      .. code-tab:: php
+         
+         <?php
+         $client = new http\Client;
+         $request = new http\Client\Request;
+         $request->setRequestUrl('https://vcstage.asvin.io/api/device/register');
+         $request->setRequestMethod('POST');
+         $body = new http\Message\Body;
+         $body->append('{
+           "mac": "AC:12:CC:22:34:D3",
+           "firmware_version": "1.0",
+           "customer_key": "3c2eb557d6d3ee718ec4e4695ae271ad",
+           "device_key": "9db3e1546c1788db1acb158f9cca20f47e1dd3b2c669365fcd19333118bc65fa",
+           "name": "Hello World",
+           "class": "class1",
+           "serial_number": "12212112212",
+           "f1": "f1",
+           "f2": "f2",
+           "f3": "f3",
+           "f4": "f4",
+           "f5": "f5",
+           "f6": "f6",
+           "f7": "f7",
+           "f8": "f8",
+           "f9": "f9",
+           "f10": "f10"
+         }');
+         $request->setBody($body);
+         $request->setOptions(array());
+         $request->setHeaders(array(
+           'Content-Type' => 'application/json'
+         ));
+         $client->enqueue($request)->send();
+         $response = $client->getResponse();
+         echo $response->getBody();
+ 
    **Example response**:
 
    .. sourcecode:: json
 
       {
-        "id": "urn:ngsi-ld:Vehicle:TEST1",
-        "type": "http://example.org/vehicle/Vehicle",
-        "http://example.org/vehicle/brandName": {
-          "type": "Property",
-          "value": "Mercedes"
-        },
-        "http://example.org/vehicle/speed": {
-          "type": "Property",
-          "value": 80
-        },
-        "location": {
-          "type": "GeoProperty",
-          "value": {
-            "type": "Point",
-            "coordinates": [
-              -1.1336517,
-              37.9894006
-            ]
-          }
-        },
-        "@context": [
-          "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
-        ]
+        "id": 21,
+        "name": "Hello World",
+        "macAddress": "AC:12:CC:22:34:D3",
+        "created": "2020-09-11 11:33:46",
+        "firmwareVersion": "1.0",
+        "workspaceId": 1,
+        "deviceGroupId": null,
+        "transactionId": null,
+        "blackListed": null,
+        "customerKey": "3c2eb557d6d3ee718ec4e4695ae271ad",
+        "serialNumber": "12212112212",
+        "class": "class1",
+        "f1": "f1",
+        "f2": "f2",
+        "f3": "f3",
+        "f4": "f4",
+        "f5": "f5",
+        "f6": "f6",
+        "f7": "f7",
+        "f8": "f8",
+        "f9": "f9",
+        "f10": "f10",
+        "deviceKey": null
       }
 
-   :resheader Content-Type: application/ld+json
+   :resheader Content-Type: application/json
       
-   :statuscode 200: no error
-   :statuscode 404: not found
-
-
-Update entity
-+++++++++++++
-
-.. http:patch:: /ngsi-ld/v1/entities/(str:patch)/attrs
-
-   Update entity.
-
-   :param patch: patch's unique id
-   :type patch: str
-
-   :reqheader Content-Type: application/ld+json
-
-   **Example request**:
-
-   .. tabs::
-
-      .. code-tab:: bash
- 
-         $ curl --location --request PATCH 'http://{{broker-host}}/ngsi-ld/v1/entities/urn:ngsi-ld:Vehicle:TEST1/attrs' \
-              --header 'Content-Type: application/ld+json' \
-              --data-raw '{
-                  "@context":[
-                      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
-                      {
-                          "Vehicle": "http://example.org/vehicle/Vehicle",
-                          "brandName": "http://example.org/vehicle/brandName",
-                          "speed": "http://example.org/vehicle/speed"
-                      }
-                  ],
-                "brandName":{
-                     "type":"Property",
-                     "value":"Seat"
-                  },
-                  "speed": {
-                      "type": "Property",
-                      "value": 5
-                  }
-                  
-              }'
- 
-   :statuscode 204: No content, no error
-   :statuscode 404: not found
-
-Delete entity
-+++++++++++++
-
-.. http:delete:: /ngsi-ld/v1/entities/(str:delete_id)
-
-   Remove an entity by identifier.
-
-   :param delete_id: delete's unique id
-   :type delete_id: str
-
-   **Example request**:
-
-   .. tabs::
-
-      .. code-tab:: bash
- 
-         $ curl --location --request DELETE 'http://{{broker-host}}/ngsi-ld/v1/entities/urn:ngsi-ld:Vehicle:TEST1'
- 
-   :statuscode 204: No content, no error
-   :statuscode 404: not found
+   :statuscode 200: OK
+   :statuscode 404: Not Found
