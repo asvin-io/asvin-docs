@@ -7,7 +7,7 @@
 Asvin Platform
 ===================
 
-.. image:: images/logo.png
+.. image:: images/asvin-logo.png
 
 Asvin facilitates Platform as Service to distributes, manage firmware updates for IoT devices.
 
