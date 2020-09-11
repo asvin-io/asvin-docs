@@ -4,12 +4,13 @@
 	  You can change it using selector at the bottom of that
 	  navigation panel.
 
-Asvin Platform
-===================
+FUOTA Platform for the Enterprise
+=================================
 
 .. image:: images/asvin-logo.png
 
-Asvin facilitates Platform as Service to distributes, manage firmware updates for IoT devices.
+An Enterprise grade Platform as a Service (PasS) to manage, distribute and monitor firmware updates, and produce real time threat landscape for IoT 
+devices. 
 
 .. toctree::
    :maxdepth: 1
