@@ -2,14 +2,14 @@
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
-- [Asvin Platform](#asvin-platform)
+- [Asvin](#asvin)
 - [Documentation](#documentation)
 - [Contributing](#contributing)
 - [License](#license)
 
 # Asvin Platform
 
-Asvin is platform to distribute over the air firmware updates for IoT devices.
+Asvin facilitates Platform as a Service to distribute over the air firmware updates for IoT devices.
 
 # Documentation
 
