@@ -21,7 +21,7 @@ We follow the Asvin [Code of Conduct](code-conduct) to keep the playing field eq
 
 ## Maintainers
 
-The Asvin project is driven by dynamic team. All the development activities, such as reviewing and merging pull requests, new feature proposals, release road map are headed by the core [maintainers](https://github.com/Asvin-io/documentation/blob/master/MAINTAINERS.md).
+The Asvin project is driven by dynamic team. All the development activities, such as reviewing and merging pull requests, new feature proposals, release road map are headed by the core [maintainers](https://github.com/Asvin-io/documentation/).
 
 ## GitHub Contributions
 
