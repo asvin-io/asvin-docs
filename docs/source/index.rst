@@ -19,7 +19,8 @@ devices.
    key-concepts
    getting-started/getting-started
    tutorials/tutorials
-   architecture/architecture.rst
+   architecture/architecture
    rest-apis
+   contributing/contributing
    glossary
    releases/releases
