@@ -21,6 +21,6 @@ devices.
    tutorials/tutorials
    architecture/architecture
    rest-apis
-   contributing/contributing
+   contribution/contribution
    glossary
    releases/releases
