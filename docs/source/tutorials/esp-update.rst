@@ -5,9 +5,9 @@ Over the air updates with ESP8266 (nodemcu) boards
 In this tutorial we will see the demonstration of OTA updates using Asvin 
 IoT platform and nodemscu board based on the ESP8266 chipset
 
-.. image:: ../images/OTA_wb.jpg
-   :width: 400pt
-   :align: center
+    .. image:: ../images/OTA_wb.jpg
+        :width: 400pt
+        :align: center
 
 Requirements:
 
@@ -28,9 +28,9 @@ The code is writen under platformIO. Import the project using VScode's PlatformI
 
     - Open the credentials.h file in the editor and add credentials for your device
 
-    .. image:: ../images/keys_edited.jpg
-        :width: 400pt
-        :align: center
+        .. image:: ../images/keys_edited.jpg
+           :width: 400pt
+           :align: center
             
     - Device & Customer keys: This will be found on the asvin platform under the settings tab
     - email & password: Use the same email ID & password you use to login to asvin web platform 
@@ -103,4 +103,5 @@ The code is writen under platformIO. Import the project using VScode's PlatformI
          
 
 
-Thus we have sucessfully completed the OTA rollout :) 
+Thus we have sucessfully completed the OTA rollout. The Complete code and files can be found
+at Asvin's github repository `Github repository <https://github.com/Asvin-io/tutorials>`_  
