@@ -77,63 +77,37 @@ folder in VScode. Make sure to have the updated firmware on your Pycom *Gpy* as 
 5.  **Setting up OTA**
 
 
-
-    Asvin IoT platform provides secure OTA updates for IoT devices. Lets see how we can setup OTA updates
-
+    Follow the steps below along with the `Getting Started <https://asvin.readthedocs.io/en/latest/getting-started/getting-started.html>`_ guide. 
+    
     1.  *Register Device*:
-        When you start and uplod your sketch on the ESP8266 board, the board will start executing 
-        and calling the defined API routes. The first API it calls is 
-        `Register device <https://asvin.readthedocs.io/en/latest/version-controller/version-controller-api.html#register-device>`_ 
-        After this API is sucessfully called, you will see your device appear
-        under the "Just Registered devices" section of the platfomr under devices. 
-
-        .. image:: ../images/register_edited.jpg
-            :width: 400pt
-            :align: center
-
+            The device will be automatically registered on boot
 
     2.  *Device Groups*:
-        Asvin's IoT platform provides updates for a group of devices. Let us create a group called
-        OTA test. We can add our ESP device to this group . Under Devices > Device groups click on 
-        *"New Device Group"*. After this navigate back to the "Just registered" devices, click device 
-        grouping and add the device to the newly created device group.         
-    
+            Setup a device group on the Asvin IoT platform.
+
     3.  *File Groups*:
-        Once our device is assigned to a file group. Let us upload a file we want to provide as an OTA 
-        update. Usually this is *<somefile_name>.bin*. Let us upload esp-ota-blink.bin file to the filegroup 
-        ESP_OTA_Test
-    
-        .. image:: ../images/upload_file.png
-            :width: 400pt
-            :align: center
+            In case of pycom target devices there are certain modifications to be done to files before uploading them to
+            a filegroup for rollout. Users must add the following two lines at the start of every file they want to upload 
+            over the air.
+
+
+            ::
+
+                path="/flash/config.py"
+                version = "0.0.1"
+                """
+                Asvin OTA Config File
+                """
+
+                
+                          
+            
+            In this case the *Path* variable is the path of the variable inside the pycom's filesystem. The *version* is the user defined
+            version number of the existing file.
 
     4.  *Rollout*:
-        In this step we will setup a rollout to deliver OTA update of the file specified above to our 
-        ESP8266 device.
-        In the rollout section let us start by creating a rollout.
-        Fill in the options as shown in the screenshot.
-        Choose either batch/immediate update. 
-        There is an option to choose a time or do an update immediately.
-        Select the file to be rolled out as update and click *Save* 
+            Setup the rollout as mentioned in the `Getting Started <https://asvin.readthedocs.io/en/latest/getting-started/getting-started.html>`_ guide.
+            In this case it is important to follow the guidelines mentioned under *File Groups*.
 
-        .. image:: ../images/rollout_edited.jpg
-            :width: 400pt
-            :align: center
-
-    5.  The rollout is now enabled. Next time our device queries the  
-        `checkrollout API <https://asvin.readthedocs.io/en/latest/version-controller/version-controller-api.html#next-rollout>`_ , 
-        the rollout will be avaliable and further API's will be called inside the ESP device.
-        The ESP device will update itself after this with the file we uploaded earlier. In this case we will see the 
-        LED blinking on our ESP board
-
-    6.  Once the rollout is completed the new file will be running on the board. In this case we rolled out a BLink LED file. 
-        The board will call the  `checkrolloutsuccess API <https://asvin.readthedocs.io/en/latest/version-controller/version-controller-api.html#rollout-success>`_ ,
-        which is the part of the esp-ota-blink.bin file that we uploaded earlier    
-
-    7.  The change in the firmware version of the device is also updated on the 
-        `Asvin platform <https://app.asvin.io/>`_  
-         
-
-
-Thus we have sucessfully completed the OTA rollout. The Complete code and files can be found
+Thus we have sucessfully completed the OTA rollout for the Pycom Gpy board. The Complete code and files can be found
 at Asvin's github repository `Github repository <https://github.com/Asvin-io/tutorials>`_  
