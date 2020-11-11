@@ -3,48 +3,80 @@ Over the air updates with Pycom Gpy boards
 ========================================================
 
 In this tutorial we will see the demonstration of OTA updates using Asvin 
-IoT platform and the `Gpy <https://pycom.io/product/gpy/>`_ board from Pycom. 
+IoT platform and the *Gpy* board from Pycom. 
 
-    .. image:: ../images/OTA_wb.jpg
+    .. image:: ../images/OTA_wb_pycom.jpg
         :width: 400pt
         :align: center
 
+
 Requirements:
 
-1. nodemcu esp8266 board
-2. micro USB cable
-3. Asvin platform subscription 
-4. platformIO VScode extension
+1. Pycom `Gpy board <https://pycom.io/product/gpy/>`_
+2. Pycom `Expansion board <https://pycom.io/product/expansion-board-3-0/>`_ 
+3. micro USB cable
+4. Asvin platform subscription 
+5. `Pymakr <https://marketplace.visualstudio.com/items?itemName=pycom.Pymakr>`_ VScode extension 
 
 
 Getting started
 ###############
 
-To get started head to `Asvin's github repository <https://github.com/Asvin-io/tutorials>`_ and clone it. 
-The code is writen under platformIO. Import the project using VScode's PlatformIO extenstion.
+To get started head to `Asvin's github repository <https://github.com/Asvin-io/tutorials>`_ and clone it. Open the *pycom-ota-updates*
+folder in VScode. Make sure to have the updated firmware on your Pycom *Gpy* as well as the *expansion* board. 
 
+1.  *Description of Files*:
+    
+    This repository contains few python sketches. Below is a brief descrption of them
 
-1.  To proceed further you will need to edit few of the parameters in the code.
+    *lib/OTA.py*
+        This library enables OTA updates. It is discussed in detail below.
+    
+    *connect_wifi.py*
+        This script is a wrapper around pycom Wlan() library
+    
+    *asvin.py*
+        This file contains funtions to call various API's from the Asvin Platform.
+    
+    *config.py*
+        This file contains various user configuration options and are dicussed in the next section
 
-    - Open the credentials.h file in the editor and add credentials for your device
+2.  To proceed further you will need to edit few of the parameters in the config.py file.
 
-        .. image:: ../images/keys_edited.jpg
-           :width: 400pt
-           :align: center
+    - Open the config.py file in the editor and add credentials for your device
+
+        .. image:: ../images/configpy.jpg
+            :width: 400pt
+            :align: center
             
-    - Device & Customer keys: This will be found on the asvin platform under the settings tab
-    - email & password: Use the same email ID & password you use to login to asvin web platform 
+    - Under the Asvin Credentials populate the following fields
+        - customer_key:     Enter Customer key from Asvin platform 
+        - device_key:       Enter Device key from Asvin platform 
+        - platformemail:    Enter email address registerd on Asvin platform 
+        - platformpassword: Enter password registerd on Asvin platform 
+
+    - Under Wifi Credentials fill in the SSID and password.
+    - Optionaly you can also set the LED color for various funtions from the config file.
+
     
 
+3.  After this step, upload the project on the Pycom Board.
 
-2.  After this step, upload the sketch on the ESP8266 board
+4.  The code goes through the following steps:
+        - Connect to Wifi
+        - Check if the previos *rollout* was successful
+        - Next it will register the device by calling the `Register device <https://asvin.readthedocs.io/en/latest/version-controller/version-controller-api.html#register-device>`_ API 
+        - Then the code will check if a rollout exists 
+        - If a rollout exists the the code will try to download and perform the update
+ 
+        
 
-3.  This sketch uses the popular `WifiManager library <https://github.com/tzapu/WiFiManager>`_ to 
-    manage WiFi credentials. On boot the ESP8266 will start a WiFi hotspot with name "AutoConectAP". User should connect to it with   
-    cellphone/laptop and enter in the credentials. These credentials will be stored in the ESP flash 
-    memory and will be stored as default. These credentials can be changed later on.
 
-4. **Setting up OTA**
+
+
+5.  **Setting up OTA**
+
+
 
     Asvin IoT platform provides secure OTA updates for IoT devices. Lets see how we can setup OTA updates
 
