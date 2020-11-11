@@ -7,3 +7,4 @@ This section includes tutorials for the usage of the Asvin platform.
    :maxdepth: 1
 
    esp-update
+   pycom-ota
