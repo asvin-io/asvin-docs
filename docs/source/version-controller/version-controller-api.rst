@@ -7,6 +7,8 @@ This section shows the Rest API end-points of Version Controller.
    :backlinks: none
    :depth: 3
 
+.. _Register Device:
+
 Register Device
 +++++++++++++++
 
