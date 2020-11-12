@@ -7,7 +7,7 @@ Asvin IoT platform provides secure OTA updates for IoT devices. Lets us get star
         When you start and upload your code on any of the supported boards in the 
         :doc:`../tutorials/tutorials` section, the board will start executing 
         and calling the defined API routes. To Register the device the 
-        `Register device <https://asvin.readthedocs.io/en/latest/version-controller/version-controller-api.html#register-device>`_ API is called.
+        :ref:`Register Device` API is called.
         After this API is sucessfully called, you will see your device appear
         under the "Just Registered devices" section of the platfomr under devices. 
 
