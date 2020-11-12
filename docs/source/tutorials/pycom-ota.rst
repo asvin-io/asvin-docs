@@ -74,7 +74,7 @@ folder in VScode. Make sure to have the updated firmware on your Pycom *Gpy* as 
 5.  **Setting up OTA**
 
 
-    Follow the steps below along with the `Getting Started <https://asvin.readthedocs.io/en/latest/getting-started/getting-started.html>`_ guide. 
+    Follow the steps below along with the :doc:`../getting-started/customer-platform` guide. 
     
     1.  *Register Device*:
             The device will be automatically registered on boot
