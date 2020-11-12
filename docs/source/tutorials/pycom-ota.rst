@@ -1,6 +1,6 @@
-========================================================
+==========================================
 Over the air updates with Pycom Gpy boards
-========================================================
+==========================================
 
 In this tutorial we will see the demonstration of OTA updates using Asvin 
 IoT platform and the *Gpy* board from Pycom. 
@@ -65,7 +65,7 @@ folder in VScode. Make sure to have the updated firmware on your Pycom *Gpy* as 
 4.  The code goes through the following steps:
         - Connect to Wifi
         - Check if the previos *rollout* was successful
-        - Next it will register the device by calling the `Register device <https://asvin.readthedocs.io/en/latest/version-controller/version-controller-api.html#register-device>`_ API 
+        - Next it will register the device by calling the :ref:`Register Device` API 
         - Then the code will check if a rollout exists 
         - If a rollout exists the the code will try to download and perform the update
  
