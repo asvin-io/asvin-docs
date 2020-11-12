@@ -10,7 +10,7 @@ IoT platform and the *Gpy* board from Pycom.
         :align: center
 
 
-Requirements:
+*Requirements*:
 
 1. Pycom `Gpy board <https://pycom.io/product/gpy/>`_
 2. Pycom `Expansion board <https://pycom.io/product/expansion-board-3-0/>`_ 
@@ -70,10 +70,6 @@ folder in VScode. Make sure to have the updated firmware on your Pycom *Gpy* as 
         - If a rollout exists the the code will try to download and perform the update
  
         
-
-
-
-
 5.  **Setting up OTA**
 
 
