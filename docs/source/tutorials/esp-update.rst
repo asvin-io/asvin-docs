@@ -50,8 +50,8 @@ The code is writen under platformIO. Import the project using VScode's PlatformI
 
     1.  *Register Device*:
         When you start and uplod your sketch on the ESP8266 board, the board will start executing 
-        and calling the defined API routes. The first API it calls is 
-        `Register device <https://asvin.readthedocs.io/en/latest/version-controller/version-controller-api.html#register-device>`_ 
+        and calling the defined API routes. The first API it calls is
+        :ref:`Register Device`, 
         After this API is sucessfully called, you will see your device appear
         under the "Just Registered devices" section of the platfomr under devices. 
 
@@ -88,14 +88,14 @@ The code is writen under platformIO. Import the project using VScode's PlatformI
             :width: 400pt
             :align: center
 
-    5.  The rollout is now enabled. Next time our device queries the  
-        `checkrollout API <https://asvin.readthedocs.io/en/latest/version-controller/version-controller-api.html#next-rollout>`_ , 
+    5.  The rollout is now enabled. Next time our device queries the
+        :ref:`Next Rollout` API, 
         the rollout will be avaliable and further API's will be called inside the ESP device.
         The ESP device will update itself after this with the file we uploaded earlier. In this case we will see the 
         LED blinking on our ESP board
 
     6.  Once the rollout is completed the new file will be running on the board. In this case we rolled out a BLink LED file. 
-        The board will call the  `checkrolloutsuccess API <https://asvin.readthedocs.io/en/latest/version-controller/version-controller-api.html#rollout-success>`_ ,
+        The board will call the :ref:`Rollout Success` API,
         which is the part of the esp-ota-blink.bin file that we uploaded earlier    
 
     7.  The change in the firmware version of the device is also updated on the 
