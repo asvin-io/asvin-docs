@@ -44,12 +44,12 @@ Asvin IoT platform provides secure OTA updates for IoT devices. Lets us get star
                 :align: center
 
         -   The rollout is now enabled. Next time our device queries the  
-            `checkrollout API <https://asvin.readthedocs.io/en/latest/version-controller/version-controller-api.html#next-rollout>`_ , 
+            :ref:`Next Rollout` API, 
             the rollout will be avaliable and further API's will be called from our target device.
             The target device will update itself after this with the file we uploaded earlier. 
 
         -   Once the rollout is completed the new file will be refelected on the target device. In this example we rolled out a BLink LED file. 
-            The target device will call the  `checkrolloutsuccess API <https://asvin.readthedocs.io/en/latest/version-controller/version-controller-api.html#rollout-success>`_ ,
+            The target device will call the :ref:`Rollout Success` API,
             which in this example is the part of the file that we uploaded earlier    
 
         -   The change in the firmware version of the device is also updated on the 
