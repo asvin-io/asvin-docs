@@ -146,6 +146,8 @@ Register Device
    :statuscode 200: OK
    :statuscode 404: Not Found
 
+.. _Next Rollout:
+
 Next Rollout
 ++++++++++++
 
@@ -244,6 +246,8 @@ Next Rollout
       
    :statuscode 200: OK
    :statuscode 404: Not Found
+
+.. _Rollout Success:
 
 Rollout Success
 +++++++++++++++
