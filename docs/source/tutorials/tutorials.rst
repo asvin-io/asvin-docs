@@ -8,3 +8,4 @@ This section includes tutorials for the usage of the Asvin platform.
 
    esp-update
    pycom-ota
+   Fed4FIRE-Experiments
