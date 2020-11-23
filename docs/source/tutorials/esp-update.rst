@@ -9,7 +9,8 @@ IoT platform and nodemscu board based on the ESP8266 chipset
         :width: 400pt
         :align: center
 
-Requirements:
+Requirements
+############
 
 1. nodemcu esp8266 board
 2. micro USB cable

@@ -10,8 +10,8 @@ IoT platform and the *Gpy* board from Pycom.
         :align: center
 
 
-Requirements:
-#############
+Requirements
+############
 
 1. Pycom `Gpy board <https://pycom.io/product/gpy/>`_
 2. Pycom `Expansion board <https://pycom.io/product/expansion-board-3-0/>`_ 
