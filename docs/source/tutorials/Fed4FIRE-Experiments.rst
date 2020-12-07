@@ -2,7 +2,7 @@
 Fed4FIRE+ Experiments
 =====================
 
-The tutorial gives the detailed steps required to start and run the Fed4FIRE+ experiments and run the asvin image for simulating virtual edge devices with asvin API stack.
+The tutorial demonstrates the steps required to start and manage the Fed4FIRE+ experiments to perform stress tests of asvin.io platform by simulating virtual edge devices with asvin API stack. This procedure facilitates the detailed analysis of the scalability and reliablity of the platform.
 
 Requirements
 ############
@@ -16,31 +16,85 @@ Getting Started
 ###############
 
 1. Starting the Experiment
-        To start and monitor the Fed4FIRE experiments we use jFed Experimenter Toolkit. It is a user-friendly tool with simple and self explainatory interface.
-        Login to the experimenter tool with Fed4FIRE account. Then experiments can be created and started by utilizing the drag and drop options to form network of nodes. Or the Experiment Specifications (ESpec) can be generated and uploaded in the toolkit to start the experiment.
+        To start and monitor the Fed4FIRE+ experiments we use jFed Experimenter Toolkit (https://jfed.ilabt.imec.be/). It is a user-friendly tool with simple and self explainatory interface.
+        Login to the experimenter tool with Fed4FIRE+ account. Then experiments can be created and started by utilizing the drag and drop options to form network of nodes. Alternatively, the Experiment Specifications (ESpec) can be generated and uploaded in the toolkit to start the experiment.
 
         .. image:: ../images/Fed4FIRE/jFed_experiment.JPG
                 :width: 350pt
                 :align: center
-
-        To create the ESpec, ESpec Generator tool is needed. **https://github.ugent.be/jlemaes/generate-espec**. 
-        This tool can be used for generated ESpec for only Virtual Wall1 and Wall2 testbeds.
-        It includes all the installation scripts of Kubernetes cluster, influx DB and other tools which are required for the stress test of our platform.
+        |
+        To create the ESpec, ESpec Generator tool is needed which is available in **https://github.ugent.be/jlemaes/generate-espec**. 
+        This tool can be used to generated ESpec for only Virtual Wall1 and Wall2 testbeds.
+        It includes all the installation scripts of Kubernetes cluster, influx DB and other tools which are required for the stress test of the platform.
 
         .. image:: ../images/Fed4FIRE/espec_generator.JPG
-                :width: 300pt
+                :width: 325pt
+                :align: center
+        |
+        Before running the ESpec generator, the python requirements have to be installed by running below line in the generator folder
+        
+                pip install -r requirements.txt
+        
+        Using the generated ESpec, one can start the experiment on Fed4FIRE+ testbeds. The experiment will have a master node, influxdb node, and all other worker nodes.
+        If ESpec is generated for 5 nodes, then the experiment will have a master node, influxdb node, and 5 worker nodes running.
+        
+        **To reserve more than 15 nodes in an experiment, it is advised to inform the Fed4FIRE+ team before initiating**
+
+2. Setting up Control Server
+        After successfully starting the experiment with Kubernetes cluster, the user shall deploy the control server from **https://github.ugent.be/jlemaes/experiment-webserver.git** on master node of the Kubernetes cluster.
+
+        Follow the steps given in the repository.
+        Then the control server website will be accessible by going to the public IPv6 address of the server.
+
+        .. image:: ../images/Fed4FIRE/control-server_create_image.JPG
+                :width: 325pt
                 :align: center
 
-        Using the generated ESpec, one can start the experiment on Fed4FIRE testbeds. The experiment will have a master node, influxdb node, and all other worker nodes.
-        If ESpec is generated for 5 nodes, then the experiment will have a master node, influxdb node, and 5 worker nodes running.
+3. Deploying asvin API stack image
+        The example python code running the API stack for simulating the edge device is provided in **https://github.com/Asvin-io/tutorials/tree/main/Fed4FIRE-Experiments**
+        The user has to provide the credentials for Blockchain server and IPFS Login, User Key and Device key in the UserDetails.json file.
+        
+        The image takes 2 user inputs:
 
-        **To reserver more than 15 nodes in an experiment, it is always good to inform the Fed4FIRE correspondent before initiating**
+                1. Number of threads to run
+                2. The server (production or staging)
+        
+        By default it starts with 1 thread and uses staging server details
 
-2. Deploying asvin API stack image
+        Files asvin.py, UserDetails.json, and Dockerfile are zipped together to .tar.gz
 
-        The example python code running the API stack for simulating the edge device is provided in 
+                tar cvfz asvin_stage2.tar.gz asvin.py UserDetails.json Dockerfile
+        
+        The control server has a web interface through which the user can create a docker image using the tar file generated which will be deployed it to the Docker registry.
 
-3. Monitoring the Experiment
+4. Monitoring the Experiment
+        In the Experiment Monitoring interface, a new experiment can be created using one of the docker images from the Docker registry.
+        
+        While creating the experiments, you should provide the runtime arguments for the python code and also mention number of pods (parallels) to run on the Kubernetes cluster.
+        
+        .. image:: ../images/Fed4FIRE/control-server_new-experiment.JPG
+                :width: 325pt
+                :align: center       
+
+5. Analysis of results in Grafana
+        Image running on the experiment saves following values in the influxdb server.
+                
+        1. Total requests to Version controller, Blockchain, and IPFS servers
+        2. Total successfully served requests from Version controller, Blockchain, and IPFS servers
+        3. Total failed requests from Version controller, Blockchain, and IPFS servers
+        4. Response times of each requests to all 3 servers
+        5. successful firmware updates
+        
+        In Grafana, these values are fetched from influxdb server and visualized as time-series graphs to analyse the robustness of asvin platform.
+        The sample json file of Grafana is provided in **https://github.com/Asvin-io/tutorials/tree/main/Fed4FIRE-Experiments**
+        
+        .. image:: ../images/Fed4FIRE/Grafana.JPG
+                :width: 325pt
+                :align: center
+                
+
+        
+
 
 
 
