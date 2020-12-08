@@ -22,7 +22,7 @@ Getting Started
         .. image:: ../images/Fed4FIRE/jFed_experiment.JPG
                 :width: 350pt
                 :align: center
-        |
+
         To create the ESpec, ESpec Generator tool is needed which is available in `ESpec Generator github repository <https://github.ugent.be/jlemaes/generate-espec>`_. 
         This tool can be used to generated ESpec for only Virtual Wall1 and Wall2 testbeds.
         It includes all the installation scripts of Kubernetes cluster, influx DB and other tools which are required for the stress test of the platform.
@@ -30,10 +30,12 @@ Getting Started
         .. image:: ../images/Fed4FIRE/espec_generator.JPG
                 :width: 325pt
                 :align: center
-        |
-        Before running the ESpec generator, the python requirements have to be installed by running below line in the generator folder
+
+        Before running the ESpec generator, the python requirements have to be installed by running below line in the generator folder.
         
-                pip install -r requirements.txt
+        .. code-block:: python
+
+           pip install -r requirements.txt
         
         Using the generated ESpec, one can start the experiment on Fed4FIRE+ testbeds. The experiment will have a master node, influxdb node, and all other worker nodes.
         If ESpec is generated for 5 nodes, then the experiment will have a master node, influxdb node, and 5 worker nodes running.
@@ -56,14 +58,16 @@ Getting Started
         
         The image takes 2 user inputs:
 
-                1. Number of threads to run
-                2. The server (production or staging)
+        - Number of threads to run
+        - The server (production or staging)
         
         By default it starts with 1 thread and uses staging server details
 
         Files asvin.py, UserDetails.json, and Dockerfile are zipped together to .tar.gz
 
-                tar cvfz asvin_stage2.tar.gz asvin.py UserDetails.json Dockerfile
+        .. code-block:: bash
+        
+           tar cvfz asvin_stage2.tar.gz asvin.py UserDetails.json Dockerfile
         
         The control server has a web interface through which the user can create a docker image using the tar file generated, which will then be deployed to the Docker registry.
 
@@ -75,6 +79,7 @@ Getting Started
         .. image:: ../images/Fed4FIRE/control-server_new-experiment.JPG
                 :width: 325pt
                 :align: center
+
         Number of parallel pods running on the cluster can be changed anytime while the experiment is running.       
 
 5. Analysis of results in Grafana
@@ -87,7 +92,7 @@ Getting Started
         5. successful firmware updates
         
         In Grafana, these values are fetched from influxdb server and visualized as time-series graphs to analyse the robustness of asvin platform.
-        The sample json file of Grafana is provided in `Asvin github repository <https://github.com/Asvin-io/tutorials/tree/main/Fed4FIRE-Experiments/grafana>`_
+        The `sample json file <https://github.com/Asvin-io/tutorials/tree/main/Fed4FIRE-Experiments/grafana>`_ can be used to create a grafana dashboard. 
         
         .. image:: ../images/Fed4FIRE/Grafana.JPG
                 :width: 325pt
