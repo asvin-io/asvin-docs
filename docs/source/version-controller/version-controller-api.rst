@@ -17,6 +17,7 @@ Register Device
    Register a device.
 
    :reqheader Content-Type: application/json
+   :reqheader x-access-token: JWT-TOKEN
 
    **Example request**:
 
@@ -26,6 +27,7 @@ Register Device
  
          $ curl --location --request POST 'https://vc-server/api/device/register' \
           --header 'Content-Type: application/json' \
+          --header 'x-access-token: <JWT-TOKEN>' \
           --data-raw '{
             "mac": "your-device-mac",
             "firmware_version": "1.0",
@@ -53,7 +55,8 @@ Register Device
            'method': 'POST',
            'url': 'https://vc-server/api/device/register',
            'headers': {
-             'Content-Type': 'application/json'
+             'Content-Type': 'application/json',
+             'x-access-token': '<JWT-TOKEN>'
            },
            body: JSON.stringify({"mac":"your-device-mac","firmware_version":"1.0","customer_key":"your-customer-key","device_key":"your-device-key","name":"Hello World","class":"class1","serial_number":"your-device-serial-number","f1":"f1","f2":"f2","f3":"f3","f4":"f4","f5":"f5","f6":"f6","f7":"f7","f8":"f8","f9":"f9","f10":"f10"})
 
@@ -69,7 +72,8 @@ Register Device
          url = "https://vc-server/api/device/register"
          payload = "{\n\t\"mac\": \"your-device-mac\",\n\t\"firmware_version\": \"1.0\",\n\t\"customer_key\": \"your-customer-key\",\n\t\"device_key\": \"your-device-key\",\n\t\"name\": \"Hello World\",\n\t\"class\": \"class1\",\n\t\"serial_number\": \"your-device-serial-number\",\n\t\"f1\": \"f1\",\n\t\"f2\": \"f2\",\n\t\"f3\": \"f3\",\n\t\"f4\": \"f4\",\n\t\"f5\": \"f5\",\n\t\"f6\": \"f6\",\n\t\"f7\": \"f7\",\n\t\"f8\": \"f8\",\n\t\"f9\": \"f9\",\n\t\"f10\": \"f10\"\n}"
          headers = {
-           'Content-Type': 'application/json'
+           'Content-Type': 'application/json',
+           'x-access-token': '<JWT-TOKEN>'
          }
  
          response = requests.request("POST", url, headers=headers, data = payload)
@@ -105,7 +109,8 @@ Register Device
          $request->setBody($body);
          $request->setOptions(array());
          $request->setHeaders(array(
-           'Content-Type' => 'application/json'
+           'Content-Type' => 'application/json',
+           'x-access-token': '<JWT-TOKEN>'
          ));
          $client->enqueue($request)->send();
          $response = $client->getResponse();
@@ -156,6 +161,7 @@ Next Rollout
    Check next rollout
 
    :reqheader Content-Type: application/json
+   :reqheader x-access-token: JWT-TOKEN
 
    **Example request**:
 
@@ -165,6 +171,7 @@ Next Rollout
  
          curl --location --request POST 'https://vc-server/api/device/next/rollout' \
          --header 'Content-Type: application/json' \
+         --header 'x-access-token: <JWT-TOKEN>' \
          --data-raw '{
            "mac": "your-device-mac",
            "firmware_version": "1.0",
@@ -179,7 +186,8 @@ Next Rollout
            'method': 'POST',
            'url': 'https://vc-server/api/device/next/rollout',
            'headers': {
-             'Content-Type': 'application/json'
+             'Content-Type': 'application/json',
+             'x-access-token': '<JWT-TOKEN>'
            },
            body: JSON.stringify({"mac":"your-device-mac","firmware_version":"1.0","customer_key":"your-customer-key","device_key":"your-device-key"})
  
@@ -195,7 +203,8 @@ Next Rollout
          url = "https://vc-server/api/device/next/rollout"
          payload = "{\n\t\"mac\": \"your-device-mac\",\n\t\"firmware_version\": \"1.0\",\n\t\"customer_key\": \"your-customer-key\",\n\t\"device_key\": \"your-device-key\"\n}"
          headers = {
-           'Content-Type': 'application/json'
+           'Content-Type': 'application/json',
+           'x-access-token': '<JWT-TOKEN>'
          }
          response = requests.request("POST", url, headers=headers, data = payload)
          print(response.text.encode('utf8'))
@@ -217,7 +226,8 @@ Next Rollout
          $request->setBody($body);
          $request->setOptions(array());
          $request->setHeaders(array(
-           'Content-Type' => 'application/json'
+           'Content-Type' => 'application/json',
+           'x-access-token': '<JWT-TOKEN>'
          ));
          $client->enqueue($request)->send();
          $response = $client->getResponse();
@@ -257,6 +267,7 @@ Rollout Success
    Inform rollout status
 
    :reqheader Content-Type: application/json
+   :reqheader x-access-token: JWT-TOKEN
 
    **Example request**:
 
@@ -266,6 +277,7 @@ Rollout Success
  
          curl --location --request POST 'https://vc-server/api/device/success/rollout' \
          --header 'Content-Type: application/json' \
+         --header 'x-access-token: <JWT-TOKEN>' \
          --data-raw '{
            "mac": "your-device-mac",
            "firmware_version": "1.0",
@@ -281,7 +293,8 @@ Rollout Success
            'method': 'POST',
            'url': 'https://vc-server/api/device/success/rollout',
            'headers': {
-             'Content-Type': 'application/json'
+             'Content-Type': 'application/json',
+             'x-access-token': '<JWT-TOKEN>'
            },
            body: JSON.stringify({"mac":"your-device-mac","firmware_version":"1.0","customer_key":"your-customer-key","device_key":"your-device-key","rollout_id":"35"})
  
@@ -297,7 +310,8 @@ Rollout Success
          url = "https://vc-server/api/device/success/rollout"
          payload = "{\n\t\"mac\": \"your-device-mac\",\n\t\"firmware_version\": \"1.0\",\n\t\"customer_key\": \"your-customer-key\",\n\t\"device_key\": \"your-device-key\",\n\t\"rollout_id\": \"35\"\n}"
          headers = {
-           'Content-Type': 'application/json'
+           'Content-Type': 'application/json',
+           'x-access-token': '<JWT-TOKEN>'
          }
          response = requests.request("POST", url, headers=headers, data = payload)
          print(response.text.encode('utf8'))
@@ -320,7 +334,8 @@ Rollout Success
          $request->setBody($body);
          $request->setOptions(array());
          $request->setHeaders(array(
-           'Content-Type' => 'application/json'
+           'Content-Type' => 'application/json',
+           'x-access-token': '<JWT-TOKEN>'
          ));
          $client->enqueue($request)->send();
          $response = $client->getResponse();

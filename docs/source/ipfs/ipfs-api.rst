@@ -10,11 +10,12 @@ This section shows the Rest API end-points of IPFS.
 Download Firmware
 +++++++++++++++++
 
-.. http:post:: /device/get
+.. http:post:: /firmware/download
 
    Get a device.
 
    :reqheader Content-Type: application/json
+   :reqheader x-access-token: JWT-TOKEN
 
    **Example request**:
 
@@ -23,7 +24,7 @@ Download Firmware
       .. code-tab:: bash
  
          $ curl -X POST 'https://ipfs-server/firmware/download' \
-         -H 'x-access-token: <your-token>' \
+         -H 'x-access-token: <JWT-TOKEN>' \
          --header 'Content-Type: application/json' \
          -d '{
              "cid": "QmWATWQ7fVPP2EFGu71UkfnqhYXDYH566qy47CnJDgvs8u"
@@ -36,7 +37,7 @@ Download Firmware
            'method': 'POST',
            'url': 'https://ipfs-server/firmware/download',
            'headers': {
-             'x-access-token': '<your-token>',
+             'x-access-token': '<JWT-TOKEN>',
              'Content-Type': 'application/json'
            },
            body: JSON.stringify({"cid":"QmWATWQ7fVPP2EFGu71UkfnqhYXDYH566qy47CnJDgvs8u"})
@@ -56,7 +57,7 @@ Download Firmware
  
          payload="{\n    \"cid\": \"QmWATWQ7fVPP2EFGu71UkfnqhYXDYH566qy47CnJDgvs8u\"\n}"
          headers = {
-           'x-access-token': '<your-token>',
+           'x-access-token': '<JWT-TOKEN>',
            'Content-Type': 'application/json'
          }
          response = requests.request("POST", url, headers=headers, data=payload)
@@ -77,7 +78,7 @@ Download Firmware
          $request->setBody($body);
          $request->setOptions(array());
          $request->setHeaders(array(
-           'x-access-token' => '<your-token>',
+           'x-access-token' => '<JWT-TOKEN>',
            'Content-Type' => 'application/json'
          ));
          $client->enqueue($request)->send();
