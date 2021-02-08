@@ -69,7 +69,7 @@ monitoring sensors, smart meters, Lora nodes, smoke detectors etc.
 Customer Platform
 #################
 
-Asvin provides a user freindly customer platform to abstract the complexities of the background processes
+Asvin provides a user friendly customer platform to abstract the complexities of the background processes
 this customer platform enables users to register devices, setup & schedule firmware rollouts, group actions on
 registered devices, blacklisting of devices etc.
 
