@@ -20,7 +20,7 @@ for storing and sharing data in a distributed file system. It is one of the core
 of Asvin architecture. Asvin uses IPFS protocol to store firmware and patches. Check out the
 detailed notes on IPFS here.
 
-*Content Identifier*
+**Content Identifier**
 
 Data exchanged on decentralised platforms like `IPFS <https://ipfs.io/>`_ depends on content-based addressing rather Then
 local addressing to securely locate and identify data. A Content Identifier (CID) is a self describing
@@ -38,7 +38,7 @@ on the asvin.io network: device register, firmware upload, device update, firmwa
 etc. All these transactions are connected with hashes and stored in blocks which are again linked with a 
 secured hash. 
 
-*Distributed Ledger*
+**Distributed Ledger**
 
 Distributed ledger technology (DLT) is a digital system for recording the transaction of assets in which 
 the transactions and their details are recorded in multiple places at the same time. Unlike traditional databases,
@@ -46,7 +46,7 @@ distributed ledgers have no central data store or administration functionality. 
 is a type of DLT. 
 
 
-*Smart Contracts*
+**Smart Contracts**
 
 A smart contract is a computer program or a transaction protocol which is intended to automatically 
 execute, control or document legally relevant events and actions according to the terms of a contract 
