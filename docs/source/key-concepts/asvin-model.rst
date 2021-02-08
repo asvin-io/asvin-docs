@@ -26,7 +26,7 @@ Data exchanged on decentralised platforms like `IPFS <https://ipfs.io/>`_ depend
 local addressing to securely locate and identify data. A Content Identifier (CID) is a self describing
 content address identifier. CID forms an address based on content itself which is a cryptographic hash
 typically SHA-256 which is 32 bytes. An example of a binary image file stored on an IPFS network, the 
-CID might be  *QmcRD4wkPPi6dig81r5sLdrtd1gDCL4zgpEj9CfuRrGbzF*.
+CID might be  **QmcRD4wkPPi6dig81r5sLdrtd1gDCL4zgpEj9CfuRrGbzF**.
 
 Blockchain
 ##########
