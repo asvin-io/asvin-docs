@@ -11,3 +11,4 @@ Key Concepts
    ipfs/ipfs
    blockchain/blockchain
    customer-platform/customer-platform
+   edge-devices/edge-devices
