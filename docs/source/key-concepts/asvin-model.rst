@@ -77,3 +77,8 @@ The customer platform also displays information of firmware updates and provides
 
 
 
+Version controller
+##################
+
+The version controller maintains updated information of firmware avaliable for a particular edge device
+or device group on the asvin.io platform. It is one of the core components of the Asvin architecture.
