@@ -2,7 +2,7 @@
 Asvin Model
 =================
 
-In this section we will see take a brief look at the asvin architecture diagram 
+In this section we will take a brief look at the asvin architecture diagram 
 and explain its components briefly. Some related concepts and keywords are also mentioned 
 below.
 
