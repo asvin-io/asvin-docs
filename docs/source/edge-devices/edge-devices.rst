@@ -23,7 +23,7 @@ interface between the edge devices and the asvin.io platform. The asvin.io SDK m
 use APIs to interact with the asvin.io update infrastructure. The SDKs are developer friendly
 and yield decreased time to market for new IoT devices to connect with asvin.io infrastructure
 and take direct advantage of a ready to run update distribution network.
-The key features of asvin SDK is that It is a generic solution. it is not limited to any specific
+The key features of asvin SDK is that It is a generic solution. It is not limited to any specific
 hardware platform e.g. Arduino, ESP, STM, Arm Cortex-M3, M4 etc. and software protocols.
 
 
