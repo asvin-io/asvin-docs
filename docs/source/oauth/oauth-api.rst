@@ -1,13 +1,11 @@
 OAuth APIs
-=======================
+==========
 This section shows the Rest API end-points of OAuth Server.
 
 .. contents:: Table of contents
    :local:
    :backlinks: none
    :depth: 3
-
-.. _login:
 
 Login
 +++++
@@ -22,13 +20,14 @@ Login
 
    .. tabs::
 
-      .. code-tab:: bash
+      .. code-tab:: bash cURL
  
          $ curl --location --request POST 'https://oauth-server/auth/login' \
           --header 'Content-Type: application/json' \
           --data-raw '{
               "customer_key": "your-customer-key",
-              "device_key": "your-device-key"
+              "device-signature": "your-device-signature",
+              "timestamp": "current-timestamp"
           }'
 
       .. code-tab:: js
@@ -40,7 +39,7 @@ Login
            'headers': {
              'Content-Type': 'application/json'
            },
-           body: JSON.stringify({"customer_key":"your-customer-key","device_key":"your-device-key"})
+           body: JSON.stringify({"customer_key":"your-customer-key","device-signature":"your-device-signature","timestamp": "current-timestamp"})
  
          };
          request(options, function (error, response) {
@@ -52,7 +51,7 @@ Login
 
          import requests
          url = "https://oauth-server/auth/login"
-         payload="{\n\"customer_key\": \"your-customer-key\",\n\"device_key\": \"your-device-key\"\n}"
+         payload="{\"customer_key\":\"your-customer-key\",\"device-signature\":\"your-device-signature\",\"timestamp\":\"current-timestamp\"}"
          headers = {
            'Content-Type': 'application/json'
          }
@@ -69,7 +68,8 @@ Login
          $body = new http\Message\Body;
          $body->append('{
              "customer_key": "your-customer-key",
-             "device_key": "your-device-key"
+             "device-signature": "your-device-signature",
+             "timestamp": "current-timestamp"
          }');
          $request->setBody($body);
          $request->setOptions(array());
@@ -89,6 +89,12 @@ Login
       }
 
    :resheader Content-Type: application/json
+   :resheader X-RateLimit-Limit: 10
+   :resheader X-RateLimit-Remaining: 9 
+   :resheader X-RateLimit-Reset: 1617352926
       
-   :statuscode 200: OK
-   :statuscode 404: Not Found
+   :statuscode 200: No error
+   :statuscode 429: Too many requests in this time frame.
+   :statuscode 500: Something broke
+   
+   
