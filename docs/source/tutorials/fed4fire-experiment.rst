@@ -63,11 +63,11 @@ Getting Started
         
         By default it starts with 1 thread and uses staging server details
 
-        Files asvin.py, UserDetails.json, and Dockerfile are zipped together to .tar.gz
+        Files asvincurl.py and Dockerfile are zipped together to .tar.gz
 
         .. code-block:: bash
         
-           tar cvfz asvin_stage2.tar.gz asvin.py UserDetails.json Dockerfile
+           tar cvfz asvin_stage2.tar.gz asvincurl.py Dockerfile
         
         The control server has a web interface through which the user can create a docker image using the tar file generated, which will then be deployed to the Docker registry.
 

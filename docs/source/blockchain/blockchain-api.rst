@@ -15,17 +15,17 @@ Get Device
    Get a device.
 
    :reqheader Content-Type: application/json
-   :reqheader x-access-token: JWT-TOKEN
+   :reqheader X-Access-Token: JWT-TOKEN
 
    **Example request**:
 
    .. tabs::
 
-      .. code-tab:: bash
+      .. code-tab:: bash cURL
  
          $ curl -X POST 'https://bc-server/device/get' \
          -H 'Content-Type: application/json' \
-         -H 'x-access-token: <JWT-TOKEN> \
+         -H 'X-Access-Token: <JWT-TOKEN> \
          -d '{
            "id": "<device-id>"
          }'
@@ -38,7 +38,7 @@ Get Device
            'url': 'https://bc-server/device/get',
            'headers': {
              'Content-Type': 'application/json',
-             'x-access-token': '<JWT-TOKEN>'
+             'X-Access-Token': '<JWT-TOKEN>'
            },
            body: JSON.stringify({"id":"<device-id>"})
  
@@ -58,7 +58,7 @@ Get Device
          payload="{\n\t\"id\": \"device-id\"\n}"
          headers = {
            'Content-Type': 'application/json',
-           'x-access-token': '<JWT-TOKEN>'
+           'X-Access-Token': '<JWT-TOKEN>'
          }
          response = requests.request("POST", url, headers=headers, data=payload)
          print(response.text)
@@ -79,7 +79,7 @@ Get Device
          $request->setOptions(array());
          $request->setHeaders(array(
            'Content-Type' => 'application/json',
-           'x-access-token' => '<JWT-TOKEN>'
+           'X-Access-Token' => '<JWT-TOKEN>'
          ));
          $client->enqueue($request)->send();
          $response = $client->getResponse();
@@ -116,17 +116,17 @@ Get Firmware
    Get a device.
 
    :reqheader Content-Type: application/json
-   :reqheader x-access-token: JWT-TOKEN
+   :reqheader X-Access-Token: JWT-TOKEN
 
    **Example request**:
 
    .. tabs::
 
-      .. code-tab:: bash
+      .. code-tab:: bash cURL
  
          $ curl -X POST 'https://bc-server/device/get' \
          -H 'Content-Type: application/json' \
-         -H 'x-access-token: <JWT-TOKEN> \
+         -H 'X-Access-Token: <JWT-TOKEN> \
          -d '{
            "id": "<firmware-id>"
          }'
@@ -139,7 +139,7 @@ Get Firmware
            'url': 'https://bc-server/firmware/get',
            'headers': {
              'Content-Type': 'application/json',
-             'x-access-token': '<JWT-TOKEN>'
+             'X-Access-Token': '<JWT-TOKEN>'
            },
            body: JSON.stringify({"id":"<firmware-id>"})
  
@@ -159,7 +159,7 @@ Get Firmware
          payload="{\n\t\"id\": \"firmware-id\"\n}"
          headers = {
            'Content-Type': 'application/json',
-           'x-access-token': '<JWT-TOKEN>'
+           'X-Access-Token': '<JWT-TOKEN>'
          }
          response = requests.request("POST", url, headers=headers, data=payload)
          print(response.text)
@@ -180,7 +180,7 @@ Get Firmware
          $request->setOptions(array());
          $request->setHeaders(array(
            'Content-Type' => 'application/json',
-           'x-access-token' => '<JWT-TOKEN>'
+           'X-Access-Token' => '<JWT-TOKEN>'
          ));
          $client->enqueue($request)->send();
          $response = $client->getResponse();

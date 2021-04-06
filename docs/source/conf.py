@@ -108,6 +108,9 @@ html_static_path = ['_static']
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'Asvindoc'
 
+# translation
+locale_dirs = ['locale/']   # po files will be created in this directory
+gettext_compact = False     # optional: avoid file concatenation in sub directories.
 
 # -- Options for LaTeX output ------------------------------------------------
 

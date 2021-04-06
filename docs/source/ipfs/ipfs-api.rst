@@ -21,7 +21,7 @@ Download Firmware
 
    .. tabs::
 
-      .. code-tab:: bash
+      .. code-tab:: bash cURL
  
          $ curl -X POST 'https://ipfs-server/firmware/download' \
          -H 'x-access-token: <JWT-TOKEN>' \
@@ -88,7 +88,7 @@ Download Firmware
  
    **Example response**:
 
-   .. sourcecode:: data
+   .. sourcecode:: byte
 
    :resheader Content-Type: application/json
       
