@@ -5,13 +5,12 @@ Interplanetary FileSystem
 In this section we will see take a brief look at the **Interplanetary FileSystem (IPFS)** component of 
 asvin architecture and explain it briefly. 
 
-    .. image:: ../images/asvinarchitecture-ipfs.png
+    .. image:: ../../../../../images/asvinarchitecture-ipfs.png
         :width: 800pt
         :align: center
 
 
-
-asvin.io uses Interplanetary File System protocol to store firmware and patches. The
+        asvin.io uses Interplanetary File System protocol to store firmware and patches. The
 IPFS is a content-addressable peer to peer method for storing and sharing hypermedia
 in a distributed file system. It uses a network infrastructure that enables asvin.io to
 store unalterable firmware data. As mentioned above it is content addressable protocol
