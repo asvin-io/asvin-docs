@@ -23,7 +23,7 @@ Requirements
 Getting started
 ###############
 
-To get started head to `Asvin's github repository <https://github.com/Asvin-io/tutorials>`_ and clone it. Open the *pycom-ota-updates*
+To get started head to `Asvin's github repository <https://github.com/asvin-io/asvin-tutorials>`_ and clone it. Open the *pycom-ota-updates*
 folder in VScode. Make sure to have the updated firmware on your Pycom *Gpy* as well as the *expansion* board. 
 
 1.  *Description of Files*:
@@ -53,9 +53,7 @@ folder in VScode. Make sure to have the updated firmware on your Pycom *Gpy* as 
     - Under the Asvin Credentials populate the following fields
         - customer_key:     Enter Customer key from Asvin platform 
         - device_key:       Enter Device key from Asvin platform 
-        - platformemail:    Enter email address registerd on Asvin platform 
-        - platformpassword: Enter password registerd on Asvin platform 
-
+      
     - Under Wifi Credentials fill in the SSID and password.
     - Optionaly you can also set the LED color for various funtions from the config file.
 
@@ -65,7 +63,7 @@ folder in VScode. Make sure to have the updated firmware on your Pycom *Gpy* as 
 
 4.  The code goes through the following steps:
         - Connect to Wifi
-        - Check if the previos *rollout* was successful
+        - Check if the previous *rollout* was successful
         - Next it will register the device by calling the :ref:`Register Device` API 
         - Then the code will check if a rollout exists 
         - If a rollout exists the the code will try to download and perform the update
@@ -107,4 +105,4 @@ folder in VScode. Make sure to have the updated firmware on your Pycom *Gpy* as 
             In this case it is important to follow the guidelines mentioned under *File Groups*.
 
 Thus we have sucessfully completed the OTA rollout for the Pycom Gpy board. The Complete code and files can be found
-at Asvin's github repository `Github repository <https://github.com/Asvin-io/tutorials>`_  
+at Asvin's github repository `Github repository <https://github.com/asvin-io/asvin-tutorials>`_  

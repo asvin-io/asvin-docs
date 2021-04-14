@@ -21,20 +21,19 @@ Requirements
 Getting started
 ###############
 
-To get started head to `Asvin's github repository <https://github.com/Asvin-io/tutorials>`_ and clone it. 
+To get started head to `Asvin's github repository <https://github.com/asvin-io/asvin-tutorials>`_ and clone it. 
 The code is writen under platformIO. Import the project using VScode's PlatformIO extenstion.
 
 
 1.  To proceed further you will need to edit few of the parameters in the code.
 
-    - Open the credentials.h file in the editor and add credentials for your device
+    - Open the main.cpp file in the editor and add credentials for your device
 
         .. image:: ../images/keys_edited.jpg
            :width: 400pt
            :align: center
             
-    - Device & Customer keys: This will be found on the asvin platform under the settings tab
-    - email & password: Use the same email ID & password you use to login to asvin web platform 
+    - Device & Customer keys: This will be found on the asvin platform under the settings tab. These keys will be used to generate an auth token.
     
 
 
@@ -69,7 +68,7 @@ The code is writen under platformIO. Import the project using VScode's PlatformI
     
     3.  *File Groups*:
         Once our device is assigned to a file group. Let us upload a file we want to provide as an OTA 
-        update. Usually this is *<somefile_name>.bin*. Let us upload esp-ota-blink.bin file to the filegroup 
+        update. Usually this is *<file_name>.bin*. Let us upload esp-ota-blink.bin file to the filegroup 
         ESP_OTA_Test
     
         .. image:: ../images/upload_file.png
