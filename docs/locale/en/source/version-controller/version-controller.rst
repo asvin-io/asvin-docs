@@ -1,13 +1,13 @@
-===================
+==================
 Version Controller
-===================
+==================
 
-In this section we will see take a brief look at the **Version Controller** component of asvin architecture 
-and explain it briefly. Version Controller (VC) maintains updated information of firmware avaliable for 
-a particular edge device or device group on the asvin.io platform. It is one of the core components of the 
-Asvin architecture.
+In this section we will take a brief look at the **Version Controller** component of asvin architecture. 
+Version Controller (VC) maintains updated information of firmware avaliable for a particular 
+edge device or device group on the asvin.io platform.
 
-    .. image:: ../images/asvinarchitecture-vc.png
+.. image:: ../images/asvinarchitecture-vc.png
+        :alt: asvin VC 
         :width: 800pt
         :align: center
 

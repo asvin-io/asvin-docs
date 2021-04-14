@@ -7,8 +7,8 @@ Key Concepts
 
    key-concepts/overview
    key-concepts/asvin-model
+   customer-platform/customer-platform
    version-controller/version-controller
    ipfs/ipfs
    blockchain/blockchain
-   customer-platform/customer-platform
    edge-devices/edge-devices
