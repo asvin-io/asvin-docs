@@ -90,17 +90,9 @@ Get Device
    .. sourcecode:: json
 
       {
-        "valid": true,
-        "id": "3",
-        "message": "Device with id 3 got successfully",
-        "Device": {
-            "id": "3",
-            "mac": "AC:AC:CC:CC:34:34",
-            "type": "ESP",
-            "fwId": "3",
-            "wsId": "1",
-            "description": "3 - asvin demo device"
-        }
+        "mac": "AC:AC:CC:CC:34:34",
+        "fwId": "3",
+        "dType": "ESP"
       }
 
    :resheader Content-Type: application/json
