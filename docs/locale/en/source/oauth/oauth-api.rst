@@ -10,7 +10,7 @@ This section shows the Rest API end-points of OAuth Server.
 Login
 +++++
 
-This API end point returns a token which should be added to the **x-access-token** on all other 
+This API end point returns a token which should be added to the **x-access-token** header, on all other 
 API requests. 
 
 .. http:post:: /auth/login
