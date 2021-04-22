@@ -5,9 +5,10 @@ Over the air updates with Pycom Gpy boards
 In this tutorial we will see the demonstration of OTA updates using Asvin 
 IoT platform and the *Gpy* board from Pycom. 
 
-    .. image:: ../images/OTA_wb_pycom.jpg
-        :width: 400pt
-        :align: center
+.. image:: ../images/OTA_wb_pycom.jpg
+    :width: 400pt
+    :align: center
+    :alt: pycomOTA
 
 
 Requirements
@@ -46,10 +47,11 @@ folder in VScode. Make sure to have the updated firmware on your Pycom *Gpy* as 
 
     - Open the config.py file in the editor and add credentials for your device
 
-        .. image:: ../images/configpy.jpg
-            :width: 400pt
-            :align: center
-            
+    .. image:: ../images/configpy.jpg
+        :width: 400pt
+        :align: center
+        :alt: configpy
+
     - Under the Asvin Credentials populate the following fields
         - customer_key:     Enter Customer key from Asvin platform 
         - device_key:       Enter Device key from Asvin platform 
