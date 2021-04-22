@@ -8,9 +8,11 @@ FUOTA Platform for the Enterprise
 =================================
 
 .. image:: images/asvin-logo.png
+      :alt: asvin logo
 
-An Enterprise grade Platform as a Service (PasS) to manage, distribute and monitor firmware updates, and produce real time threat landscape for IoT 
-devices. 
+An Enterprise-grade Platform-as-a-Service (PasS) to manage, 
+distribute and monitor firmware updates, 
+and produce a real-time threat landscape for registered IoT devices. 
 
 .. toctree::
    :maxdepth: 1

@@ -1,7 +1,7 @@
 Prerequisites
 =============
 
-This documents help you in setting up your local environment to follow tutorials of asvin platform.
+The following are necessary to setting up your local environment and gain access to the asvin.io platform tutorials.
 
 Git
 ***
