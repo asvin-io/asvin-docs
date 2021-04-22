@@ -192,16 +192,9 @@ Get Firmware
    .. sourcecode:: json
 
       {
-        "valid": true,
-        "id": "45",
-        "message": "Firmware with id 45 got successfully",
-        "Firmware": {
-            "id": "45",
-            "md": "6f5902ac237024bdd0c176cb93063dc4",
-            "cid": "QmWATWQ7fVPP2EFGu71UkfnqhYXDYH566qy47CnJDgvs8u",
-            "version": "1.9",
-            "description": "45 - asvin demo fw"
-        }
+        "md": "6f5902ac237024bdd0c176cb93063dc4",
+        "cid": "QmWATWQ7fVPP2EFGu71UkfnqhYXDYH566qy47CnJDgvs8u",
+        "version": "1.9",
       } 
 
    :resheader Content-Type: application/json
