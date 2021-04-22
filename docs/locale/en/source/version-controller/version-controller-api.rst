@@ -188,22 +188,22 @@ Next Rollout
  
    **Example response**:
 
-   .. sourcecode:: json
+      .. sourcecode:: json
 
-      {
-        "rollout_id": "84",
-        "rollout_name": "new-demo-rollout",
-        "priority": "1",
-        "start_date": "2021-04-02 09:30:00",
-        "version": "2.0",
-        "firmware_id": "11"
-      }
+          {
+            "rollout_id": "84",
+            "rollout_name": "new-demo-rollout",
+            "priority": "1",
+            "start_date": "2021-04-02 09:30:00",
+            "version": "2.0",
+            "firmware_id": "11"
+          }
 
-  **If no rollout exists:**
+    **If no rollout exists:**
   
-    .. sourcecode:: json
-      
-      {}   
+      .. sourcecode:: json
+        
+        {}   
 
    :resheader Content-Type: application/json
       
