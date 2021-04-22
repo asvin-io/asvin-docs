@@ -1,6 +1,7 @@
 REST API
 ========
-This section defines all REST APIs supported by all components of Asvin.
+This section defines REST API's supported by all components of Asvin. To test the API end points use the Asvin
+`Postman Collection <https://github.com/asvin-io/asvin-tutorials/blob/main/Collections/Asvin%20API's.postman_collection>`_ .
 
 .. toctree::
    :maxdepth: 1
