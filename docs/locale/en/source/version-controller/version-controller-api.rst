@@ -199,7 +199,7 @@ Next Rollout
         "firmware_id": "11"
       }
 
-    **If no rollout exists:**
+  **If no rollout exists:**
   
     .. sourcecode:: json
       
