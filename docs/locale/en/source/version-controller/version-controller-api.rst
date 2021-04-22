@@ -199,8 +199,10 @@ Next Rollout
         "firmware_id": "11"
       }
 
-   .. sourcecode:: json
-
+  If no rollout exists:
+  
+    .. sourcecode:: json
+      
       {}   
 
    :resheader Content-Type: application/json
