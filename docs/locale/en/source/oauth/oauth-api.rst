@@ -1,6 +1,6 @@
 OAuth APIs
 ==========
-This section shows the Rest API end-points of OAuth Server.
+This section shows the Rest API end-points of OAuth Server. 
 
 .. contents:: Table of contents
    :local:
@@ -9,6 +9,9 @@ This section shows the Rest API end-points of OAuth Server.
 
 Login
 +++++
+
+This API end point returns a token which should be added to the **x-access-token** on all other 
+API requests. 
 
 .. http:post:: /auth/login
 
