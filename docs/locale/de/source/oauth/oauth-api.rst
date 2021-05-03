@@ -25,7 +25,7 @@ Login
          $ curl --location --request POST 'https://oauth-server/auth/login' \
           --header 'Content-Type: application/json' \
           --data-raw '{
-              "customer_key": "your-customer-key",
+              "device_key": "your-device-key",
               "device-signature": "your-device-signature",
               "timestamp": "current-timestamp"
           }'
@@ -39,7 +39,7 @@ Login
            'headers': {
              'Content-Type': 'application/json'
            },
-           body: JSON.stringify({"customer_key":"your-customer-key","device-signature":"your-device-signature","timestamp": "current-timestamp"})
+           body: JSON.stringify({"device_key":"your-device-key","device-signature":"your-device-signature","timestamp": "current-timestamp"})
  
          };
          request(options, function (error, response) {
@@ -51,7 +51,7 @@ Login
 
          import requests
          url = "https://oauth-server/auth/login"
-         payload="{\"customer_key\":\"your-customer-key\",\"device-signature\":\"your-device-signature\",\"timestamp\":\"current-timestamp\"}"
+         payload="{\"device_key\":\"your-device-key\",\"device-signature\":\"your-device-signature\",\"timestamp\":\"current-timestamp\"}"
          headers = {
            'Content-Type': 'application/json'
          }
@@ -67,7 +67,7 @@ Login
          $request->setRequestMethod('POST');
          $body = new http\Message\Body;
          $body->append('{
-             "customer_key": "your-customer-key",
+             "device_key": "your-device-key",
              "device-signature": "your-device-signature",
              "timestamp": "current-timestamp"
          }');
