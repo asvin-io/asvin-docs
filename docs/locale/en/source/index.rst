@@ -21,6 +21,7 @@ and produce a real-time threat landscape for registered IoT devices.
    key-concepts
    getting-started/getting-started
    tutorials/tutorials
+   security/security
    architecture/architecture
    rest-apis
    contribution/contribution
