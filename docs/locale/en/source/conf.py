@@ -19,9 +19,9 @@ import sphinx_rtd_theme
 
 # -- Project information -----------------------------------------------------
 
-project = u'Asvin'
-copyright = u'2020, Asvin'
-author = u'Asvin'
+project = u'asvin'
+copyright = u'2021, asvin'
+author = u'asvin'
 
 # The short X.Y version
 version = u''
