@@ -7,18 +7,17 @@ This section shows the Rest API end-points of OAuth Server.
    :backlinks: none
    :depth: 3
 
+.. _Login:
+
 Login
 +++++
 
-This API end point returns a token which should be added to the **x-access-token** header, on all other 
-API requests.
+This API end point returns a token which should be added to the **x-access-token** header, for all other API requests.
 
 .. http:post:: /auth/login
 
-   The :code:`device_key` and :code:`customer_key` are obtained from the asvin dashboard. The :code:`timestamp` is unix epoch.The :code:`device_signature` is `HMAC-SHA256 <https://en.wikipedia.org/wiki/HMAC/>`_. In psuedocode, it can be illustrated as 
-   :code:`HMAC-SHA256(key, message)`. Here, message is :code:`timestamp+device_key` and key is :code:`customer_key`. So, the :code:`device_signature` is calculated as 
-   :code:`device_signature = HMAC-SHA256(customer_key, timestamp+device_key)`
-
+   The :code:`device_key` and :code:`customer_key` are obtained from the asvin dashboard. The :code:`timestamp` is unix epoch.The :code:`device_signature` 
+   is `HMAC-SHA256 <https://en.wikipedia.org/wiki/HMAC/>`_. The :ref:`Device Signature` section contains calculation details. 
 
    :reqheader Content-Type: application/json
 
