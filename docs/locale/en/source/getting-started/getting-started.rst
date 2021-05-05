@@ -7,4 +7,4 @@ Getting Started
    prerequisites
    customer-platform
 
-   Before getting started with asvin you will need to install these :doc:`prerequisites`.
+Before getting started with asvin you will need to install these :doc:`prerequisites`.
