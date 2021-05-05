@@ -10,9 +10,11 @@ Device Signature
 ################
 The :code:`device_signature` used in the The :ref:`Login` API is a hashed-based message authentication code (MAC). It consists of cryptographic hash 
 function (HMAC-SHA256) and secret key. In psuedocode, it can be illustrated as :code:`HMAC-SHA256(key, message)`. Here, message is :code:`timestamp+device_key` and key is :code:`customer_key`. So, the 
-:code:`device_signature` is calculated as::
+:code:`device_signature` is calculated as
 
-  device_signature = HMAC-SHA256(customer_key, timestamp+device_key)
+.. code-block::
+
+   device_signature = HMAC-SHA256(customer_key, timestamp+device_key)
 
 The customer_key and device_key are acquired from `Customer Platform <https://app.asvin.io>`_. One needs to make a account there. The code block below
 shows the :code:`device_signature` generation.
