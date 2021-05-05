@@ -10,9 +10,15 @@ This section shows the Rest API end-points of OAuth Server.
 Login
 +++++
 
+This API end point returns a token which should be added to the **x-access-token** header, on all other 
+API requests.
+
 .. http:post:: /auth/login
 
-   Get token
+   The :code:`device_key` and :code:`customer_key` are obtained from the asvin dashboard. The :code:`timestamp` is unix epoch.The :code:`device_signature` is `HMAC-SHA256 <https://en.wikipedia.org/wiki/HMAC/>`_. In psuedocode, it can be illustrated as 
+   :code:`HMAC-SHA256(key, message)`. Here, message is :code:`timestamp+device_key` and key is :code:`customer_key`. So, the :code:`device_signature` is calculated as 
+   :code:`device_signature = HMAC-SHA256(customer_key, timestamp+device_key)`
+
 
    :reqheader Content-Type: application/json
 
@@ -26,8 +32,8 @@ Login
           --header 'Content-Type: application/json' \
           --data-raw '{
               "device_key": "your-device-key",
-              "device-signature": "your-device-signature",
-              "timestamp": "current-timestamp"
+              "timestamp": 1620045991
+              "device_signature": "your-device-signature"
           }'
 
       .. code-tab:: js
@@ -39,7 +45,7 @@ Login
            'headers': {
              'Content-Type': 'application/json'
            },
-           body: JSON.stringify({"device_key":"your-device-key","device-signature":"your-device-signature","timestamp": "current-timestamp"})
+           body: JSON.stringify({"device_key":"your-device-key","timestamp": 1620045991,"device_signature":"your-device-signature"})
  
          };
          request(options, function (error, response) {
@@ -51,7 +57,7 @@ Login
 
          import requests
          url = "https://oauth-server/auth/login"
-         payload="{\"device_key\":\"your-device-key\",\"device-signature\":\"your-device-signature\",\"timestamp\":\"current-timestamp\"}"
+         payload="{\"device_key\":\"your-device-key\",\"timestamp\":1620045991,\"device_signature\":\"your-device_signature\"}"
          headers = {
            'Content-Type': 'application/json'
          }
@@ -68,8 +74,8 @@ Login
          $body = new http\Message\Body;
          $body->append('{
              "device_key": "your-device-key",
-             "device-signature": "your-device-signature",
-             "timestamp": "current-timestamp"
+             "timestamp": 1620045991,
+             "device-signature": "your-device_signature",
          }');
          $request->setBody($body);
          $request->setOptions(array());
@@ -93,8 +99,8 @@ Login
    :resheader X-RateLimit-Remaining: 9 
    :resheader X-RateLimit-Reset: 1617352926
       
-   :statuscode 200: No error
+   :statuscode 200: OK
    :statuscode 429: Too many requests in this time frame.
-   :statuscode 500: Something broke
+   :statuscode 500: Error on Server
    
    
