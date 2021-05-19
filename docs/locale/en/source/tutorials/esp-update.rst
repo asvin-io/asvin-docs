@@ -55,7 +55,7 @@ The code is writen under PlatformIO. Import the project using VScode's PlatformI
         After this API is successfully called, you will see your device appear
         under the "Just Registered Devices" section of the platform under devices. 
 
-        .. image:: ../images/register_edited.jpg
+        .. image:: ../images/register_edited.png
             :width: 400pt
             :align: center
 
@@ -84,7 +84,7 @@ The code is writen under PlatformIO. Import the project using VScode's PlatformI
         There is an option to choose a time or to do an update immediately.
         Select the file to be rolled out as an update and click *Save*. 
 
-        .. image:: ../images/rollout_edited.jpg
+        .. image:: ../images/rollout_edited.png
             :width: 400pt
             :align: center
 
