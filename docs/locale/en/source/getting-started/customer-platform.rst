@@ -8,8 +8,8 @@ asvin IoT platform provides secure OTA updates for IoT devices. Let's get starte
         :doc:`../tutorials/tutorials` section, the board will start executing 
         and calling the defined API routes. To Register the device the 
         :ref:`Register Device` API is called.
-        After this API is sucessfully called, your device will appear
-        under the *"Just Registered devices"* sub-section of the platform's *"Devices"* section. 
+        After this API is successfully called, your device will appear
+        under the *"Lobby"* sub-menu of the platform's *"Devices"* menu. 
 
         .. image:: ../images/register_edited.png
             :width: 400pt
@@ -23,7 +23,7 @@ asvin IoT platform provides secure OTA updates for IoT devices. Let's get starte
         grouping and add the device to the newly created device group.         
 
 3.  *File Groups*:
-        Once your devics are assigned to a file group, the file you want to provide as an OTA update can be uploaded. 
+        Once your devices are assigned to a file group, the file you want to provide as an OTA update can be uploaded. 
         Usually this is *<new_firmware_file_name>.bin* or the type of file associated with the particular devices. 
         Let us show you in this example, the uploading of the esp-ota-blink.bin file to the filegroup ESP_OTA_Test
     
@@ -45,7 +45,7 @@ asvin IoT platform provides secure OTA updates for IoT devices. Let's get starte
 
         -   The rollout is now enabled. Next time the defined device queries the  
             :ref:`Next Rollout` API, 
-            the rollout will be avaliable and further API's will be called from that target device.
+            the rollout will be available and further APIs will be called from that target device.
             The target device will update itself after this with the file we uploaded earlier. 
 
         -   Once the rollout is completed, the new file will be reflected on the target device. In this example we rolled out a BLink LED file. 
