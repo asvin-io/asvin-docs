@@ -11,7 +11,7 @@ asvin IoT platform provides secure OTA updates for IoT devices. Let's get starte
         After this API is sucessfully called, your device will appear
         under the *"Just Registered devices"* sub-section of the platform's *"Devices"* section. 
 
-        .. image:: ../images/register_edited.jpg
+        .. image:: ../images/register_edited.png
             :width: 400pt
             :align: center
 
@@ -39,7 +39,7 @@ asvin IoT platform provides secure OTA updates for IoT devices. Let's get starte
             There is an option to choose a time or issue the update immediately.
             Select the file to be rolled out as update and click *Save*.
 
-            .. image:: ../images/rollout_edited.jpg
+            .. image:: ../images/rollout_edited.png
                 :width: 400pt
                 :align: center
 
