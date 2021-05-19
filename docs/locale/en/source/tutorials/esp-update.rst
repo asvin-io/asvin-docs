@@ -99,7 +99,7 @@ The code is writen under PlatformIO. Import the project using VScode's PlatformI
         which is the part of the esp-ota-blink.bin file that we uploaded earlier.    
 
     7.  The change in the firmware version of the device is also updated on the 
-        `asvin platform <https://app.asvin.io/>`_  
+        `asvin platform <https://app.asvin.io/>`_  .
          
 
 
