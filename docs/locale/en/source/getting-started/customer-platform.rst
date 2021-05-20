@@ -20,7 +20,14 @@ asvin IoT platform provides secure OTA updates for IoT devices. Let's get starte
         asvin's IoT platform provides updates for a group of devices. You can create a group to associate these devices by various categories
         such as, location, customer, deployment etc. You can add the target device to this group. Under *Devices > Device groups* click on 
         *"New Device Group"*. After this navigate back to the *"Just registered"* devices, click device 
-        grouping and add the device to the newly created device group.         
+        grouping and add the device to the newly created device group.
+
+        .. raw:: html
+
+          <video width="600" autoplay muted>
+          <source src="../_static/videos/rollout.m4v" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
 
 3.  *File Groups*:
         Once your devices are assigned to a file group, the file you want to provide as an OTA update can be uploaded. 
