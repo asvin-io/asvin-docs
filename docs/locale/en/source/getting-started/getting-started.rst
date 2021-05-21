@@ -14,3 +14,4 @@ follow the steps given below.
 
 * :doc:`Create and activate your account <acc-registration>` on `Customer Platform <https://app.asvin.io>`_ and get global access keys
 * :doc:`Register <device-registration>` your first device and add it in a device group
+* :doc:`Create file group <firmware-upload>` and add your first firmware in it
