@@ -7,7 +7,7 @@ email address, select couple of check boxes and click on Register now. It is sho
 
 .. raw:: html
 
-  <video width="600" autoplay muted>
+  <video width="600" autoplay muted loop>
   <source src="../_static/videos/acc-registration.m4v" type="video/mp4">
   Your browser does not support the video tag.
   </video>
@@ -24,7 +24,7 @@ Once you enter valid password and click on Create a password button, it will lan
 
 .. raw:: html
 
-  <video width="600" autoplay muted>
+  <video width="600" autoplay muted loop>
   <source src="../_static/videos/acc-activation.m4v" type="video/mp4">
   Your browser does not support the video tag.
   </video>
