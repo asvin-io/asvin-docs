@@ -23,17 +23,17 @@ Types of Contribution
 As a user:
 ==========
 
-- Feature proposal
-- Enhancement proposal
-- Bug reporting
-- Testing
+* Feature proposal
+* Enhancement proposal
+* Bug reporting
+* Testing
 
 As a Developer
 ==============
 
-- Fixing open issues
-- Make feature/enhancement proposal and implement them
-- Improve documentation
+* Fixing open issues
+* Make feature/enhancement proposal and implement them
+* Improve documentation
 
 Maintainers
 ***********

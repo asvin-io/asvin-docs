@@ -2,6 +2,7 @@
 
 Asvin Code of Conduct
 #####################
+
 Asvin GmbH developed a platform to distribute firmware updates for IoT devices. We also encourage external developers to contribute in the 
 project. Which means it is an open-source project where participants can choose to work together, and in that process experience differences in 
 language, location, nationality, and experience. In such a diverse environment, misunderstandings and disagreements happen, which in most cases 
@@ -22,33 +23,24 @@ we all share responsibility for our work environment.
 
 Code
 ****
-1. Treat each other with :ref:`respect<Respect>`, professionalism, fairness, and sensitivity to our many differences and strengths, including in 
-situations of high pressure and urgency.
 
-2. Never :ref:`harass<Harassment>` or :ref:`bully<Workplace Bullying>` anyone verbally, physically or :ref:`sexually<Unwelcome Sexual Advance>`.
-
-3. Never :ref:`discriminate<Discrimination>` on the basis of personal characteristics or group membership.
-
-4. Communicate constructively and avoid :ref:`demeaning<Demeaning Behavior>` or :ref:`insulting<Insulting Behavior>` behavior or language.
-
-5. Seek, accept, and offer objective work criticism, and :ref:`acknowledge<Acknowledgement>` properly the contributions of others.
-
-6. Be honest about your own qualifications, and about any circumstances that might lead to conflicts of interest.
-
-7. Respect the privacy of others and the confidentiality of data you access.
-
-8. With respect to cultural differences, be conservative in what you do and liberal in what you accept from others, but not to the point of 
-accepting disrespectful, unprofessional or unfair or :ref:`unwelcome behavior<Unwelcome Behavior>` or :ref:`advances<Unwelcome Sexual Advance>`.
-
-9. Promote the rules of this Code and take action (especially if you are in a :ref:`leadership position<Leadership Position>`) to bring the 
-discussion back to a more civil level whenever inappropriate behaviors are observed.
-
-10. Stay on topic: Make sure that you are posting to the correct channel and avoid off-topic discussions. Remember when you update an issue or 
-respond to an email you are potentially sending to a large number of people.
-
-11. Step down considerately: Members of every project come and go, and the Asvin is no different. When you leave or disengage from the project, 
-in whole or in part, we ask that you do so in a way that minimizes disruption to the project. This means you should tell people you are leaving 
-and take the proper steps to ensure that others can pick up where you left off.
+#. Treat each other with :ref:`respect<Respect>`, professionalism, fairness, and sensitivity to our many differences and strengths, including in 
+   situations of high pressure and urgency.
+#. Never :ref:`harass<Harassment>` or :ref:`bully<Workplace Bullying>` anyone verbally, physically or :ref:`sexually<Unwelcome Sexual Advance>`.
+#. Never :ref:`discriminate<Discrimination>` on the basis of personal characteristics or group membership.
+#. Communicate constructively and avoid :ref:`demeaning<Demeaning Behavior>` or :ref:`insulting<Insulting Behavior>` behavior or language.
+#. Seek, accept, and offer objective work criticism, and :ref:`acknowledge<Acknowledgement>` properly the contributions of others.
+#. Be honest about your own qualifications, and about any circumstances that might lead to conflicts of interest.
+#. Respect the privacy of others and the confidentiality of data you access.
+#. With respect to cultural differences, be conservative in what you do and liberal in what you accept from others, but not to the point of 
+   accepting disrespectful, unprofessional or unfair or :ref:`unwelcome behavior<Unwelcome Behavior>` or :ref:`advances<Unwelcome Sexual Advance>`.
+#. Promote the rules of this Code and take action (especially if you are in a :ref:`leadership position<Leadership Position>`) to bring the 
+   discussion back to a more civil level whenever inappropriate behaviors are observed.
+#. Stay on topic: Make sure that you are posting to the correct channel and avoid off-topic discussions. Remember when you update an issue or 
+   respond to an email you are potentially sending to a large number of people.
+#. Step down considerately: Members of every project come and go, and the Asvin is no different. When you leave or disengage from the project, 
+   in whole or in part, we ask that you do so in a way that minimizes disruption to the project. This means you should tell people you are leaving 
+   and take the proper steps to ensure that others can pick up where you left off.
 
 Glossary
 ********
@@ -99,10 +91,10 @@ Participant
 ===========
 includes the following persons:
 
-- Developers
-- Member representatives
-- Staff members
-- Anyone from the Public partaking in the Asvin work environment (e.g. contribute code, comment on our code or specs, email us, attend our 
+* Developers
+* Member representatives
+* Staff members
+* Anyone from the Public partaking in the Asvin work environment (e.g. contribute code, comment on our code or specs, email us, attend our 
   conferences, functions, etc)
 
 .. _Respect:
@@ -125,12 +117,12 @@ Unwelcome Behavior
 ==================
 Hard to define? Some questions to ask yourself are:
 
-- how would I feel if I were in the position of the recipient?
-- would my spouse, parent, child, sibling or friend like to be treated this way?
-- would I like an account of my behavior published in the organization's newsletter?
-- could my behavior offend or hurt other members of the work group?
-- could someone misinterpret my behavior as intentionally harmful or harassing?
-- would I treat my boss or a person I admire at work like that ?
+* how would I feel if I were in the position of the recipient?
+* would my spouse, parent, child, sibling or friend like to be treated this way?
+* would I like an account of my behavior published in the organization's newsletter?
+* could my behavior offend or hurt other members of the work group?
+* could someone misinterpret my behavior as intentionally harmful or harassing?
+* would I treat my boss or a person I admire at work like that ?
 
 Summary: if you are unsure whether something might be welcome or unwelcome, don't do it.
 
@@ -140,9 +132,9 @@ Unwelcome Sexual Advance
 ========================
 includes requests for sexual favors, and other verbal or physical conduct of a sexual nature, where:
 
-- submission to such conduct is made either explicitly or implicitly a term or condition of an individual's employment,
-- submission to or rejection of such conduct by an individual is used as a basis for employment decisions affecting the individual,
-- such conduct has the purpose or effect of unreasonably interfering with an individual's work performance or creating an intimidating hostile or 
+* submission to such conduct is made either explicitly or implicitly a term or condition of an individual's employment,
+* submission to or rejection of such conduct by an individual is used as a basis for employment decisions affecting the individual,
+* such conduct has the purpose or effect of unreasonably interfering with an individual's work performance or creating an intimidating hostile or 
   offensive working environment.
 
 .. _Workplace Bullying:
@@ -162,10 +154,10 @@ chat channels, phone and video teleconferences, and any kind of face-to-face mee
 Incident Procedure
 ==================
 To report incidents or to appeal reports of incidents, send email to m.ross@asvin.io. Please include any available relevant information, including
- links to any publicly accessible material relating to the matter. Every effort will be taken to ensure a safe and collegial environment in which 
- to collaborate on matters relating to the Project. In order to protect the community, the Project reserves the right to take appropriate action, 
- potentially including the removal of an individual from any and all participation in the project. The Project will work towards an equitable 
- resolution in the event of a misunderstanding.
+links to any publicly accessible material relating to the matter. Every effort will be taken to ensure a safe and collegial environment in which 
+to collaborate on matters relating to the Project. In order to protect the community, the Project reserves the right to take appropriate action, 
+potentially including the removal of an individual from any and all participation in the project. The Project will work towards an equitable 
+resolution in the event of a misunderstanding.
 
 Credits
 *******
