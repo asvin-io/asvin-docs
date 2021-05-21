@@ -1,5 +1,5 @@
-Firmware Group and Firmware Upload
-==================================
+Firmware Upload
+===============
 
 If you have completed the device registration process, then you must have a device in your account. Next, you need a firmware for the device. This can
 be achieved in two steps. Firstly, create a firmware group by clicking on create new file group button under Firmware menu. When you have a firmware 
