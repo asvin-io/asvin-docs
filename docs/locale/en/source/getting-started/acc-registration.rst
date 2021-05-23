@@ -33,7 +33,13 @@ asvin uses access keys to manage unauthorized access to the api end-points. Thes
 automatically when an account is created for the first time. You can access the keys in My Account -> Settings section as shown in the picture below.
 
 .. image:: ../images/access-keys.png
-            :width: 400pt
+            :width: 500pt
             :align: center
 
-The keys will be used to get OAUTH token.
+The keys will be used to get Jason Web Token (JWT) from OAuth server. Copy the access keys and set the respective collection variables in the Postman 
+as shown in the image below.
+
+.. image:: ../images/collection-variables.png
+            :width: 500pt
+            :align: center
+
