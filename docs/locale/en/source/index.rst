@@ -7,7 +7,7 @@
 FUOTA Platform for the Enterprise
 =================================
 
-.. image:: images/asvin-logo.png
+.. image:: images/asvin-logo-transparent.png
    :alt: asvin logo
    :height: 70px
 
