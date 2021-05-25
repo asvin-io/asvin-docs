@@ -1,3 +1,7 @@
 a {
   color: #8bc34a;
 }
+
+a:hover {
+  color: #f39304;
+}
