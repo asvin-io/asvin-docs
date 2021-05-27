@@ -1,7 +1,7 @@
 Tutorials
 =========
 
-This section includes tutorials for the usage of the Asvin platform.
+Dieser Abschnitt enthält Tutorials für die Verwendung der Asvin-Plattform.
 
 .. toctree::
    :maxdepth: 1

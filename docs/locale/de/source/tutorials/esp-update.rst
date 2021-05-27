@@ -1,108 +1,112 @@
 ========================================================
-Over the air updates with ESP8266 (nodemcu) boards
+Over the air updates mit ESP8266 (nodemcu) boards
 ========================================================
 
-In this tutorial we will see the demonstration of OTA updates using Asvin 
-IoT platform and nodemscu board based on the ESP8266 chipset
+In diesem Tutorial sehen wir die Demonstration von OTA-Updates unter Verwendung der 
+asvin IoT-Plattform und des nodemscu-Boards basierend auf dem ESP8266-Chipsatz.
 
     .. image:: ../images/OTA_wb.jpg
         :width: 400pt
         :align: center
 
-Requirements
-############
+Anforderungen
+#############
 
-1. nodemcu esp8266 board
-2. micro USB cable
-3. Asvin platform subscription 
-4. platformIO VScode extension
-
-
-Getting started
-###############
-
-To get started head to `Asvin's github repository <https://github.com/Asvin-io/tutorials>`_ and clone it. 
-The code is writen under platformIO. Import the project using VScode's PlatformIO extenstion.
+1. nodemcu esp8266-Platine
+2. Micro USB Kable
+3. asvin platform Zugang 
+4. PlatformIO VScode extension
 
 
-1.  To proceed further you will need to edit few of the parameters in the code.
+Erste Schritte
+##############
 
-    - Open the credentials.h file in the editor and add credentials for your device
+Gehen Sie als als erstes zum  `Github repository <https://github.com/asvin-io/asvin-tutorials>`_ von asvin 
+und klonen Sie es. Der Code ist unter PlatformIO geschrieben. Importieren Sie das Projekt mit der 
+PlatformIO-Erweiterung von VScode.
+
+
+1.  Um fortzufahren, müssen Sie einige der Parameter im Code bearbeiten
+
+    - Öffnen Sie die Datei main.cpp im Editor und fügen Sie die Zugangsdaten für Ihr Gerät hinzu.
 
         .. image:: ../images/keys_edited.jpg
            :width: 400pt
            :align: center
             
-    - Device & Customer keys: This will be found on the asvin platform under the settings tab
-    - email & password: Use the same email ID & password you use to login to asvin web platform 
-    
+    - Geräte- und Kundenschlüssel: Diese finden Sie auf der asvin-Plattform unter der Registerkarte 
+      "Einstellungen". Diese Schlüssel werden verwendet, um ein Auth-Token zu generieren.  
 
 
-2.  After this step, upload the sketch on the ESP8266 board
+2.  Nach diesem Schritt erstellen Sie den Code für Arduino oder PlatformIO und laden ihn auf das ESP8266-Board hoch
 
-3.  This sketch uses the popular `WifiManager library <https://github.com/tzapu/WiFiManager>`_ to 
-    manage WiFi credentials. On boot the ESP8266 will start a WiFi hotspot with name "AutoConectAP". User should connect to it with   
-    cellphone/laptop and enter in the credentials. These credentials will be stored in the ESP flash 
-    memory and will be stored as default. These credentials can be changed later on.
+3.  Dieser Sketch verwendet die populäre `WifiManager-Bibliothek <https://github.com/tzapu/WiFiManager>`_ , 
+    um die WiFi-Berechtigungsnachweise zu verwalten. Nach dem Booten wird der ESP8266 einen WiFi-Hotspot mit 
+    dem Namen "AutoConectAP" starten. Der Benutzer sollte sich mit seinem Handy/Laptop mit diesem verbinden 
+    und seine Zugangsdaten eingeben. Diese Zugangsdaten werden im Flash-Speicher des ESP als Standard gespeichert. 
+    Diese Zugangsdaten können später geändert werden.
 
-4. **Setting up OTA**
 
-    Asvin IoT platform provides secure OTA updates for IoT devices. Lets see how we can setup OTA updates
+4. **OTA einrichten**
 
-    1.  *Register Device*:
-        When you start and uplod your sketch on the ESP8266 board, the board will start executing 
-        and calling the defined API routes. The first API it calls is
-        :ref:`Register Device`, 
-        After this API is sucessfully called, you will see your device appear
-        under the "Just Registered devices" section of the platfomr under devices. 
+    Die asvin IoT Plattform bietet sichere OTA Updates für IoT Geräte. Folgend wird gezeigt, 
+    wie Updates eingerichtet werden können.
 
-        .. image:: ../images/register_edited.jpg
+    1.  *Gerät registrieren*:
+        
+        Wenn sie den Sketch starten und auf das ESP8266 Board hochläden, beginnt das Board mit 
+        der Ausführung und ruft die definierten API Routen auf. Die erste API, die es aufruft, 
+        ist :ref:`Register Device`, Nachdem diese API erfolgreich aufgerufen wurde, finden Sie ihr Gerät 
+        auf der Plattform unter Geräte>Just registered Devices. 
+
+        .. image:: ../images/register_edited.png
             :width: 400pt
             :align: center
 
 
-    2.  *Device Groups*:
-        Asvin's IoT platform provides updates for a group of devices. Let us create a group called
-        OTA test. We can add our ESP device to this group . Under Devices > Device groups click on 
-        *"New Device Group"*. After this navigate back to the "Just registered" devices, click device 
-        grouping and add the device to the newly created device group.         
+    2.  *Gerätegruppen*:
+        
+        asvin's IoT Plattform bietet Updates für eine Gruppe von Geräten. Das ESP Gerät kann zu 
+        dieser Gruppe hinzufügt werden. Gehen Sie hierzu auf Geräte>Gerätegruppe auf *Neue Gerätegruppe*. 
+        Anschließend navigieren Sie zurück zu *Lobby*, klicken auf Geräte gruppieren 
+        und fügen das Gerät zurneu erstellten Gerätegruppe hinzu.
     
-    3.  *File Groups*:
-        Once our device is assigned to a file group. Let us upload a file we want to provide as an OTA 
-        update. Usually this is *<somefile_name>.bin*. Let us upload esp-ota-blink.bin file to the filegroup 
-        ESP_OTA_Test
-    
+    3.  *Dateigruppen*:
+   
+        Sobald das Gerät einer Dateigruppe zugewiesen ist, kann die Datei hochgeladen werden, 
+        die wir als OTA-Update zur Verfügung stellen wollen. Normalerweise handelt  es sich um 
+        eine Datei mit dem Namen *<Dateiname>.bin*. In diesem Beispiel wird die Datei esp-ota-blink.bin 
+        in die Dateigruppe ESP_OTA_Test hochgeladen.
+
+
         .. image:: ../images/upload_file.png
             :width: 400pt
             :align: center
 
     4.  *Rollout*:
-        In this step we will setup a rollout to deliver OTA update of the file specified above to our 
-        ESP8266 device.
-        In the rollout section let us start by creating a rollout.
-        Fill in the options as shown in the screenshot.
-        Choose either batch/immediate update. 
-        There is an option to choose a time or do an update immediately.
-        Select the file to be rolled out as update and click *Save* 
+        
+        In diesem Schritt werden wir einen Rollout einrichten, um ein OTA-Update der oben angegebenen 
+        Datei an unser ESP8266-Gerät zu liefern. In der Rollout Sektion beginnen wir mit der Erstellung 
+        eines Rollouts. Fülle die Optionen wie im Screenshot gezeigt aus. Wähle entweder Batch oder 
+        sofortiges Update. Es gibt eine Option, eine Zeit zu wählen oder ein Update sofort durchzuführen. 
+        Wähle die Datei aus, die als Update ausgerollt werden soll und klicke auf *Speichern*.
 
-        .. image:: ../images/rollout_edited.jpg
+        .. image:: ../images/rollout_edited.png
             :width: 400pt
             :align: center
 
-    5.  The rollout is now enabled. Next time our device queries the
-        :ref:`Next Rollout` API, 
-        the rollout will be avaliable and further API's will be called inside the ESP device.
-        The ESP device will update itself after this with the file we uploaded earlier. In this case we will see the 
-        LED blinking on our ESP board
+    5.  Das Rollout ist nun aktiviert. Wenn das Gerät das nächste Mal die :ref:`Next Rollout` API abfragt, 
+        wird der Rollout verfügbar sein und weitere APIs werden im ESP-Gerät aufgerufen. Das ESP-Gerät 
+        wird sich danach mit der Datei aktualisieren, die wir zuvor hochgeladen haben. In diesem Fall 
+        werden wir die LED auf unserem ESP-Board blinken sehen.
 
-    6.  Once the rollout is completed the new file will be running on the board. In this case we rolled out a BLink LED file. 
-        The board will call the :ref:`Rollout Success` API,
-        which is the part of the esp-ota-blink.bin file that we uploaded earlier    
+    6.  Sobald der Rollout abgeschlossen ist, wird die neue Datei auf dem Board ausgeführt. 
+        In diesem Fall haben wir eine Blink-LED-Datei ausgerollt. Das Board wird die :ref:`Rollout Success`
+        API aufrufen, die Teil der Datei esp-ota-blink.bin ist, die wir zuvor hochgeladen haben.
 
-    7.  The change in the firmware version of the device is also updated on the 
-        `Asvin platform <https://app.asvin.io/>`_  
+    7.  Die Änderung der Firmware-Version des Geräts wird auch auf der 
+        `asvin platform <https://app.asvin.io/>`_ aktualisiert.
          
 
-
-Thus we have sucessfully completed the OTA rollout. The Complete code and files can be found
-at Asvin's github repository `Github repository <https://github.com/Asvin-io/tutorials>`_  
+Damit haben wir den OTA-Rollout erfolgreich abgeschlossen. Den vollständigen Code und die Dateien 
+finden Sie in asvins `Github repository <https://github.com/Asvin-io/tutorials>`_  . 

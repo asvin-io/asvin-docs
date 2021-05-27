@@ -1,92 +1,92 @@
 ==========================================
-Over the air updates with Pycom Gpy boards
+Over the air updates mit Pycom Gpy boards
 ==========================================
 
-In this tutorial we will see the demonstration of OTA updates using Asvin 
-IoT platform and the *Gpy* board from Pycom. 
+In diesem Tutorial sehen wir die Demonstration von OTA-Updates mit der asvin 
+IoT-Plattform und dem *Gpy* Board von Pycom.
 
-    .. image:: ../images/OTA_wb_pycom.jpg
-        :width: 400pt
-        :align: center
+.. image:: ../images/OTA_wb_pycom.jpg
+    :width: 400pt
+    :align: center
+    :alt: pycomOTA
 
 
 Requirements
 ############
 
 1. Pycom `Gpy board <https://pycom.io/product/gpy/>`_
-2. Pycom `Expansion board <https://pycom.io/product/expansion-board-3-0/>`_ 
-3. micro USB cable
-4. Asvin platform subscription 
-5. `Pymakr <https://marketplace.visualstudio.com/items?itemName=pycom.Pymakr>`_ VScode extension 
+2. Pycom `Erweiterungskarte <https://pycom.io/product/expansion-board-3-0/>`_ 
+3. Micro USB Kabel
+4. Asvin plattform Zugang 
+5. `Pymakr <https://marketplace.visualstudio.com/items?itemName=pycom.Pymakr>`_ VScode-Erweiterung
 
 
-Getting started
+Erste Schritte
 ###############
 
-To get started head to `Asvin's github repository <https://github.com/Asvin-io/tutorials>`_ and clone it. Open the *pycom-ota-updates*
-folder in VScode. Make sure to have the updated firmware on your Pycom *Gpy* as well as the *expansion* board. 
+Um zu beginnen, gehe zu `asvin's Github repository <https://github.com/asvin-io/asvin-tutorials>`_ und 
+klone es. Öffne den Ordner *pycom-ota-updates* in VScode. Achte darauf, dass Sie die aktualisierte Firmware 
+auf deinem Pycom *Gpy* und dem *Expansion* Board haben.
 
-1.  *Description of Files*:
+1.  *Beschreibung der Dateien*:
     
-    This repository contains few python sketches. Below is a brief descrption of them
+    Dieses Repository enthält ein paar Python Sketches. Unten ist eine kurze Beschreibung von ihnen
 
     *lib/OTA.py*
-        This library enables OTA updates. It is discussed in detail below.
+        Diese Bibliothek ermöglicht OTA-Updates. Sie wird unten im Detail besprochen.
     
     *connect_wifi.py*
-        This script is a wrapper around pycom Wlan() library
+        Dieses Skript ist ein Wrapper um die pycom Wlan() Bibliothek
     
     *asvin.py*
-        This file contains funtions to call various API's from the Asvin Platform.
+        Diese Datei enthält Funktionen, um verschiedene API's der Asvin Plattform aufzurufen.
     
     *config.py*
-        This file contains various user configuration options and are dicussed in the next section
+        Diese Datei enthält verschiedene Benutzerkonfigurationsoptionen und wird im nächsten Abschnitt besprochen
 
-2.  To proceed further you will need to edit few of the parameters in the config.py file.
+2.  Als nächstes müssen einige Parameter in der config.py Datei überarbeitet werden. 
 
-    - Open the config.py file in the editor and add credentials for your device
+    - Öffne die config.py Datei im Editor und füge die Anmeldedaten für dein Gerät hinzu
 
-        .. image:: ../images/configpy.jpg
-            :width: 400pt
-            :align: center
-            
-    - Under the Asvin Credentials populate the following fields
-        - customer_key:     Enter Customer key from Asvin platform 
-        - device_key:       Enter Device key from Asvin platform 
-        - platformemail:    Enter email address registerd on Asvin platform 
-        - platformpassword: Enter password registerd on Asvin platform 
+    .. image:: ../images/configpy.jpg
+        :width: 400pt
+        :align: center
+        :alt: configpy
 
-    - Under Wifi Credentials fill in the SSID and password.
-    - Optionaly you can also set the LED color for various funtions from the config file.
+    - Ergänzen Sie unter “Asvin Credentials” folgende Informationen
+        - customer_key:     siehe asvin Plattform
+        - device_key:       siehe asvin Plattform
+      
+    - Ergänzen Sie unter „WiFi Credentials“ folgende Angaben SSID und Passwort
+    
+    - Zusätzlich kann die Farbe der LED in der Konfigurationsdatei eingestellt werden.
 
     
+3.	Laden Sie nun das Projekt aufs Pycom Board hoch
 
-3.  After this step, upload the project on the Pycom Board.
+4.  Der Code führt folgende Schritte aus: :
+        - WiFi-Verbindung
+	    - Prüfung, ob der vorherige *Rollout* erfolgreich ausgeführt wurde
+        - Registrierung des Gerätes durch Aufruf der :ref:`Register Device` API.
+        - Prüfung auf neuen Rollout  Rollout vorhanden!
+        - Herunterladen und Ausführung des Updates. 
 
-4.  The code goes through the following steps:
-        - Connect to Wifi
-        - Check if the previos *rollout* was successful
-        - Next it will register the device by calling the :ref:`Register Device` API 
-        - Then the code will check if a rollout exists 
-        - If a rollout exists the the code will try to download and perform the update
- 
         
-5.  **Setting up OTA**
+5.  **Einrichtung des OTA**
 
 
     Follow the steps below along with the :doc:`../getting-started/customer-platform` guide. 
     
-    1.  *Register Device*:
-            The device will be automatically registered on boot
+    1.  *Gerät registrieren*:
+            Die Registrierung erfolgt automatisch beim Booten
 
-    2.  *Device Groups*:
-            Setup a device group on the Asvin IoT platform.
+    2.  *Gerätegruppe*:
+            Bitte richten Sie eine Gerätegruppe auf der asvin Plattform ein.
 
-    3.  *File Groups*:
-            In case of pycom target devices there are certain modifications to be done to files before uploading them to
-            a filegroup for rollout. Users must add the following two lines at the start of every file they want to upload 
-            over the air.
-
+    3.  *Dateigruppen*:
+            
+            Bevor Dateien zum Rollout in eine Dateigruppe hochgeladen werden können, müssen bestimmte Änderungen an 
+            Dateien vorgenommen werden: Integrieren der folgenden zwei Zeilen zu Beginn des Codes
 
             ::
 
@@ -97,14 +97,15 @@ folder in VScode. Make sure to have the updated firmware on your Pycom *Gpy* as 
                 """
 
                 
-                          
-            
-            In this case the *Path* variable is the path of the variable inside the pycom's filesystem. The *version* is the user defined
-            version number of the existing file.
+            In diesem Fall ist die Path-Variable der Pfad der Variable im Dateisystem von Pycom. Die Version ist 
+            die benutzerdefinierte Versionsnummer der vorhandenen Datei.
 
     4.  *Rollout*:
             Setup the rollout as mentioned in the `Getting Started <https://asvin.readthedocs.io/en/latest/getting-started/getting-started.html>`_ guide.
             In this case it is important to follow the guidelines mentioned under *File Groups*.
 
-Thus we have sucessfully completed the OTA rollout for the Pycom Gpy board. The Complete code and files can be found
-at Asvin's github repository `Github repository <https://github.com/Asvin-io/tutorials>`_  
+            Richten Sie das Rollout wie in der Anleitung `Erste Schritte <https://asvin.readthedocs.io/en/latest/getting-started/getting-started.html>`_ 
+            beschrieben ein. In diesem Fall ist es wichtig, die unter Dateigruppen genannten Richtlinien zu befolgen.
+
+Der OTA-Rollout für das Pycom Gpy-Board wurde erfolgreich abgeschlossen. Den vollständigen Code und die 
+Dateien finden Sie in asvin's `Github repository <https://github.com/asvin-io/asvin-tutorials>`_. 

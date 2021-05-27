@@ -1,99 +1,132 @@
 =====================
-Fed4FIRE+ Experiments
+Fed4FIRE+ Experimente
 =====================
 
-The tutorial demonstrates the steps required to start and manage the Fed4FIRE+ experiments for executing stress tests of asvin.io platform by simulating virtual edge devices with asvin API stack. This procedure facilitates the detailed analysis of the scalability and reliablity of the platform.
+Das Tutorial demonstriert die Schritte, die zum Starten und Verwalten der Fed4FIRE+-Experimente 
+für die Durchführung von Stresstests der asvin.io-Plattform erforderlich sind, indem virtuelle 
+Endgeräte mit dem asvin API-Stack simuliert werden. Diese Vorgehensweise erleichtert die detaillierte 
+Analyse der Skalierbarkeit und Zuverlässigkeit der Plattform.
 
-Requirements
-############
+
+Voraussetzungen
+###############
 1. `jFed Experimenter Toolkit <https://jfed.ilabt.imec.be/>`_
 2. `ESpec Generator <https://github.ugent.be/jlemaes/generate-espec>`_
 3. `asvin API stack image <https://github.com/Asvin-io/tutorials/tree/main/Fed4FIRE-Experiments/image>`_
 4. `Grafana json file <https://github.com/Asvin-io/tutorials/tree/main/Fed4FIRE-Experiments/grafana>`_
 
 
-Getting Started
+Erste Schritte
 ###############
 
-1. Starting the Experiment
-        To start and monitor the Fed4FIRE+ experiments we use `jFed Experimenter Toolkit <https://jfed.ilabt.imec.be/>`_. It is a user-friendly tool with simple and self explainatory interface.
-        Login to the experimenter tool with Fed4FIRE+ account. Then experiments can be created and started by utilizing the drag and drop options to form network of nodes. Alternatively, the Experiment Specifications (ESpec) can be generated and uploaded in the toolkit to start the experiment.
+1. Start des Experiments
+        
+        Zum Start und zum Überwachen der Fed4FIRE+ Experimente findet das `jFed Experimenter Toolkit <https://jfed.ilabt.imec.be/>`_ 
+        Anwendung. Es ist ein benutzerfreundliches Tool mit einer einfachen und selbsterklärenden Oberfläche. 
+        Loggen Sie sich mit Ihrem Fed4FIRE+ Konto in das Experimenter Tool ein. Zum Erstellen und Starten der 
+        Experimente kann einfach die Drag and Drop Funktion genutzt werden. Alternativ können die 
+        Experiment-Spezifikationen (ESpec) erstellt und in das Toolkit hochgeladen werden. 
+
 
         .. image:: ../images/Fed4FIRE/jFed_experiment.JPG
                 :width: 350pt
                 :align: center
 
-        To create the ESpec, ESpec Generator tool is needed which is available in `ESpec Generator github repository <https://github.ugent.be/jlemaes/generate-espec>`_. 
-        This tool can be used to generated ESpec for only Virtual Wall1 and Wall2 testbeds.
-        It includes all the installation scripts of Kubernetes cluster, influx DB and other tools which are required for the stress test of the platform.
+        Zur Erstellung der ESpec wird das Tool 
+        `ESpec Generator Github repository <https://github.ugent.be/jlemaes/generate-espec>`_, 
+        das im Github-Repository ESpec Generator verfügbar ist. Mit diesem Tool kann ESpec nur 
+        für die Testbeds Virtual Wall1 und Wall2 generiert werden. Es enthält alle Installationsskripte 
+        des Kubernetes-Clusters, der Influx-DB und anderer Tools, die für den Stresstest der Plattform erforderlich sind.
+
 
         .. image:: ../images/Fed4FIRE/espec_generator.JPG
                 :width: 325pt
                 :align: center
 
-        Before running the ESpec generator, the python requirements have to be installed by running below line in the generator folder.
+        Vor dem Ausführen des ESpec-Generators müssen die Python-Voraussetzungen durch Ausführen der 
+        folgenden Zeile im Generatorordner installiert werden
         
         .. code-block:: python
 
            pip install -r requirements.txt
         
-        Using the generated ESpec, one can start the experiment on Fed4FIRE+ testbeds. The experiment will have a master node, influxdb node, and all other worker nodes.
-        If ESpec is generated for 5 nodes, then the experiment will have a master node, influxdb node, and 5 worker nodes running.
+        Mit der generierten ESpec kann nun das Experiment auf Fed4FIRE+ Testbeds gestartet werden. Das 
+        Experiment besteht aus einem Master-Knoten, einen influxdb-Knoten und weiteren Arbeitsknoten Wenn 
+        die ESpec für 5 Knoten generiert wurde, dann besteht das Experiment aus einem Master-Knoten, einem 
+        influxdb-Knoten und 5 Worker-Knoten.
+
+        **Wenn Experimente mit mehr als 15 Knoten durchgeführt werden sollen, kontaktieren Sie bitte das Fed4FIRE+-Team, bevor Sie das Experiment starten.**
+
+
+2. Einrichten des Controll-Servers
         
-        **To reserve more than 15 nodes in an experiment, it is advised to inform the Fed4FIRE+ team before initiating the experiment.**
+        Nach dem erfolgreichen Start des Experiments mit einem Kubernetes-Cluster muss der Benutzer 
+        den Kontroll-Server aus dem `Experiment-webserver-Github-Repository <https://github.ugent.be/jlemaes/experiment-webserver.git>`_  
+        herunterladen und auf dem Master-Knoten des Kubernetes-Clusters bereitstellen.
 
-2. Setting up Control Server
-        After successfully starting the experiment with Kubernetes cluster, the user shall download the control server from  `Experiment-webserver github repository <https://github.ugent.be/jlemaes/experiment-webserver.git>`_ and deploy it on master node of the Kubernetes cluster.
+        Befolgen Sie die im Repository angegebenen Schritte. Anschließend ist die Website des Kontrollservers über 
+        die öffentliche IPv6-Adresse des Servers erreichbar.
 
-        Follow the steps given in the repository.
-        Then the control server website will be accessible by going to the public IPv6 address of the server.
 
         .. image:: ../images/Fed4FIRE/control-server_create_image.JPG
                 :width: 325pt
                 :align: center
 
-3. Deploying asvin API stack image
-        The example python code running the API stack for simulating the edge device is provided in `Asvin github repository <https://github.com/Asvin-io/tutorials/tree/main/Fed4FIRE-Experiments/image>`_.
-        The user has to provide the credentials for Blockchain server and IPFS Login, User Key and Device key in the UserDetails.json file.
+3. Bereitstellen des asvin API-Stack-Images
         
-        The image takes 2 user inputs:
+Der Beispiel-Python-Code, mit dem der API-Stack zur Simulation des Edge-Geräts ausgeführt wird, 
+        wird im `asvin Github repository <https://github.com/Asvin-io/tutorials/tree/main/Fed4FIRE-Experiments/image>`_. 
+        von asvin bereitgestellt. Der Benutzer muss die Anmeldeinformationen für den Blockchain-Server und IPFS-Login, 
+        Benutzerschlüssel und Geräteschlüssel in der Datei "UserDetails.json" angeben.
 
-        - Number of threads to run
-        - The server (production or staging)
+        Das Image benötigt 2 Benutzereingaben:
+
+        - Anzahl der auszuführenden Threads
+        - Der Server (Produktion oder Staging)
+
+        Standardmäßig startet es mit 1 Thread und verwendet Staging-Server-Details
         
-        By default it starts with 1 thread and uses staging server details
-
-        Files asvincurl.py and Dockerfile are zipped together to .tar.gz
+        Die Dateien asvincurl.py und Dockerfile werden zusammen nach .tar.gz gezippt.
 
         .. code-block:: bash
         
            tar cvfz asvin_stage2.tar.gz asvincurl.py Dockerfile
         
-        The control server has a web interface through which the user can create a docker image using the tar file generated, which will then be deployed to the Docker registry.
+        Der Steuerserver verfügt über eine Weboberfläche, über die der Benutzer mithilfe der erzeugten tar-Datei 
+        ein Docker-Image erstellen kann, das dann in der Docker-Registry bereitgestellt wird.
 
-4. Monitoring the Experiment
-        In the Experiment Monitoring interface, a new experiment can be created using one of the docker images from the Docker registry.
+4. Monitoring der Experimente
         
-        While creating the experiments, you should provide the runtime arguments for the python code. Else, the code runs with the default arguments as mentioned previously. Also, the user should mention number of pods (parallels) to run on the Kubernetes cluster.
-        
+        In der Schnittstelle zur Experimentüberwachung kann ein neues Experiment mit einem der 
+        Docker-Images aus der Docker-Registry erstellt werden.
+
+        Beim Erstellen der Experimente sollten Sie die Laufzeitparameter für den Python-Code angeben. 
+        Andernfalls wird der Code mit den Standardparametern ausgeführt. Außerdem sollten Sie die Anzahl 
+        der Pods (Parallelen) angeben, die auf dem Kubernetes-Cluster ausgeführt werden sollen.
+
+
         .. image:: ../images/Fed4FIRE/control-server_new-experiment.JPG
                 :width: 325pt
                 :align: center
 
-        Number of parallel pods running on the cluster can be changed anytime while the experiment is running.       
+        Die Anzahl der parallelen Pods, die auf dem Cluster laufen, kann jederzeit während des 
+        laufenden Experiments geändert werden.
 
-5. Analysis of results in Grafana
-        Tha asvin API stack image running in the experiment saves following values in the influxdb server.
-                
-        1. Total requests to Version controller, Blockchain, and IPFS servers
-        2. Total successfully served requests from Version controller, Blockchain, and IPFS servers
-        3. Total failed requests from Version controller, Blockchain, and IPFS servers
-        4. Response times of each requests to all 3 servers
-        5. successful firmware updates
+5. Analyse der Daten in Grafana
+        Das im Experiment laufende asvin API-Stack-Image speichert die folgenden Werte im influxdb-Server.
         
-        In Grafana, these values are fetched from influxdb server and visualized as time-series graphs to analyse the robustness of asvin platform.
-        The `sample json file <https://github.com/Asvin-io/tutorials/tree/main/Fed4FIRE-Experiments/grafana>`_ can be used to create a grafana dashboard. 
-        
+        1. Gesamte Anfragen an Versionskontroller, Blockchain- und IPFS-Server
+        2. Gesamtzahl der erfolgreich bedienten Anfragen von Versionskontroller, Blockchain- und IPFS-Servern
+        3. Summe der fehlgeschlagenen Anfragen von Versionskontroller-, Blockchain- und IPFS-Servern
+        4. Antwortzeiten der einzelnen Anfragen an alle 3 Server
+        5. Erfolgreiche Firmware-Updates
+
+        In Grafana werden diese Werte vom influxdb-Server geholt und als Zeitseriendiagramme visualisiert, 
+        um die Robustheit der asvin-Plattform zu analysieren. Die `Beispiel-Json-Datei <https://github.com/Asvin-io/tutorials/tree/main/Fed4FIRE-Experiments/grafana>`_ 
+        kann zur Erstellung eines Grafana-Dashboards verwendet werden.
+
+
+
         .. image:: ../images/Fed4FIRE/Grafana.JPG
                 :width: 325pt
                 :align: center
