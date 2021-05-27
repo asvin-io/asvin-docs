@@ -15,9 +15,9 @@ um einen Beitrag zum Projekt zu leisten.
 .. toctree::
   :maxdepth: 1
 	
-  Asvin-Verhaltenskodex
-	GitHub Beitragsrichtlinien
-	Stilrichtlinien für die Dokumentation
+  code-conduct
+  github-contribution
+  style-guide
 
 
 Wie Sie beitragen können:
