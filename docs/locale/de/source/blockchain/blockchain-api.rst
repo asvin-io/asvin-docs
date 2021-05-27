@@ -90,17 +90,9 @@ Get Device
    .. sourcecode:: json
 
       {
-        "valid": true,
-        "id": "3",
-        "message": "Device with id 3 got successfully",
-        "Device": {
-            "id": "3",
-            "mac": "AC:AC:CC:CC:34:34",
-            "type": "ESP",
-            "fwId": "3",
-            "wsId": "1",
-            "description": "3 - asvin demo device"
-        }
+        "mac": "AC:AC:CC:CC:34:34",
+        "fwId": "3",
+        "dType": "ESP"
       }
 
    :resheader Content-Type: application/json
@@ -192,16 +184,9 @@ Get Firmware
    .. sourcecode:: json
 
       {
-        "valid": true,
-        "id": "45",
-        "message": "Firmware with id 45 got successfully",
-        "Firmware": {
-            "id": "45",
-            "md": "6f5902ac237024bdd0c176cb93063dc4",
-            "cid": "QmWATWQ7fVPP2EFGu71UkfnqhYXDYH566qy47CnJDgvs8u",
-            "version": "1.9",
-            "description": "45 - asvin demo fw"
-        }
+        "md": "6f5902ac237024bdd0c176cb93063dc4",
+        "cid": "QmWATWQ7fVPP2EFGu71UkfnqhYXDYH566qy47CnJDgvs8u",
+        "version": "1.9",
       } 
 
    :resheader Content-Type: application/json

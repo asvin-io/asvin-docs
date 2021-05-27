@@ -19,9 +19,9 @@ import sphinx_rtd_theme
 
 # -- Project information -----------------------------------------------------
 
-project = u'Asvin'
-copyright = u'2020, Asvin'
-author = u'Asvin'
+project = u'asvin'
+copyright = u'2021, asvin'
+author = u'asvin'
 
 # The short X.Y version
 version = u''
@@ -91,6 +91,10 @@ html_theme = 'sphinx_rtd_theme'
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+html_css_files = [
+    'css/custom.css',
+]
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.

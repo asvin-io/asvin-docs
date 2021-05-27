@@ -1,11 +1,34 @@
 {% extends "!layout.html" %}
+:copyright: Copyright 2007-2021 by the Sphinx team, see AUTHORS.
 {% block sidebartitle %}
 {{ super() }}
 
-<br><img style="height: unset; width: unset; border-radius: 0%" alt="Asvin" src="{{ pathto("_static/images/asvin-logo.png", 1) }}"/>
+<br><img style="height:auto ; width: 250px; border-radius: 0%" alt="asvin" src="{{ pathto("_static/images/asvin-logo.png", 1) }}"/>
 <br>
 <a href="https://github.com/Asvin-io"><img style="padding: 0px; margin: auto auto auto auto;" alt="GitHub" src="{{ pathto("_static/images/github-logo.png", 1) }}"/></a>
 &nbsp;<a href="https://twitter.com/asvin_iot"><img style="padding: 0px; margin: auto auto auto auto;" alt="Twitter" src="{{ pathto("_static/images/twitter-logo.png", 1) }}"/></a>
-&nbsp;<a href="https://asvin.io/"><img style="padding: 0px; margin: auto auto auto auto;" alt="StackOverflow" src="{{ pathto("_static/images/stackoverflow-logo.png", 1) }}"/></a>
-&nbsp;<a href="https://www.youtube.com/channel/UCpP9D_f6y2vtrJYTnUfD0dA"><img style="padding: 0px; margin: auto auto auto auto;" alt="Youtube Channel" src="{{ pathto("_static/images/youtube-logo.png", 1) }}"/></a>
+&nbsp;<a href="https://de.linkedin.com/company/asvin-gmbh"><img style="padding: 0px; margin: auto auto auto auto;" alt="LinkedIn" src="{{ pathto("_static/images/linkedin-logo.png", 1) }}"/></a>
+&nbsp;<a href="https://www.youtube.com/channel/UCpP9D_f6y2vtrJYTnUfD0dA/videos"><img style="padding: 0px; margin: auto auto auto auto;" alt="YouTube Channel" src="{{ pathto("_static/images/youtube-logo.png", 1) }}"/></a>
+{% endblock %}
+
+{% block footer %} {{ super() }}
+
+<style>
+  /* Sidebar header (and topbar for mobile) */
+  .wy-side-nav-search, .wy-nav-top {
+    background: #8bc34a;
+  }
+
+  .wy-side-nav-search input[type=text] {
+    border-color: #8bc34a;
+  }
+
+  .wy-side-nav-search img {
+    background: #8bc34a;
+  }
+  /* Sidebar */
+  .wy-nav-side {
+    background: #272525;
+  }
+</style>
 {% endblock %}

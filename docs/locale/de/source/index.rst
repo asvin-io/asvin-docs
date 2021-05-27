@@ -1,26 +1,30 @@
-.. note:: Please make sure you are looking at the documentation that
-	  matches the version of the software you are using. See the
-	  version label at the top of the navigation panel on the left.
-	  You can change it using selector at the bottom of that
-	  navigation panel.
+.. Achtung:: Bitte achten Sie darauf, dass Sie die zur Software passende 
+   Version der Dokumentation ansehen. Die eingestellte Version finden Sie 
+   oben im Navigationsbereich. Ändern können Sie diese über das Auswahlmenü 
+   rechts unten im Navigationsbereich.
+     
 
-FUOTA Platform for the Enterprise
+FUOTA Plattform für Unternehmen
 =================================
 
-.. image:: images/asvin-logo.png
+.. image:: images/asvin-logo-transparent.png
+   :alt: asvin logo
+   :height: 70px
 
-An Enterprise grade Platform as a Service (PasS) to manage, distribute and monitor firmware updates, and produce real time threat landscape for IoT 
-devices. 
+   Ein Platform-as-a-Service (PasS) in Enterprise-Qualität zur Verwaltung, 
+   Verteilung und Überwachung von Firmware-Updates und zur Erstellung einer 
+   Echtzeit-Bedrohungslandschaft für registrierte IoT-Geräte. 
 
 .. toctree::
    :maxdepth: 1
 
-   introduction
-   key-concepts
-   getting-started/getting-started
-   tutorials/tutorials
-   architecture/architecture
-   rest-apis
-   contribution/contribution
-   glossary
-   releases/releases
+   Einführung
+	Schlüsselkonzepte
+	Erste Schritte
+	Tutorials
+	Sicherheitsprinzipien
+	Architektur-Referenz
+	REST-API
+	Contribution erwünscht!
+	Glossar
+	Veröffentlichungen
