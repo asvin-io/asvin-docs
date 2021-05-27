@@ -21,7 +21,7 @@ Rechte und Pflichten, die sich auf eine bestimmte Situation beziehen, nicht erse
 
 Absichtserklärung
 *****************
-Asvin verpflichtet sich, ein positives :ref:`Arbeitsumfeld <Arbeitsumfeld>` zu schaffen. Diese Verpflichtung 
+Asvin verpflichtet sich, ein positives :ref:`Arbeitsumfeld<Arbeitsumfeld>` zu schaffen. Diese Verpflichtung
 erfordert einen Arbeitsplatz, an dem sich alle :ref:`Beteiligten<Beteiligten>` auf allen Ebenen nach den Regeln des folgenden 
 Kodex verhalten. Ein grundlegendes Konzept dieses Kodex ist, dass wir alle gemeinsam für unser Arbeitsumfeld 
 verantwortlich sind.
@@ -31,10 +31,10 @@ Kodex
 
    1.	Behandeln Sie sich gegenseitig mit :ref:`respekt<Respekt>`, Professionalität, Fairness und Sensibilität für 
       unsere vielen Unterschiede und Stärken, auch in Situationen mit hohem Druck und Dringlichkeit.
-   2.	:ref:`Belästigen<Belästigen>` oder :ref:`schikanieren<schikanieren>`  Sie niemanden verbal, körperlich oder :ref:`sexuell<Unwelcome Sexual Advance>`.
-   3.	:ref:`Diskriminieren<Diskriminieren>` Sie niemanden aufgrund von persönlichen Eigenschaften oder Gruppenzugehörigkeit.
-   4.	Kommunizieren Sie konstruktiv und vermeiden Sie :ref:`erniedrigendes<erniedrigendes>` oder :ref:`beleidigendes<beleidigendes>` Verhalten oder Sprache
-   5.	Suchen, akzeptieren und bieten Sie objektive Arbeitskritik und :ref:`erkennen<erkennen>` Sie die Beiträge anderer angemessen an.
+   2.	:ref:`Belästigen<Harassment>` oder :ref:`schikanieren<Mobbing am Arbeitsplatz>`  Sie niemanden verbal, körperlich oder :ref:`sexuell<Unerwünschte sexuelle>`.
+   3.	:ref:`Diskriminieren<Diskriminierung>` Sie niemanden aufgrund von persönlichen Eigenschaften oder Gruppenzugehörigkeit.
+   4.	Kommunizieren Sie konstruktiv und vermeiden Sie :ref:`erniedrigendes<Erniedrigendes Verhalten>` oder :ref:`beleidigendes<Beleidigendes Verhalten>` Verhalten oder Sprache
+   5.	Suchen, akzeptieren und bieten Sie objektive Arbeitskritik und :ref:`erkennen<Quellenangabe>` Sie die Beiträge anderer angemessen an.
    6.	Seien Sie ehrlich in Bezug auf Ihre eigenen Qualifikationen und auf alle Umstände, die zu Interessenkonflikten führen könnten.
    7.	Respektieren Sie die Privatsphäre anderer und die Vertraulichkeit der Daten, auf die Sie zugreifen.
    8.	Seien Sie in Bezug auf kulturelle Unterschiede konservativ in dem, was Sie tun, und liberal in dem, was Sie von anderen 
@@ -49,13 +49,13 @@ Glossar
 *******
 ist ein Verhalten, das die Würde, das Selbstwertgefühl oder den Respekt einer anderen Person innerhalb der Gemeinschaft herabsetzt.
 
-.. _Demeaning Behavior:
+.. _Erniedrigendes Verhalten:
 
-Beleidigendes Verhalten
-==================
+Erniedrigendes Verhalten
+========================
 ist die Behandlung einer anderen Person mit Verachtung oder Respektlosigkeit.
 
-.. _Discrimination:
+.. _Diskriminierung:
 
 Diskriminierung
 ===============
@@ -65,15 +65,14 @@ sexuelle Orientierung, familiäre oder gesundheitliche Situation, Schwangerschaf
 Bildung, Vermögen, Wohnsitz, politische Einstellung, Moral, Beschäftigung oder gewerkschaftliche Tätigkeit.
 
 
-.. _Insulting Behavior:
-
+.. _Beleidigendes Verhalten:
 
 Beleidigendes Verhalten
 =======================
 
 is treating another person with scorn or disrespect.
 
-.. _Acknowledgement:
+.. _Quellenangabe:
 
 Quellenangabe
 =============
@@ -86,14 +85,15 @@ Harassment
 ist jedes Verhalten, verbal oder physisch, das die Absicht oder Wirkung hat, eine Person zu beeinträchtigen,
 oder das eine einschüchternde, feindselige oder beleidigende Umgebung schafft. beleidigendes Umfeld schafft.
 
-.. _Leadership Position:
+.. _Führungsposition:
 
 Führungsposition
 ===================
 umfasst Gruppenvorsitzende, Projektbetreuer, Mitarbeiter und Vorstandsmitglieder.
-.. _Participant:
 
-Teilnehmer
+.. _Beteiligten:
+
+Beteiligten
 ===========
 includes the following persons:
 
@@ -101,10 +101,10 @@ includes the following persons:
 * Entwickler
 * Vertreter der Mitglieder
 * Mitarbeiter
-* Jeder aus der Öffentlichkeit, der an der Arbeitsumgebung von Asvin teilnimmt 
+* Jeder aus der Öffentlichkeit, der an der Arbeitsumfeld von Asvin teilnimmt 
   (z. B. Code beitragen, unseren Code oder Spezifikationen kommentieren, uns eine E-Mail schicken, an unseren Konferenzen und Veranstaltungen teilnehmen, usw.)
   
-.. _Respect:
+.. _Respekt:
 
 Respekt
 =======
@@ -135,7 +135,7 @@ Schwer zu definieren? Einige Fragen, die Sie sich stellen sollten, sind:
 Zusammenfassung: Wenn Sie sich nicht sicher sind, ob etwas willkommen oder unerwünscht sein könnte, tun Sie es nicht.
 
 
-.. _Unwelcome Sexual Advance:
+.. _Unerwünschte sexuelle:
 
 Unerwünschte sexuelle Annäherung umfasst: 
 =========================================
@@ -149,7 +149,7 @@ Bitten um sexuelle Gefälligkeiten und anderes verbales oder körperliches Verha
   zu beeinträchtigen oder ein einschüchterndes, feindseliges oder beleidigendes Arbeitsumfeld zu schaffen.
   
 
-.. _Workplace Bullying:
+.. _Mobbing am Arbeitsplatz:
 
 Mobbing am Arbeitsplatz
 =======================
@@ -158,10 +158,10 @@ ist eine Tendenz von Einzelpersonen oder Gruppen, anhaltend aggressives oder 	un
 Verhalten (z. B. verbale oder schriftliche Beschimpfungen, 	beleidigendes Verhalten oder jegliche 
 Einmischung, die die Arbeit untergräbt 	oder behindert) gegen einen Mitarbeiter oder eine berufliche Beziehung 	anzuwenden.
 
-.. _Work Environment:
+.. _Arbeitsumfeld:
 
-Arbeitsumgebung
-================
+Arbeitsumfeld
+=============
 
 ist die Gesamtheit aller verfügbaren Mittel der Zusammenarbeit, einschließlich, aber nicht beschränkt 
 auf Nachrichten an Mailing-Listen, private Korrespondenz, Webseiten, Chat-Kanäle, Telefon- und 
