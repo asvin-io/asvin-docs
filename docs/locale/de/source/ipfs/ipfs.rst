@@ -2,27 +2,25 @@
 Interplanetary FileSystem 
 =========================
 
-In this section we will explore the **Interplanetary FileSystem (IPFS)** component of asvin architecture. 
+In diesem Abschnitt wird das **Interplanetary FileSystem (IPFS)** als Komponente der asvin Architektur 
+kurz vorgestellt und erklärt.
 
     .. image:: ../images/asvinarchitecture-ipfs.png
         :width: 800pt
         :align: center
 
-
-
-asvin.io uses Interplanetary File System protocol to store firmware and patches. 
-IPFS is a content-addressable peer to peer method for storing and sharing hypermedia
-in a distributed file system while eliminating duplicate files and redundancy. 
-It uses a network infrastructure that enables asvin.io to store unalterable firmware data.
-When a firmware file is stored on the network a hash is generated based on content of
-the firmware and stored on blockchain network. Later on, the same hash is used by
-edge devices to pull the firmware from data storage. This forms a generalized Merkle
-directed acyclic graph(DAG). Each node of Merkle DAG is connected with a secured Hash. 
-When a node is added in the DAG, its hash is computed based on hash of its local content 
-and hashes of its children’s name instead of their content. Once it is created, it is 
-impossible to alter a node in the network. IPFS has no single point of failure. asvin.io 
-provides a distributed content delivery system which provides an extra layer of security 
-and prevents DDoS attacks. asvin.io's SDK, which is run on edge devices, enables the functionality 
-to interact with data storage servers. Once an edge device gets information from the version
-controller regarding the newly available firmware, it uses this information to download 
-appropriate firmware from the distributed CDN.
+asvin.io nutzt das Interplanetary File System Protokoll, um Firmware und Patches zu speichern. 
+IPFS ist eine inhaltsadressierbare Peer-to-Peer-Methode (P2P) zum Speichern und Teilen von Hypermedia 
+in einem verteilten Dateisystem, wobei doppelte Dateien und Redundanz vermieden werden. Es nutzt eine 
+Netzwerkinfrastruktur, welche es asvin.io ermöglicht, unveränderliche Firmwaredaten zu speichern. Wenn 
+eine Firmware-Datei im Netzwerk gespeichert wird, wird ein Hash basierend auf dem Inhalt der Firmware 
+generiert und im Blockchain-Netzwerk gespeichert. Später wird derselbe Hash von Edge-Geräten verwendet, 
+um die Firmware aus dem Datenspeicher zu extrahieren. Dies bildet einen verallgemeinerten Merkle gerichteten 
+azyklischen Graphen (DAG). Jeder Knoten des Merkle DAG ist mit einem gesicherten Hash verbunden. Wenn ein 
+Knoten im DAG hinzugefügt wird, wird sein Hash basierend auf dem Hash seines lokalen Inhalts und den Hashes 
+der Namen seiner Unterknoten berechnet, anstatt deren Inhalt. Sobald er erstellt wurde, ist es unmöglich, 
+einen Knoten im Netzwerk zu verändern. IPFS hat keinen Single Point of Failure. asvin.io bietet ein verteiltes 
+Content-Delivery-System, welches eine zusätzliche Sicherheitsebene bietet und DDoS-Attacken verhindert. 
+asvin.io's SDK, das auf Edge-Devices ausgeführt wird, ermöglicht es, mit Datenspeichern zu interagieren. 
+Sobald ein Edge-Device vom Versions-Controller Informationen über die neu verfügbare Firmware erhält, nutzt es 
+diese Informationen, um die entsprechende Firmware aus dem verteilten CDN herunterzuladen.
