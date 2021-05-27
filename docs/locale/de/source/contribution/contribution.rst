@@ -1,43 +1,50 @@
-Contribution Welcomed
-#####################
+Beteiligung am Projekt ist gewünscht!
+#####################################
+
+Das asvin-Projekt wurde von einigen wenigen begonnen, aber von vielen entwickelt und gepflegt. 
+Wir bei asvin sind ein großer Unterstützer von Open-Source-Projekten und haben auch die gesamte 
+asvin-Plattform für die Community offengehalten. Wir begrüßen Ihren Beitrag zum Projekt. 
+Lassen Sie uns gemeinsam die asvin Plattform für alle aufbauen.
+
+Voraussetzung für eine fairen und respektvollem Umgang miteinander ist das Befolgen des asvin :doc:`Verhaltenskodex`. 
+Bevor Sie einen Bug melden oder eine Anfrage starten, lesen Sie bitte vorab unseren asvin-Verhaltenskodex durch. 
+
+Die Quelldateien der asvin-Plattform werden in den GitHub-Repositories gespeichert. Folgen Sie den :doc:`GitHub-Beitragsrichtlinien`, 
+um einen Beitrag zum Projekt zu leisten.
 
 .. toctree::
-   :maxdepth: 1
-   :hidden:
+  :maxdepth: 1
+	
+  Asvin-Verhaltenskodex
+	GitHub Beitragsrichtlinien
+	Stilrichtlinien für die Dokumentation
 
-   code-conduct
-   github-contribution
 
-The asvin project was started by a few but has been developed and maintained by many. At asvin, we are the big supporter of open source projects and
-have also kept the whole asvin platform open for the community. We welcome your contribution in the project. Let us all together build the asvin 
-platform for all.
+Wie Sie beitragen können:
+*************************
+Als Benutzer:
+=============
+* Feature-Vorschlag
+* Verbesserungsvorschlag
+* Fehlerbericht
+* Testen
 
-We follow the :doc:`code-conduct` to keep the playing field equal and fair for all to work together. We request you to review it 
-before you report a bug or make pull requests. The aim of it to maintain the decorum.
 
-The source files of the asvin platform are stored on the GitHub repositories. Follow the :doc:`github-contribution` 
-to start contributing in the project.
-
-Types of Contribution
-*********************
-As a user:
-==========
-
-- Feature proposal
-- Enhancement proposal
-- Bugs reporting
-- Testing
-
-As a Developer
+Als Entwickler
 ==============
 
-- Fixing open issues
-- Make feature/enhancement proposal and implement them
-- Improve documentation
+* Offene Probleme beheben
+* Funktions-/Erweiterungsvorschläge machen und diese implementieren
+* Verbessern der Dokumentation
 
-Maintainers
-***********
-The Asvin project is driven by dynamic team. All the development activities, such as reviewing and merging pull requests, new feature proposals, 
-release road map are headed by the core `maintainers <https://github.com/Asvin-io/documentation/blob/master/MAINTAINERS.md>`_.
+Betreuer
+********
+
+Das Asvin-Projekt wird von einem dynamischen Team geleitet. Alle Entwicklungsaktivitäten, wie z.B. 
+das Überprüfen und Zusammenführen von Pull-Requests, Vorschläge für neue Funktionen und die Veröffentlichung 
+der Roadmap, werden von den `Hauptbetreuern <https://github.com/Asvin-io/documentation/blob/master/MAINTAINERS.md>`_. geleitet.
+
+Bitte nehmen Sie keine Änderungen vor, ohne vorher die Genehmigung von Mirko Ross von (m.ross@asvin.io) einzuholen.
+
 
 
