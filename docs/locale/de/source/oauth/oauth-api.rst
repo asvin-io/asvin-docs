@@ -1,24 +1,25 @@
 OAuth APIs
 ==========
-This section shows the Rest API end-points of OAuth Server.
 
-.. contents:: Table of contents
+Dieser Abschnitt zeigt die Rest-API-Endpunkte von OAuth Server.
+
+.. contents:: Inhaltsübersicht
    :local:
    :backlinks: none
    :depth: 3
 
+.. _Login:
+
 Login
 +++++
 
-This API end point returns a token which should be added to the **x-access-token** header, on all other 
-API requests.
+Dieser API-Endpunkt gibt ein Token zurück, das dem **x-access-token** Header für alle anderen API-Anfragen hinzugefügt werden sollte.
 
 .. http:post:: /auth/login
 
-   The :code:`device_key` and :code:`customer_key` are obtained from the asvin dashboard. The :code:`timestamp` is unix epoch.The :code:`device_signature` is `HMAC-SHA256 <https://en.wikipedia.org/wiki/HMAC/>`_. In psuedocode, it can be illustrated as 
-   :code:`HMAC-SHA256(key, message)`. Here, message is :code:`timestamp+device_key` and key is :code:`customer_key`. So, the :code:`device_signature` is calculated as 
-   :code:`device_signature = HMAC-SHA256(customer_key, timestamp+device_key)`
-
+   Der :code:`device_key` und der :code:`customer_key` werden aus dem asvin Dashboard bezogen. Der The :code:`timestamp` 
+   ist eine Unix-Epoche, die :code:`device_signature` ist `HMAC-SHA256 <https://en.wikipedia.org/wiki/HMAC/>`_. 
+   Der Abschnitt Gerätesignatur enthält Details zur Berechnung.
 
    :reqheader Content-Type: application/json
 
@@ -100,7 +101,7 @@ API requests.
    :resheader X-RateLimit-Reset: 1617352926
       
    :statuscode 200: OK
-   :statuscode 429: Too many requests in this time frame.
+   :statuscode 429: Zu viele Anfragen im gewünschten Zeitraum
    :statuscode 500: Error on Server
    
    
