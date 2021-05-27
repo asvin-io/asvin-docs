@@ -1,17 +1,16 @@
-Erste Schritte
-==============
+Prerequisites
+=============
 
-Bevor Sie mit asvin beginnen können, müssen Sie diese **Komponenten** installieren. 
+Before your embark on a journey to explore asvin getting started and tutorials sections, it is necessary to install the following tools on your 
+machine.
 
 Postman
 -------
 
-Laden Sie die neueste Version von `postman <https://www.postman.com/downloads/>`_ herunter und installieren Sie sie. Der postman wird verwendet,
-um http-Anfragen an asvin Servern. 
-Wir haben eine `postman-Sammlung <https://github.com/asvin-io/asvin-tutorials/blob/main/Collections/asvin-platform-postman-collection.json/>`_ von asvin-APIs. 
-Sie könnten einen Testarbeitsbereich erstellen und die Sammlung importieren. Sie wird für die Einstiegsdokumentation benötigt. Das folgende Video 
-zeigt die Vorgehensweise.
-
+Download and install the latest version of `postman <https://www.postman.com/downloads/>`_. The postman will be used to make http requests to asvin
+servers. We have a `postman collection <https://github.com/asvin-io/asvin-tutorials/blob/main/Collections/asvin-platform-postman-collection.json/>`_ 
+of asvin APIs. You could create a test workspace and import the collection. It is required for the getting started documentation. The following video 
+shows the procedure.
 
 .. raw:: html
 
@@ -20,16 +19,16 @@ zeigt die Vorgehensweise.
   Your browser does not support the video tag.
   </video>
 
-Der Postman reicht aus, um alle Schritte auszuführen, die im Abschnitt "Erste Schritte" aufgeführt sind. 
-Wenn Sie eines der Tutorials ausprobieren möchten, installieren Sie die Tools unten erwähnt.
 
+The Postman is enough to execute all the steps listed in the getting started section. If you want to try any of the tutorials then install the tools
+mentioned below.
 
 Git
 ---
 
-Laden Sie die neueste Version von `git <https://git-scm.com/downloads>`_. herunter und installieren Sie diese. 
+Download and install the latest version of `git <https://git-scm.com/downloads>`_.
 
 cURL
 ----
 
-Laden Sie die neueste Version des `cURL <https://curl.haxx.se/download.html>`_ -Tools herunter und installieren Sie diese.
+Download and install the latest version of `cURL <https://curl.haxx.se/download.html>`_ tool.
