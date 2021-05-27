@@ -2,72 +2,73 @@
 Blockchain
 ===========
 
-In this section we will see take a brief look at the **Blockchain** component of 
-asvin architecture and explain it briefly. 
+In diesem Abschnitt werden wir die **Blockchain** -Komponente der asvin Architektur erläutern. 
 
     .. image:: ../images/asvinarchitecture-bc.png
         :width: 800pt
         :align: center
 
-Blockchain is a type of Distributed Ledger Technology (DLT) which contains a growing list 
-of records known as **blocks**. Each block contains the 
-`cryptographic hash <https://en.wikipedia.org/wiki/Cryptographic_hash_function>`_ 
-of the previous block. Blockchains by design are resistant to modification of its data.
+Blockchain ist eine Art Distributed Ledger Technology (DLT), die eine wachsende Liste von Einträgen enthält, 
+die als **Blöcke** bezeichnet werden. Jeder Block enthält den `kryptographischen Hash  
+<https://en.wikipedia.org/wiki/Cryptographic_hash_function>`_ des vorherigen Blocks. Durch ihr Design sind 
+Blockchains beständig gegen Veränderungen der gespeicherten Daten.
 
-In the Asvin architecture, we have build the blockchain network based on 
-`Hyperledger Fabric <https://www.hyperledger.org/use/fabric>`_ and 
-`Hyperledger besu <https://www.hyperledger.org/use/besu>`_. Customers can choose to use any of the two
-blockchains in their deployments. These blockchain networks provide a ledger that stores all transactions 
-executed on the asvin.io network E.g: device register, firmware upload, device update, firmware update, 
-user register etc. All these transactions are connected with hashes and stored in blocks which are again 
-linked with a secured hash. This process provides security and immutability to the ledger. The asvin.io 
-platform is backed with a cluster of servers which runs fabric & besu networks to maintain millions of IoT
-devices. asvin.io has built this cluster in such a way that it can be scaled up multifold to support 
-increasing demand of edge devices. 
+In der asvin Architektur ist das Blockchain-Netzwerk auf Basis von `Hyperledger Fabric <https://www.hyperledger.org/use/fabric>`_ 
+und `Hyperledger besu <https://www.hyperledger.org/use/besu>`_ aufgebaut. Kunden können wählen, welche der beiden Blockchains 
+sie für ihre Einsätze nutzen möchten. Diese Blockchain-Netzwerke stellen ein Ledger zur Verfügung, das alle Transaktionen 
+speichert, die im asvin.io Netzwerk ausgeführt werden, z.B.: Geräteregistrierung, Firmware-Upload, Geräte-Update, 
+Firmware-Update und Benutzerregistrierung. Jede dieser Transaktionen ist mit eindeutigen Hashes gepaart und wird in 
+Blöcken gespeichert, die wiederum mit einem gesicherten Hash verbunden sind. Dieser Prozess bietet Sicherheit und 
+Unveränderlichkeit für den Ledger. Die asvin.io Plattform auf eine unbegrenzte Skalierbarkeit mit einem Cluster von 
+Servern ausgelegt, die Fabric & Besu Netzwerke betreiben, um die Anforderungen zu verwalten um so die Funktionalität 
+für Millionen von IoT-Geräten aufrecht zu erhalten.
+
 
 Hyperledger Fabric
 ##################
 
-The fabric network is constructed of different pluggable modules which allow asvin.io infrastructure
-to be more flexible. This modular and pluggable approach enables asvin.io to develop tailored solutions 
-for IoT customers. The cluster is formed using docker swarm. 
+Die steckbaren Module des Fabric-Netzwerks erlauben der asvin.io-Infrastruktur maximale Flexibilität, 
+sodass asvin.io maßgeschneiderte Lösungen für seine IoT-Kunden entwickeln kann. Der Cluster wird mit 
+`Docker swarm <https://www.docker.com/>`_. entwickelt.
 
-**The fabric has following modules and services:**
+**Die Fabric hat folgende Module und Dienste:**
+1.	Peer: 
+	eine Entität im Fabric-Netzwerk, die Anfragen von Anwendungen empfängt, einen Chaincode 	ausführt, Transaktionen validiert und den Ledger verwaltet.
+2.	Orderer: 
+	Dieser Dienst ordnet alle Transaktionen, die im Fabric-Netzwerk stattfinden, und leitet sie an 	die Peers weiter, um sie zu validieren.
+3. MSP: 
+	stellt jedem Mitglied des Fabric Netzwerks digitale Identitäten zur Verfügung.
+4. Storage:
+ 	Das Fabric-Netzwerk nutzt CouchDB, um den aktuellen Stand der Ledger-Daten zu speichern.
 
-1. Peer: It is an entity in the fabric network which receives request from applications, runs a chaincode, 
-   validates transactions and maintains ledger.
-2. Orderer: This service orders all the transactions happening in the fabric network and forward them to peers to be validated
-3. MSP: It takes care of providing digital identities to every member of the fabric network.
-4. Storage: Fabric network uses CouchDB to store the current state of ledger data.
+
 
 Hyperledger Besu
 ################
 
-Hyperledger Besu is an open source Ethereum client. It can be run on the Ethereum public network or on 
-private permissioned networks. 
+Hyperledger Besu ist ein Open Source Ethereum Client. Er kann auf dem öffentlichen Ethereum-Netzwerk 
+oder auf privaten, zugelassenen Netzwerken betrieben werden.
 
-**Hyperledger Besu’s features include:** 
+**Hyperledger Besu's Features**
 
-1. The Ethereum Virtual Machine (EVM): The EVM is the Turing complete virtual machine that allows the deployment 
-   and execution of smart contracts via transactions within an Ethereum blockchain.
-2. Consensus Algorithms: Hyperledger Besu implements various consensus algorithms which are involved in transaction
-   validation, block validation, and block production (i.e., mining in Proof of Work). 
-3. Storage: Hyperledger Besu uses a RocksDB key-value database to persist chain data locally.  
-4. P2P networking: Hyperledger Besu implements Ethereum’s devp2p network protocols for inter-client communication 
-   and an additional sub-protocol for IBFT2.
-5. User-facing APIs: Hyperledger Besu provides mainnet Ethereum and EEA JSON-RPC APIs over HTTP and WebSocket protocols 
-   as well as a GraphQL API.  
-6. Monitoring: Hyperledger Besu allows you to monitor node and network performance.
-   Node performance is monitored using Prometheus or the debug_metrics JSON-RPC API method. 
-   Network Performance is monitored with Alethio tools such as Block Explorer and EthStats Network Monitor.
-7. Privacy: Privacy in Hyperledger Besu refers to the ability to keep transactions private between the involved parties. 
-   Other parties cannot access the transaction content, sending party, or list of participating parties. 
-   Besu uses a Private Transaction Manager to implement privacy. 
-8. Permissioning: A permissioned network allows only specified nodes and accounts to participate by enabling 
-   node permissioning and/or account permissioning on the network.
+1.	Die Ethereum Virtual Machine (EVM) ist eine vollständige virtuelle Turing-Maschine, die das 
+   Deployment und die Ausführung von Smart Contracts über Transaktionen innerhalb einer Ethereum-Blockchain ermöglicht.
+2.	Konsens-Algorithmen sind an der Validierung von Transaktionen, der Validierung von Blöcken und 
+   der Produktion von Blöcken (d.h. dem Mining in Proof of Work) beteiligt.
+3.	Zur Speicherung wird die Key-Value-Datenbank RocksDB verwendet, um die Daten der Kette lokal 
+   zu persistieren.
+4.	P2P Networking über Ethereums devp2p Netzwerkprotokolle für die Kommunikation zwischen den Clients 
+   und ein zusätzliches Unterprotokoll für IBFT2.
+5.	Benutzerfreundliches Mainnet Ethereum und EEA JSON-RPC APIs über HTTP und WebSocket Protokolle sowie eine GraphQL API.
+6.	Die Node Performance wird mit Prometheus oder der debug_metrics JSON-RPC API Methode überwacht. 
+   Die Netzwerk-Performance wird mit Alethio-Tools wie dem Block Explorer und EthStats Network Monitor überwacht.
+7.	Privacy in Hyperledger Besu bezieht sich auf die Fähigkeit, Transaktionen privat zwischen den beteiligten 
+   Parteien zu halten. Andere Parteien können nicht auf den Inhalt der Transaktion, die sendende Partei oder die 
+   Liste der beteiligten Parteien zugreifen. Besu verwendet einen Private Transaction Manager, um Privatsphäre zu implementieren.
+8.	Ein berechtigtes Netzwerk erlaubt nur bestimmten Knoten und Accounts die Teilnahme, indem es Node 
+   Permissioning und/oder Account Permissioning im Netzwerk aktiviert.
 
-
-The operating system level virtualization is achieved on blockchain server using docker. Each service
-in the network runs in a separate docker container. These docker containers are hosted on multiple
-machines on the cluster. The communication among containers is achieved using docker swarm. The whole 
-blockchain network is developed, deploy and run using docker swarm technology.
+Die Virtualisierung auf Betriebssystemebene wird auf dem Blockchain-Server mit Docker erreicht. 
+Jeder Dienst im Netzwerk läuft in einem separaten Docker-Container und diese Container werden auf 
+mehreren Maschinen des Clusters gehostet. Die Kommunikation zwischen den Containern wird mit Docker 
+Swarm erreicht. Das gesamte Blockchain-Netzwerk wird mit der Docker Swarm Technologie entwickelt und betrieben.
