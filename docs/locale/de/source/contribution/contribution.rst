@@ -6,18 +6,18 @@ Wir bei asvin sind ein großer Unterstützer von Open-Source-Projekten und haben
 asvin-Plattform für die Community offengehalten. Wir begrüßen Ihren Beitrag zum Projekt. 
 Lassen Sie uns gemeinsam die asvin Plattform für alle aufbauen.
 
-Voraussetzung für eine fairen und respektvollem Umgang miteinander ist das Befolgen des asvin :doc:`Verhaltenskodex`. 
+Voraussetzung für eine fairen und respektvollem Umgang miteinander ist das Befolgen des asvin :doc:`code-conduct`. 
 Bevor Sie einen Bug melden oder eine Anfrage starten, lesen Sie bitte vorab unseren asvin-Verhaltenskodex durch. 
 
-Die Quelldateien der asvin-Plattform werden in den GitHub-Repositories gespeichert. Folgen Sie den :doc:`GitHub-Beitragsrichtlinien`, 
+Die Quelldateien der asvin-Plattform werden in den GitHub-Repositories gespeichert. Folgen Sie den :doc:`github-contribution`, 
 um einen Beitrag zum Projekt zu leisten.
 
 .. toctree::
   :maxdepth: 1
 	
-  Asvin-Verhaltenskodex
-	GitHub Beitragsrichtlinien
-	Stilrichtlinien für die Dokumentation
+  code-conduct
+  github-contribution
+  style-guide
 
 
 Wie Sie beitragen können:
