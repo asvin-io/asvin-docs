@@ -1,57 +1,68 @@
-Asvin Customer Platform
-=======================
+asvin’s beehive Plattform
+=========================
 
-Asvin IoT platform provides secure OTA updates for IoT devices. Lets us get started with using the platform.
+Die asvin IoT Plattform bietet sichere OTA Updates für IoT Geräte. Folgen Sie folgenden Schritten, 
+um die Plattform nutzen zu können. 
 
-1.  *Register Device*:
-        When you start and upload your code on any of the supported boards in the 
-        :doc:`../tutorials/tutorials` section, the board will start executing 
-        and calling the defined API routes. To Register the device the 
-        :ref:`Register Device` API is called.
-        After this API is sucessfully called, you will see your device appear
-        under the "Just Registered devices" section of the platfomr under devices. 
+1.  *Registrierung von Devices/ Geräten*:
+        
+        Wenn Sie anfangen und einen Code und auf eines der unterstützten Boards in der 
+        :doc:`../tutorials/tutorials` Sektion laden, beginnt das Board mit der Ausführung und ruft die definierten 
+        API Routen auf. Um das Gerät zu registrieren, wird die :ref:`Register Device` API aufgerufen. 
+        Nachdem diese API erfolgreich aufgerufen wurde, erscheint dein Gerät in der Untersektion 
+        **"Lobby"** im Bereich **"Devices"** der Plattform.
 
-        .. image:: ../images/register_edited.jpg
+        .. image:: ../images/register_edited.png
             :width: 400pt
             :align: center
 
 
-2.  *Device Groups*:
-        Asvin's IoT platform provides updates for a group of devices. We can create a group to associate these devices by various categories
-        such as, location, customer, deployment etc. We can add our target device to this group. Under Devices > Device groups click on 
-        *"New Device Group"*. After this navigate back to the "Just registered" devices, click device 
-        grouping and add the device to the newly created device group.         
+2.  *Gerätegruppen*:
+        
+        Die IoT-Plattform von asvin bietet die Möglichkeit Updates für Gruppen von Geräten auszuführen. 
+        Geräte können anhand verschiedener Kategorien wie Standort, Kunde, Einsatz etc. in Gruppen zusammengefasst werden. 
+        So ordnen Sie ein Gerät einer Gerätegruppe zu: 
 
-3.  *File Groups*:
-        Once our devics are assigned to a file group. We can upload a file we want to provide as an OTA 
-        update. Usually this is *<somefile_name>.bin* or the type of file associated with our particular devices. 
-        Let us in this example upload the esp-ota-blink.bin file to the filegroup ESP_OTA_Test
+        - Erstellen Sie unter *Geräte > Gerätegruppe* > *Neue Gerätegruppe* eine neue Gerätegruppe. 
+        - Navigieren Sie zu den neu registrierten Geräten zurück und fügen Sie das Gerät einer Gerätegruppe zu.
+
+
+        .. raw:: html
+
+          <video width="600" autoplay muted>
+          <source src="../_static/videos/rollout.m4v" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+
+3.  *Dateigruppen*:
+        
+Sobald ein Gerät einer Gerätegruppe zugewiesen ist, kann ein OTA-Update hochgeladen werden. In aller Regel 
+        handelt es sich dabei um eine Datei im Format *<new_firmware_file_name>.bin* oder der Dateityp, der mit dem 
+        jeweiligen Geräten verbunden ist. Im Folgenden wird exemplarisch das Hochladen der Datei esp-ota-blink.bin 
+        in die Dateigruppe ESP_OTA_Test gezeigt: 
+
     
         .. image:: ../images/upload_file.png
             :width: 400pt
             :align: center
 
 4.  *Rollout*:
-        -   In this example we will setup a rollout to deliver OTA update of the file specified above to our target ESP8266 device.
-            In the rollout section let us start by creating a rollout.
-            Fill in the options as shown in the screenshot.
-            Choose either batch/immediate update. 
-            There is an option to choose a time or do an update immediately.
-            Select the file to be rolled out as update and click *Save* 
+        -   In diesem Beispiel wird ein Rollout eingerichtet, um ein OTA-Update der oben angegebenen Datei an unser 
+            ESP8266-Zielgerät zu übertragen. Im Abschnitt "Rollout" beginnen wir mit der Erstellung eines Rollouts. 
+            Füllen Sie die Optionen wie im Screenshot gezeigt aus. Für die Priorisierung des Updates wählen Sie bitte 
+            entweder Batch oder Immediately. Weiterhin besteht die Möglichkeit den Zeitpunkt für das Update zu wählen. 
+            Zum Schluss wählen Sie die gewünschte Datei aus und klicken auf *Speichern*.  
 
-            .. image:: ../images/rollout_edited.jpg
+            .. image:: ../images/rollout_edited.png
                 :width: 400pt
                 :align: center
 
-        -   The rollout is now enabled. Next time our device queries the  
-            :ref:`Next Rollout` API, 
-            the rollout will be avaliable and further API's will be called from our target device.
-            The target device will update itself after this with the file we uploaded earlier. 
+        -   Das Rollout ist nun aktiviert. Das nächste Mal, wenn das gewählte Gerät die :ref:`Next Rollout` API, 
+            anfordert und ein aktives Rollout bereitsteht, werden weitere APIs vom Gerät angefordert. 
+            Das Gerät vollzieht das Update selbstständig. 
+            
+        -   Sobald der Rollout abgeschlossen ist, wird die neue Datei auf dem Zielgerät angezeigt. 
+            In diesem Beispiel haben wir eine Blink-LED-Datei ausgerollt. Das Zielgerät ruft die 
+            :ref:`Rollout Success` API auf, die in diesem Beispiel der Teil der Datei ist, den wir zuvor hochgeladen haben
 
-        -   Once the rollout is completed the new file will be refelected on the target device. In this example we rolled out a BLink LED file. 
-            The target device will call the :ref:`Rollout Success` API,
-            which in this example is the part of the file that we uploaded earlier    
-
-        -   The change in the firmware version of the device is also updated on the 
-            `Asvin platform <https://app.asvin.io/>`_  
-    
+        -   Die Änderung der Firmware-Version des Geräts wird auch auf der `asvin platform <https://app.asvin.io/>`_ aktualisiert
