@@ -1,84 +1,86 @@
-=================
-Asvin Model
-=================
+==============
+Asvin Modell
+==============
 
-In this section we will take a brief look at the asvin architecture diagram 
-and explain its components briefly. Some related concepts and keywords are also mentioned 
-below.
+In diesem Abschnitt werden wir einen kurzen Blick auf die Architektur von Asvin werfen 
+und seine Komponenten kurz erklären. Einige relevante Konzepte und Schlüsselwörter werden 
+ebenfalls erläutert.
 
     .. image:: ../images/asvinarchitecture.png
+        :alt: asvin architecture
         :width: 800pt
         :align: center
 
+Kundenplattform
+###############
+
+asvin bietet eine benutzerfreundliche Kundenplattform, um die Komplexität der Hintergrundprozesse 
+zu abstrahieren, um Geräte zu registrieren, Firmware-Rollouts einzurichten und zu planen, Gruppenaktionen 
+für registrierte Geräte zu definieren und Geräte auf eine Blacklist zu setzen. Die Kundenplattform zeigt 
+auch Informationen zu Firmware-Updates an und liefert die aktuelle Version der Edge-Geräte.
+
+Version controller
+##################
+
+Der Versions-Controller hält aktuelle Informationen über die verfügbare Firmware für ein bestimmtes 
+Gerät oder eine Gerätegruppe auf der asvin.io-Plattform bereit. Er ist eine der Kernkomponenten der 
+asvin Architektur.
 
 
 Interplanetary FileSystem
 #########################
 
-Interplanetary FileSystem or IPFS is a distributed peer to peer hypermedia protocol designed
-for storing and sharing data in a distributed file system. It is one of the core components 
-of Asvin architecture. Asvin uses IPFS protocol to store firmware and patches. Check out the
-detailed notes on IPFS here.
+Interplanetary FileSystem oder IPFS ist ein verteiltes Peer-to-Peer-Hypermedia-Protokoll, welches 
+zum Speichern und Teilen von Daten in einem verteilten Dateisystem entwickelt wurde. IPFS dient als 
+eine der Kernkomponenten der asvin Architektur. asvin nutzt das `IPFS <https://ipfs.io/>`_. Protokoll 
+um Firmware, Updates und Patches zu speichern. 
+
+
 
 **Content Identifier**
 
-Data exchanged on decentralised platforms like `IPFS <https://ipfs.io/>`_ depends on content-based addressing rather Then
-local addressing to securely locate and identify data. A Content Identifier (CID) is a self describing
-content address identifier. CID forms an address based on content itself which is a cryptographic hash
-typically SHA-256 which is 32 bytes. An example of a binary image file stored on an IPFS network, the 
-CID might be  **QmcRD4wkPPi6dig81r5sLdrtd1gDCL4zgpEj9CfuRrGbzF**.
+Der Datenaustausch auf dezentralen Plattformen wie `IPFS <https://ipfs.io/>`_ hängt von der inhaltsbasierten Adressierung 
+ab, anstatt von der lokalen Adressierung, um Daten sicher zu lokalisieren und zu identifizieren. Ein 
+Content Identifier (CID) ist ein selbstbeschreibender Inhaltsadressbezeichner, kryptographischer Hash, 
+typischerweise SHA-256, der 32 Bytes lang ist. Der CID für eine binäre Bilddatei, die in einem IPFS Netzwerk 
+gespeichert ist, könnte **QmcRD4wkPPi6dig81r5sLdrtd1gDCL4zgpEj9CfuRrGbzFsein**.
+
+
 
 Blockchain
 ##########
 
-On the Asvin platform we use the `Hyperledger Fabric <https://www.hyperledger.org/use/fabric>`_ and 
-`Hyperledger besu <https://www.hyperledger.org/use/besu>`_ blockchains. It is one of the core componets 
-of the asvin platform. The asvin platform uses Blockchain technology to store all transactions executed 
-on the asvin.io network: device register, firmware upload, device update, firmware update, user registeration
-etc. All these transactions are connected with hashes and stored in blocks which are again linked with a 
-secured hash. 
+Die asvin-Plattform nutzt die Blockchain-Technologie, um alle Transaktionen zu speichern, die 
+im asvin.io-Netzwerk ausgeführt werden, einschließlich: Geräteregistrierung, Firmware-Upload, 
+Geräte-Update, Firmware-Update, Benutzerregistrierung, etc. All diese Transaktionen sind mit Hashs 
+verbunden und in Blöcken gespeichert, die wiederum mit einem gesicherten Hash verbunden sind. Für 
+die asvin Plattform nutzen wir die `Hyperledger Fabric <https://www.hyperledger.org/use/fabric>`_  
+und `Hyperledger besu <https://www.hyperledger.org/use/besu>`_ blockchains.
+
 
 **Distributed Ledger**
 
-Distributed ledger technology (DLT) is a digital system for recording the transaction of assets in which 
-the transactions and their details are recorded in multiple places at the same time. Unlike traditional databases,
-distributed ledgers have no central data store or administration functionality. The above mentioned Blockchain 
-is a type of DLT. 
+Distributed Ledger Technology (DLT) ist ein digitales System zur Aufzeichnung der Transaktion 
+von Assets, in dem die Details von bestimmten Transaktionen an mehreren Stellen aufgezeichnet 
+werden. Im Gegensatz zu traditionellen Datenbanken gibt es bei Distributed Ledger keine zentrale 
+Datenspeicherung oder Verwaltungsfunktion. Die oben erwähnte Blockchain ist eine Art von DLT.
 
 
 **Smart Contracts**
 
-A smart contract is a computer program or a transaction protocol which is intended to automatically 
-execute, control or document legally relevant events and actions according to the terms of a contract 
-or an agreement.The objectives of smart contracts are the reduction of need in trusted intermediators,
-arbitrations and enforcement costs, fraud losses, as well as the reduction of malicious and accidental 
-exceptions.
+Ein Smart Contract ist ein Computerprogramm oder ein digitales Transaktionsprotokoll, das dazu gedacht 
+ist, rechtlich relevante Ereignisse und Handlungen gemäß den Bedingungen eines Vertrages oder einer 
+Vereinbarung automatisch auszuführen, zu kontrollieren oder zu dokumentieren. Das Ziel eines Smart Contracts 
+ist es, den Bedarf an vertrauenswürdigen Vermittlern, Schlichtung, Durchführungskosten, Betrugsverluste sowie 
+die Risikominderung von schädlichen Angriffen und unbeabsichtigten Störungen zu reduzieren.
 
-Edge Devices
-############
+Endgeräte oder Edge Devices
+###########################
 
-The edge devices are end points in the asvin.io architecture. These are the end devices in an
-IoT network which are operated to control, manage and solve a physical task for an instance,
-smart washing machine in a house, temperature and humidity monitor in a chemical plant, air
-quatliy sensor installed in a city etc. These devices have microcontrollers and sensors at their
-core. Usually, edge devices have a small footprint and are easy to manage in
-remote areas under extreme environmental conditions. Examples for egde devices are industrial process
-monitoring sensors, smart meters, Lora nodes, smoke detectors etc.
+Endgeräte sind Endpunkte in der asvin.io-Architektur und in einem IoT-Netzwerk, die eine bestimmte physikalische 
+Aufgabe steuern, verwalten und lösen: Edge Devices schalten zum Beispiel eine smarte Waschmaschine in einem Haus 
+ein, überwachen Temperatur und Luftfeuchtigkeit in einer Chemiefabrik oder einen Luftqualität in einer Stadt. 
+Diese Geräte haben als Herzstück Mikrocontroller und Sensoren und mit ihrem geringen Platzbedarf sind diese Edge 
+Devices leicht in abgelegenen Gebieten unter extremen Umweltbedingungen zu betreiben. Beispiele für Edge Devices 
+im Industrial Internet of Things (IIoT) sind Prozessüberwachungssensoren, Smart Meter, Lora-Knoten, Rauchmelder, etc.
 
-
-Customer Platform
-#################
-
-Asvin provides a user friendly customer platform to abstract the complexities of the background processes
-this customer platform enables users to register devices, setup & schedule firmware rollouts, group actions on
-registered devices, blacklisting of devices etc.
-
-The customer platform also displays information of firmware updates and provides version of edge devices.
-
-
-
-Version controller
-##################
-
-The version controller maintains updated information of firmware avaliable for a particular edge device
-or device group on the asvin.io platform. It is one of the core components of the Asvin architecture.
