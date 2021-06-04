@@ -8,4 +8,5 @@ Dieser Abschnitt enthält Tutorials für die Verwendung der Asvin-Plattform.
 
    esp-update
    pycom-ota
+   esp32-ota
    fed4fire-experiment
