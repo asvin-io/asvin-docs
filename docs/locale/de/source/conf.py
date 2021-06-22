@@ -96,6 +96,9 @@ html_css_files = [
     'css/custom.css',
 ]
 
+html_js_files = [
+    'js/custom.js'
+]
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
 #
