@@ -3,7 +3,7 @@ Over the air updates mit ESP8266 (nodemcu) boards
 ========================================================
 
 In diesem Tutorial sehen wir die Demonstration von OTA-Updates unter Verwendung der 
-asvin IoT-Plattform und des nodemscu-Boards basierend auf dem ESP8266-Chipsatz.
+asvin IoT-Plattform und des nodemcu-Boards basierend auf dem ESP8266-Chipsatz.
 
     .. image:: ../images/OTA_wb.jpg
         :width: 400pt
