@@ -8,6 +8,6 @@ This section defines REST API's supported by all components of Asvin. To test th
    :maxdepth: 1
 
    oauth/oauth-api
-   vc/version-controller-api
+   vc/version-controller-api-copy
    blockchain/blockchain-api
    ipfs/ipfs-api

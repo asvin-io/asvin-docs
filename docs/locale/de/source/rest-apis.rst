@@ -10,6 +10,6 @@ Doc oder die
    :maxdepth: 1
 
    oauth/oauth-api
-   vc/version-controller-api
+   vc/version-controller-api-copy
    blockchain/blockchain-api
    ipfs/ipfs-api
