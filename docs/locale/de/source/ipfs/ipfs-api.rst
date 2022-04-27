@@ -7,10 +7,10 @@ This section shows the Rest API end-points of IPFS.
    :backlinks: none
    :depth: 3
 
-Download Firmware
+Download Firmware 
 +++++++++++++++++
 
-.. http:post:: /firmware/download
+.. http:get:: /firmware:id
 
    Get a device.
 

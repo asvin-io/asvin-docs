@@ -10,7 +10,7 @@ This section shows the Rest API end-points of Blockchain.
 Get Device
 ++++++++++
 
-.. http:post:: /device/get
+.. http:get:: /device/:id
 
    Get a device.
 
@@ -23,21 +23,17 @@ Get Device
 
       .. code-tab:: bash cURL
  
-         $ curl -X POST 'https://bc-server/device/get' \
+         $ curl 'https://bc-server/device/:id' \
          -H 'Content-Type: application/json' \
-         -H 'X-Access-Token: <JWT-TOKEN> \
-         -d '{
-           "id": "<device-id>"
-         }'
+         -H 'X-Access-Token: <JWT-TOKEN>
 
       .. code-tab:: js
 
          var request = require('request');
          var options = {
-           'method': 'POST',
-           'url': 'https://bc-server/device/get',
+           'method': 'GET',
+           'url': 'https://bc-server/device/:id',
            'headers': {
-             'Content-Type': 'application/json',
              'X-Access-Token': '<JWT-TOKEN>'
            },
            body: JSON.stringify({"id":"<device-id>"})
@@ -53,15 +49,12 @@ Get Device
 
          import requests
 
-         url = "https://bc-server/device/get"
+         url = "https://bc-server/device/:id"
  
-         payload="{\n\t\"id\": \"device-id\"\n}"
          headers = {
-           'Content-Type': 'application/json',
            'X-Access-Token': '<JWT-TOKEN>'
          }
-         response = requests.request("POST", url, headers=headers, data=payload)
-         print(response.text)
+         response = requests.request("GET", url, headers=headers)
  
 
       .. code-tab:: php
@@ -69,16 +62,11 @@ Get Device
          <?php
          $client = new http\Client;
          $request = new http\Client\Request;
-         $request->setRequestUrl('https://bc-server/device/get');
-         $request->setRequestMethod('POST');
-         $body = new http\Message\Body;
-         $body->append('{
-           "id" : "<device-id>"
-         }');
-         $request->setBody($body);
+         $request->setRequestUrl('https://bc-server/device/:id');
+         $request->setRequestMethod('GET');
+         
          $request->setOptions(array());
          $request->setHeaders(array(
-           'Content-Type' => 'application/json',
            'X-Access-Token' => '<JWT-TOKEN>'
          ));
          $client->enqueue($request)->send();
@@ -103,7 +91,7 @@ Get Device
 Get Firmware
 ++++++++++++
 
-.. http:post:: /firmware/get
+.. http:get:: /firmware/:id
 
    Get a device.
 
@@ -116,24 +104,18 @@ Get Firmware
 
       .. code-tab:: bash cURL
  
-         $ curl -X POST 'https://bc-server/device/get' \
-         -H 'Content-Type: application/json' \
-         -H 'X-Access-Token: <JWT-TOKEN> \
-         -d '{
-           "id": "<firmware-id>"
-         }'
+         $ curl 'https://bc-server/device/:id' \
+         -H 'X-Access-Token: <JWT-TOKEN> 
 
       .. code-tab:: js
 
          var request = require('request');
          var options = {
-           'method': 'POST',
-           'url': 'https://bc-server/firmware/get',
+           'method': 'GET',
+           'url': 'https://bc-server/firmware/:id',
            'headers': {
-             'Content-Type': 'application/json',
              'X-Access-Token': '<JWT-TOKEN>'
-           },
-           body: JSON.stringify({"id":"<firmware-id>"})
+           })
  
          };
          request(options, function (error, response) {
@@ -146,14 +128,12 @@ Get Firmware
 
          import requests
 
-         url = "https://bc-server/firmware/get"
+         url = "https://bc-server/firmware/:id"
  
-         payload="{\n\t\"id\": \"firmware-id\"\n}"
          headers = {
-           'Content-Type': 'application/json',
            'X-Access-Token': '<JWT-TOKEN>'
          }
-         response = requests.request("POST", url, headers=headers, data=payload)
+         response = requests.request("GET", url, headers=headers)
          print(response.text)
  
 
@@ -162,16 +142,10 @@ Get Firmware
          <?php
          $client = new http\Client;
          $request = new http\Client\Request;
-         $request->setRequestUrl('https://bc-server/firmware/get');
-         $request->setRequestMethod('POST');
-         $body = new http\Message\Body;
-         $body->append('{
-           "id" : "<firmware-id>"
-         }');
-         $request->setBody($body);
+         $request->setRequestUrl('https://bc-server/firmware/:id');
+         $request->setRequestMethod('GET');
          $request->setOptions(array());
          $request->setHeaders(array(
-           'Content-Type' => 'application/json',
            'X-Access-Token' => '<JWT-TOKEN>'
          ));
          $client->enqueue($request)->send();

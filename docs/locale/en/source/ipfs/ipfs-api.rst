@@ -10,7 +10,7 @@ This section shows the Rest API end-points of IPFS.
 Download Firmware
 +++++++++++++++++
 
-.. http:post:: /firmware/download
+.. http:post:: /firmware
 
    Get a device.
 
@@ -23,7 +23,7 @@ Download Firmware
 
       .. code-tab:: bash cURL
  
-         $ curl -X POST 'https://ipfs-server/firmware/download' \
+         $ curl -X POST 'https://ipfs-server/firmware' \
          -H 'x-access-token: <JWT-TOKEN>' \
          --header 'Content-Type: application/json' \
          -d '{
@@ -35,7 +35,7 @@ Download Firmware
          var request = require('request');
          var options = {
            'method': 'POST',
-           'url': 'https://ipfs-server/firmware/download',
+           'url': 'https://ipfs-server/firmware',
            'headers': {
              'x-access-token': '<JWT-TOKEN>',
              'Content-Type': 'application/json'
@@ -53,7 +53,7 @@ Download Firmware
 
          import requests
 
-         url = "https://ipfs-server/firmware/download"
+         url = "https://ipfs-server/firmware"
  
          payload="{\n    \"cid\": \"QmWATWQ7fVPP2EFGu71UkfnqhYXDYH566qy47CnJDgvs8u\"\n}"
          headers = {
@@ -69,7 +69,7 @@ Download Firmware
          <?php
          $client = new http\Client;
          $request = new http\Client\Request;
-         $request->setRequestUrl('https://ipfs-server/firmware/download');
+         $request->setRequestUrl('https://ipfs-server/firmware');
          $request->setRequestMethod('POST');
          $body = new http\Message\Body;
          $body->append('{
