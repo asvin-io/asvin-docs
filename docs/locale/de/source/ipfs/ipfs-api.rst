@@ -23,25 +23,19 @@ Download Firmware
 
       .. code-tab:: bash cURL
  
-         $ curl -X POST 'https://ipfs-server/firmware/download' \
+         $ curl -X GET 'https://ipfs-server/firmware/:cid' \
          -H 'x-access-token: <JWT-TOKEN>' \
-         --header 'Content-Type: application/json' \
-         -d '{
-             "cid": "QmWATWQ7fVPP2EFGu71UkfnqhYXDYH566qy47CnJDgvs8u"
-         }'
+         --header 'Content-Type: application/json'
 
       .. code-tab:: js
 
          var request = require('request');
          var options = {
-           'method': 'POST',
-           'url': 'https://ipfs-server/firmware/download',
+           'method': 'GET',
+           'url': 'https://ipfs-server/firmware/:cid',
            'headers': {
              'x-access-token': '<JWT-TOKEN>',
-             'Content-Type': 'application/json'
            },
-           body: JSON.stringify({"cid":"QmWATWQ7fVPP2EFGu71UkfnqhYXDYH566qy47CnJDgvs8u"})
-
          };
          request(options, function (error, response) {
            if (error) throw new Error(error);
@@ -53,14 +47,12 @@ Download Firmware
 
          import requests
 
-         url = "https://ipfs-server/firmware/download"
+         url = "https://ipfs-server/firmware/:cid"
  
-         payload="{\n    \"cid\": \"QmWATWQ7fVPP2EFGu71UkfnqhYXDYH566qy47CnJDgvs8u\"\n}"
          headers = {
            'x-access-token': '<JWT-TOKEN>',
-           'Content-Type': 'application/json'
          }
-         response = requests.request("POST", url, headers=headers, data=payload)
+         response = requests.request("GET", url, headers=headers)
          print(response.text)
  
 
@@ -69,17 +61,13 @@ Download Firmware
          <?php
          $client = new http\Client;
          $request = new http\Client\Request;
-         $request->setRequestUrl('https://ipfs-server/firmware/download');
-         $request->setRequestMethod('POST');
+         $request->setRequestUrl('https://ipfs-server/firmware/:cid');
+         $request->setRequestMethod('GET');
          $body = new http\Message\Body;
-         $body->append('{
-             "cid": "QmWATWQ7fVPP2EFGu71UkfnqhYXDYH566qy47CnJDgvs8u"
-         }');
-         $request->setBody($body);
+         
          $request->setOptions(array());
          $request->setHeaders(array(
            'x-access-token' => '<JWT-TOKEN>',
-           'Content-Type' => 'application/json'
          ));
          $client->enqueue($request)->send();
          $response = $client->getResponse();
