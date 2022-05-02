@@ -35,9 +35,7 @@ Get Device
            'url': 'https://bc-server/device/:id',
            'headers': {
              'X-Access-Token': '<JWT-TOKEN>'
-           },
-           body: JSON.stringify({"id":"<device-id>"})
- 
+           })
          };
          request(options, function (error, response) {
            if (error) throw new Error(error);
