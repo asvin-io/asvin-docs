@@ -1,8 +1,8 @@
 =========================
-Beehive - Plattform
+Device Security Booster™ - Plattform
 =========================
 
-In diesem Abschnitt erläutern wir die **Plattform beehive** als Bestandteil der asvin Architektur. 
+In diesem Abschnitt erläutern wir die **Plattform Device Security Booster™** als Bestandteil der asvin Architektur. 
 
     .. image:: ../images/asvinarchitecture-customerplatform.png
         :width: 800pt
@@ -16,7 +16,7 @@ verwaltet werden und, dass es keine Latenz in der Verbindung zwischen dem Netzwe
 IoT-Edge-Geräten und dem asvin.io-Server gibt.
 
 
-**Beehive** - Die Kundenplattform beinhaltet folgende Funktionen:
+**Kundenplattform** - Die Kundenplattform beinhaltet folgende Funktionen:
 
 1. Service Dashboard
     Es dient als Portal für die IoT-Gerätebetreiber, um direkt zu interagieren und den Update- 	und  	Patch-Status 

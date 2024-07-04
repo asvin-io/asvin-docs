@@ -1,4 +1,4 @@
-asvin’s beehive Plattform
+asvin’s Kundenplattform Plattform
 =========================
 
 Die asvin IoT Plattform bietet sichere OTA Updates für IoT Geräte. Folgen Sie folgenden Schritten, 

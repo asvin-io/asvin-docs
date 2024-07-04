@@ -14,7 +14,7 @@ This abstraction is facilitated using a cluster of servers backed with a databas
 A load balancer ensures that the volume of IoT devices being maintained on the asvin.io 
 platform encounter no latency in the connection between the customer’s network and their IoT edge devices to the asvin.io server.
 
-**Beehive** - The customer Platform delivers following functions:
+**Device Security Booster™** - The customer Platform delivers following functions:
 
 1. Service Dashboard
     It serves as a portal for the IoT device operators to directly interact and 

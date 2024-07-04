@@ -51,4 +51,4 @@ Server antworten dem Edge-Device mit der Information über eine gültige Firmwar
 
 Der Version Controller verwaltet Echtzeit-Informationen über verschiedene Versionen der auf den Servers 
 verfügbaren Firmware. Außerdem verfügt er über eine Liste der verfügbaren Firmware für alle Edge-Devices 
-auf der asvin.io-Plattform. Er hält die Liste durch Interaktion mit dem beehive-Server aktualisiert.
+auf der asvin-Plattform. Er hält die Liste durch Interaktion mit dem Kundenplattform aktualisiert.

@@ -14,4 +14,4 @@ Follow this blog here for a detailed  `setup guide <https://asvin.io/physically-
 
 Later on we also describe the process of key generation `here <https://asvin.io/puf-generate-unique-ids/>`_ based on PUF technology.
 This generated key can be used in your applications in various ways. 
-We at asvin are using the generated ID as a unique device ID while making requests to the asvin BeeHive IoT update platform.
+We at asvin are using the generated ID as a unique device ID while making requests to the Device Security Booster™ IoT update platform.

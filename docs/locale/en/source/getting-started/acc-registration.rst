@@ -1,8 +1,8 @@
 Account Registration
 ====================
 
-asvin Beehive provides an interactive dashboard to visualize and manages devices, firmware, and rollouts. It is necessary to create an account 
-on the asvin Beehive to use asvin services. The process is quite simple. All you need is a valid email address. Go to the register page, input your
+Device Security Booster™ provides an interactive dashboard to visualize and manages devices, firmware, and rollouts. It is necessary to create an account 
+on the Device Security Booster™ to use asvin services. The process is quite simple. All you need is a valid email address. Go to the register page, input your
 email address, select couple of check boxes and click on Register now. It is shown below.   
 
 .. raw:: html
