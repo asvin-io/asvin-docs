@@ -4,16 +4,16 @@
      rechts unten im Navigationsbereich.
      
 
-FUOTA Plattform für Unternehmen
-===============================
+Plattform zur Verwaltung des Lebenszyklus von IoT-Geräten
+=========================================================
 
 .. image:: images/asvin-logo-transparent.png
    :alt: asvin logo
    :height: 70px
 
-Ein Platform-as-a-Service (PasS) in Enterprise-Qualität zur Verwaltung, 
-Verteilung und Überwachung von Firmware-Updates und zur Erstellung einer 
-Echtzeit-Bedrohungslandschaft für registrierte IoT-Geräte. 
+Eine Platform-as-a-Service (PasS) der Enterprise-Klasse zur Lebenszyklusverwaltung von IoT-Geräten, 
+zur Verteilung und Überwachung von Firmware-Updates und zur Erstellung einer 
+Echtzeit-Bedrohungslandschaft für registrierte IoT-Geräte.
 
 .. toctree::
    :maxdepth: 1

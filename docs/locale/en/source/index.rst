@@ -4,15 +4,15 @@
 	  You can change it using selector at the bottom of that
 	  navigation panel.
 
-FUOTA Platform for the Enterprise
-=================================
+IoT Device Lifecycle Management Platform
+========================================
 
 .. image:: images/asvin-logo-transparent.png
    :alt: asvin logo
    :height: 70px
 
-An Enterprise-grade Platform-as-a-Service (PasS) to manage, distribute and monitor firmware updates, and produce a real-time threat landscape for 
-registered IoT devices.
+An Enterprise-grade Platform-as-a-Service (PasS) to manage lifecycle of IoT devices and distribute and 
+monitor firmware updates, and produce a real-time threat landscape for registered IoT devices.
 
 .. toctree::
    :maxdepth: 1
