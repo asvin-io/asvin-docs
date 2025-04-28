@@ -1,6 +1,6 @@
 <img src="images/logo.png" width="200"/>
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)(https://asvin.readthedocs.io/en/latest/?badge=latest)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
 - [Device Security Booster](#asvin)
 - [Documentation](#documentation)
