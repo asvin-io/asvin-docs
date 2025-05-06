@@ -8,8 +8,8 @@ Requirements
 ############
 1. `jFed Experimenter Toolkit <https://jfed.ilabt.imec.be/>`_
 2. `ESpec Generator <https://github.ugent.be/jlemaes/generate-espec>`_
-3. `asvin API stack image <https://github.com/Asvin-io/tutorials/tree/main/Fed4FIRE-Experiments/image>`_
-4. `Grafana json file <https://github.com/Asvin-io/tutorials/tree/main/Fed4FIRE-Experiments/grafana>`_
+3. `asvin API stack image <https://github.com/asvin-io/tutorials/tree/main/Fed4FIRE-Experiments/image>`_
+4. `Grafana json file <https://github.com/asvin-io/tutorials/tree/main/Fed4FIRE-Experiments/grafana>`_
 
 
 Getting Started
@@ -53,7 +53,7 @@ Getting Started
                 :align: center
 
 3. Deploying asvin API stack image
-        The example python code running the API stack for simulating the edge device is provided in `asvin Github repository <https://github.com/Asvin-io/tutorials/tree/main/Fed4FIRE-Experiments/image>`_.
+        The example python code running the API stack for simulating the edge device is provided in `asvin Github repository <https://github.com/asvin-io/tutorials/tree/main/Fed4FIRE-Experiments/image>`_.
         The user has to provide the credentials for the Blockchain server and IPFS Login, User Key and Device key in the UserDetails.json file.
         
         The image takes 2 user inputs:
@@ -91,8 +91,8 @@ Getting Started
         4. Response times of each requests to all 3 servers
         5. Successful firmware updates
         
-        In Grafana, these values are fetched from the influxdb server and visualized as time-series graphs to analyze the robustness of asvin platform.
-        The `sample json file <https://github.com/Asvin-io/tutorials/tree/main/Fed4FIRE-Experiments/grafana>`_ can be used to create a Grafana dashboard. 
+        In Grafana, these values are fetched from the influxdb server and visualized as time-series graphs to analyze the robustness of Device Security Booster.
+        The `sample json file <https://github.com/asvin-io/tutorials/tree/main/Fed4FIRE-Experiments/grafana>`_ can be used to create a Grafana dashboard. 
         
         .. image:: ../images/Fed4FIRE/Grafana.JPG
                 :width: 325pt

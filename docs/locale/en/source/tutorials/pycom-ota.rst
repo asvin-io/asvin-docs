@@ -17,7 +17,7 @@ Requirements
 1. Pycom `Gpy board <https://pycom.io/product/gpy/>`_
 2. Pycom `Expansion board <https://pycom.io/product/expansion-board-3-0/>`_ 
 3. Micro USB cable
-4. Asvin platform subscription 
+4. Device Security Booster subscription 
 5. `Pymakr <https://marketplace.visualstudio.com/items?itemName=pycom.Pymakr>`_ VScode extension 
 
 
@@ -38,7 +38,7 @@ folder in VScode. Make sure to have the updated firmware on your Pycom *Gpy* as 
         This script is a wrapper around the pycom Wlan() library
     
     *asvin.py*
-        This file contains functions to call various API's from the Asvin Platform.
+        This file contains functions to call various API's from the platform.
     
     *config.py*
         This file contains various user configuration options and are discussed in the next section.
@@ -52,9 +52,9 @@ folder in VScode. Make sure to have the updated firmware on your Pycom *Gpy* as 
         :align: center
         :alt: configpy
 
-    - Under the Asvin Credentials populate the following fields
-        - customer_key:     Enter your Customer key from the asvin platform 
-        - device_key:       Enter your Device key from asvin platform 
+    - Under the asvin Credentials populate the following fields
+        - customer_key:     Enter your Customer key from the platform 
+        - device_key:       Enter your Device key from platform 
       
     - Under WiFi Credentials, fill in the SSID and password.
     - Optionally, you can also set the LED color for various funtions from the config file.
@@ -80,7 +80,7 @@ folder in VScode. Make sure to have the updated firmware on your Pycom *Gpy* as 
             The device will be automatically registered on booting
 
     2.  *Device Groups*:
-            Setup a device group on the Asvin IoT platform.
+            Setup a device group on the asvin IoT platform.
 
     3.  *File Groups*:
             In the case of Pycom target devices, there are certain modifications to be done to files before uploading them to
@@ -93,7 +93,7 @@ folder in VScode. Make sure to have the updated firmware on your Pycom *Gpy* as 
                 path="/flash/config.py"
                 version = "0.0.1"
                 """
-                Asvin OTA Config File
+                asvin OTA Config File
                 """
 
                 

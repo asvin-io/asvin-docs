@@ -1,5 +1,5 @@
 =================
-Asvin Model
+asvin Model
 =================
 
 In this section we will take a brief look at asvin’s architecture and briefly 
@@ -43,10 +43,10 @@ stored on an IPFS network might be **QmcRD4wkPPi6dig81r5sLdrtd1gDCL4zgpEj9CfuRrG
 Blockchain
 ##########
 
-The asvin platform uses blockchain technology to store all of the transactions executed on the 
+The Device Security Booster uses blockchain technology to store all of the transactions executed on the 
 asvin.io network including: device registration, firmware upload, device update, firmware update, 
 user registration, etc. All these transactions are connected with hashes and stored in blocks 
-which are again linked to a secured hash. For the asvin platform we use the 
+which are again linked to a secured hash. For the platform we use the 
 `Hyperledger Fabric <https://www.hyperledger.org/use/fabric>`_ and 
 `Hyperledger besu <https://www.hyperledger.org/use/besu>`_ blockchains. 
 
