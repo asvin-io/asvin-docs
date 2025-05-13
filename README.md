@@ -7,7 +7,7 @@
 - [Contributing](#contributing)
 - [License](#license)
 
-# Device Security Booster
+# Device Security Booster™
 
 asvin facilitates Device Security Booster as a Service to distribute over the air firmware updates for IoT devices.
 
@@ -25,7 +25,7 @@ The documentation is generated for each commit in the master branch. Therefore, 
 1. Download and install latest version of Python from [here](https://www.python.org/downloads/)
 2. Clone the repo
    ```
-   git clone https://github.com/Asvin-io/asivn-docs.git
+   git clone https://github.com/asvin-io/asivn-docs.git
    ```
 3. Install dependencies
 
