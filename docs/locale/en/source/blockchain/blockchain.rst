@@ -18,17 +18,17 @@ In the asvin architecture, we have built the blockchain network based on
 `Hyperledger Fabric <https://www.hyperledger.org/use/fabric>`_ and 
 `Hyperledger besu <https://www.hyperledger.org/use/besu>`_. Customers can choose to use either of the two
 blockchains for their deployments. These blockchain networks provide a ledger that stores all transactions 
-executed on the asvin.io network, e.g: device register, firmware upload, device update, firmware update, 
+executed on the Device Security Booster network, e.g: device register, firmware upload, device update, firmware update, 
 and user registration. Each of these transactions are paired with unique hashes and are stored in blocks which are again 
 linked with a secured hash. This process provides security and immutability to the ledger. 
-The asvin.io platform is designed for unlimited scalability with a cluster of servers which runs 
+The Device Security Booster is designed for unlimited scalability with a cluster of servers which runs 
 Fabric & Besu networks to administer the requirements to maintain functionality to millions of IoT devices.
 
 Hyperledger Fabric
 ##################
 
-The pluggable modules of the Fabric network allow maximum flexibility to asvin.io infrastructure, 
-enabling asvin.io to develop bespoke solutions for its IoT customers. The cluster is developed using `Docker swarm <https://www.docker.com/>`_.
+The pluggable modules of the Fabric network allow maximum flexibility to Device Security Booster infrastructure, 
+enabling Device Security Booster to develop bespoke solutions for its IoT customers. The cluster is developed using `Docker swarm <https://www.docker.com/>`_.
 
 **The fabric has following modules and services:**
 

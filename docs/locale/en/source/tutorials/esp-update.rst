@@ -2,8 +2,7 @@
 Over the air updates with ESP8266 (nodemcu) boards
 ========================================================
 
-In this tutorial we will see the demonstration of OTA updates using the asvin 
-IoT platform and nodemcu board based on the ESP8266 chipset.
+In this tutorial we will see the demonstration of OTA updates using the Device Security Booster and nodemcu board based on the ESP8266 chipset.
 
     .. image:: ../images/OTA_wb.jpg
         :width: 400pt
@@ -46,7 +45,7 @@ The code is writen under PlatformIO. Import the project using VScode's PlatformI
 
 4. **Setting up OTA**
 
-    The asvin IoT platform provides secure OTA updates for IoT devices. Lets see how we can setup OTA updates
+    The Device Security Booster provides secure OTA updates for IoT devices. Lets see how we can setup OTA updates
 
     1.  *Register Device*:
         When you start and upload your sketch on the ESP8266 board, the board will start executing 
@@ -61,7 +60,7 @@ The code is writen under PlatformIO. Import the project using VScode's PlatformI
 
 
     2.  *Device Groups*:
-        asvin's IoT platform provides updates for a group of devices. Let us create a group called
+        Device Security Booster provides updates for a group of devices. Let us create a group called
         OTA test. We can add our ESP device to this group . Under Devices > Device groups click on 
         *"New Device Group"*. After this navigate back to the "Just Registered" Devices, click Device 
         Grouping and add the device to the newly created device group.         

@@ -22,8 +22,9 @@ monitor firmware updates, and produce a real-time threat landscape for registere
    getting-started/getting-started
    tutorials/tutorials
    security/security
-   architecture/architecture
+   .. architecture/architecture
+
    rest-apis
    contribution/contribution
-   glossary
-   releases/releases
+   .. glossary
+   .. releases/releases

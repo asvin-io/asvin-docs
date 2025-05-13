@@ -2,7 +2,7 @@
 Fed4FIRE+ Experiments
 =====================
 
-The tutorial demonstrates the steps required to start and manage the Fed4FIRE+ experiments for executing stress tests of the asvin.io platform by simulating virtual edge devices with asvin API stack. This procedure facilitates the detailed analysis of the scalability and reliability of the platform.
+The tutorial demonstrates the steps required to start and manage the Fed4FIRE+ experiments for executing stress tests of the Device Security Booster by simulating virtual edge devices with asvin API stack. This procedure facilitates the detailed analysis of the scalability and reliability of the platform.
 
 Requirements
 ############

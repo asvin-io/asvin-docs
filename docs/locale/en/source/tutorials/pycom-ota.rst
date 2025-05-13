@@ -2,8 +2,7 @@
 Over the air updates with Pycom Gpy boards
 ==========================================
 
-In this tutorial we will see the demonstration of OTA updates using the asvin 
-IoT platform and the *Gpy* board from Pycom. 
+In this tutorial we will see the demonstration of OTA updates using the Device Security Booster and the *Gpy* board from Pycom. 
 
 .. image:: ../images/OTA_wb_pycom.jpg
     :width: 400pt
@@ -80,7 +79,7 @@ folder in VScode. Make sure to have the updated firmware on your Pycom *Gpy* as 
             The device will be automatically registered on booting
 
     2.  *Device Groups*:
-            Setup a device group on the asvin IoT platform.
+            Setup a device group on the Device Security Booster.
 
     3.  *File Groups*:
             In the case of Pycom target devices, there are certain modifications to be done to files before uploading them to

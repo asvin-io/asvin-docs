@@ -1,7 +1,7 @@
 Contribution Welcomed
 #####################
 
-The asvin project was started by a few but has been developed and maintained by many. At asvin, we are a big supporter of open source projects and
+The Device Security Booster project was started by a few but has been developed and maintained by many. At asvin, we are a big supporter of open source projects and
 have also kept the whole Device Security Booster open for the community. We welcome your contribution to the project. Let's all build the
 platform together for all.
 
@@ -37,6 +37,6 @@ As a Developer
 
 Maintainers
 ***********
-The asvin project is driven by a dynamic team. All the development activities, such as reviewing and merging pull requests, new feature proposals, and
+The Device Security Booster project is driven by a dynamic team. All the development activities, such as reviewing and merging pull requests, new feature proposals, and
 road map release, are headed by the core `maintainers <https://github.com/asvin-io/documentation/blob/master/MAINTAINERS.md>`_.
 

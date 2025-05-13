@@ -45,7 +45,7 @@ The Device Security Booster provides secure OTA updates for IoT devices. The use
             :align: center
 
 2. *Device Groups*: 
-   asvin's IoT platform provides updates for a group of devices. Let us create a group called ESP32Devices. 
+   Device Security Booster provides updates for a group of devices. Let us create a group called ESP32Devices. 
    We can add our ESP device to this group . Under *Devices -> Grouped* click on *"New Device Group"*. Then give the group name and save it. 
    After this navigate back to the "Lobby", click Device Grouping and add the device to the newly created device group.         
 
