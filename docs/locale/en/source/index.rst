@@ -4,7 +4,7 @@
 	  You can change it using selector at the bottom of that
 	  navigation panel.
 
-IoT Device Lifecycle Management Platform
+Device Security Booster™
 ========================================
 
 .. image:: images/asvin-logo-transparent.png
