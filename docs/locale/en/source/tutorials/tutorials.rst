@@ -1,7 +1,7 @@
 Tutorials
 =========
 
-This section includes tutorials for the usage of the Asvin platform.
+This section includes tutorials for the usage of the Device Security Booster.
 
 .. toctree::
    :maxdepth: 1

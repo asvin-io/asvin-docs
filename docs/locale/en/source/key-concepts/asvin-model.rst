@@ -1,5 +1,5 @@
 =================
-Asvin Model
+asvin Model
 =================
 
 In this section we will take a brief look at asvin’s architecture and briefly 
@@ -13,16 +13,16 @@ explain its components.  Some relevant concepts and keywords are also mentioned 
 Customer Platform
 #################
 
-asvin provides a user-friendly customer platform to abstract the complexities of the background processes 
+asvin provides a user-friendly Customer platform to abstract the complexities of the background processes 
 to register devices, setup & schedule firmware rollouts, define group actions on registered devices, 
-and to blacklist devices. The customer platform also displays information related to firmware updates 
+and to blacklist devices. The Customer platform also displays information related to firmware updates 
 and provides the current version of edge devices.
 
 Version controller
 ##################
 
 The version controller maintains updated information of firmware avaliable for a particular edge device
-or device group on the asvin.io platform. It is one of the core components of the asvin architecture.
+or device group on the Device Security Booster. It is one of the core components of the asvin architecture.
 
 Interplanetary FileSystem
 #########################
@@ -43,10 +43,10 @@ stored on an IPFS network might be **QmcRD4wkPPi6dig81r5sLdrtd1gDCL4zgpEj9CfuRrG
 Blockchain
 ##########
 
-The asvin platform uses blockchain technology to store all of the transactions executed on the 
-asvin.io network including: device registration, firmware upload, device update, firmware update, 
+The Device Security Booster uses blockchain technology to store all of the transactions executed on the 
+Device Security Booster network including: device registration, firmware upload, device update, firmware update, 
 user registration, etc. All these transactions are connected with hashes and stored in blocks 
-which are again linked to a secured hash. For the asvin platform we use the 
+which are again linked to a secured hash. For the platform we use the 
 `Hyperledger Fabric <https://www.hyperledger.org/use/fabric>`_ and 
 `Hyperledger besu <https://www.hyperledger.org/use/besu>`_ blockchains. 
 
@@ -69,7 +69,7 @@ malicious attacks and accidental exceptions.
 Edge Devices
 ############
 
-Edge devices are end-points in the asvin.io architecture and in an IoT network which control, 
+Edge devices are end-points in the Device Security Booster architecture and in an IoT network which control, 
 manage and solve a specific physical task: For instance, edge devices turn on a smart washing machine 
 in a house, monitoring temperature and humidity in a chemical plant or an air quality sensor 
 installed in a city. These devices have microcontrollers and sensors at their core and with their 

@@ -1,7 +1,7 @@
 Security Principles
 ===================
 
-This section includes security principles of the asvin platform.
+This section includes security principles of the Device Security Booster.
 
 .. toctree::
    :maxdepth: 1

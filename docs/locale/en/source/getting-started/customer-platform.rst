@@ -1,7 +1,7 @@
-Asvin Customer Platform
+asvin Customer Platform
 =======================
 
-asvin IoT platform provides secure OTA updates for IoT devices. Let's get started with the platform.
+Device Security Booster provides secure OTA updates for IoT devices. Let's get started with the platform.
 
 1.  *Register Device*:
         When you start and upload your code on any of the supported boards in the 
@@ -17,7 +17,7 @@ asvin IoT platform provides secure OTA updates for IoT devices. Let's get starte
 
 
 2.  *Device Groups*:
-        asvin's IoT platform provides updates for a group of devices. You can create a group to associate these devices by various categories
+        Device Security Booster provides updates for a group of devices. You can create a group to associate these devices by various categories
         such as, location, customer, deployment etc. You can add the target device to this group. Under *Devices > Device groups* click on 
         *"New Device Group"*. After this navigate back to the *"Just registered"* devices, click device 
         grouping and add the device to the newly created device group.
@@ -60,5 +60,5 @@ asvin IoT platform provides secure OTA updates for IoT devices. Let's get starte
             which in this example is the part of the file that we uploaded earlier    
 
         -   The change in the firmware version of the device is also updated on the 
-            `asvin platform <https://app.asvin.io/>`_  
+            `Device Security Booster <https://app.asvin.io/>`_  
     

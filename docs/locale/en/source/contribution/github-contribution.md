@@ -2,16 +2,16 @@
 
 ## Create Github Account
 
-The code base of asvin platform is developed and maintained on GitHub. One needs to create a GitHub account to start contributing for the Asvin project. In oder to create the account go to [GitHub](https://github.com/) and and sign up with username, email and password.
+The code base of Device Security Booster is developed and maintained on GitHub. One needs to create a GitHub account to start contributing for the asvin project. In oder to create the account go to [GitHub](https://github.com/) and and sign up with username, email and password.
 ![GitHub Sign up](signup.jpg)
 
 ## Fork Repository
 
-Asvin comprised of multiple components which are developed in respective repositories. When you start contributing it is recommended to fork the repository, make your changes and submit a pull request. It helps to keep the source code in master branch maintainable, clean and stable. The forking of a repository results in an identical copy of the repository in your personal account. With that, you will have full control over the repository to make changes in the source code. Once, you are satisfied with your changes you can submit a pull request to Asvin's official repository.
+asvin comprised of multiple components which are developed in respective repositories. When you start contributing it is recommended to fork the repository, make your changes and submit a pull request. It helps to keep the source code in master branch maintainable, clean and stable. The forking of a repository results in an identical copy of the repository in your personal account. With that, you will have full control over the repository to make changes in the source code. Once, you are satisfied with your changes you can submit a pull request to asvin's official repository.
 
 How to fork a repository?
 
-- Open your browser and go to the Asvin repository that you want to fork
+- Open your browser and go to the asvin repository that you want to fork
 - Click on fork button on top right corner
 
   ![fork](fork.jpg)
@@ -29,13 +29,13 @@ How to clone a repository?
   ![clone](clone.jpg)
 - Open your terminal and go to the directory where you want to clone
 - Use `git clone <web-url>` e.g. `git clone https://github.com/b-rohit/documentation.git`
-- Go to repository directory and add original Asvin repository as remote upstream repository
+- Go to repository directory and add original asvin repository as remote upstream repository
 
   For an example Framework repository
 
   ```
   cd documentation
-  git remote add upstream https://github.com/Asvin-io/documentation.git
+  git remote add upstream https://github.com/asvin-io/documentation.git
   ```
 
 - You can check all your remote repositories with following command
@@ -49,16 +49,16 @@ How to clone a repository?
   ```
   origin	https://github.com/b-rohit/documentation.git (fetch)
   origin	https://github.com/b-rohit/documentation.git (push)
-  upstream	https://github.com/Asvin-io/documentation.git (fetch)
-  upstream	https://github.com/Asvin-io/documentation.git (push)
+  upstream	https://github.com/asvin-io/documentation.git (fetch)
+  upstream	https://github.com/asvin-io/documentation.git (push)
 
   ```
 
-Now, everything is set to start developing and making the Asvin platform better.
+Now, everything is set to start developing and making the Device Security Booster better.
 
 ## Create Feature Branch
 
-All Asvin component repositories have a main branch called `master`. The `master` branch contains the stable code of the component. The main idea behind using a feature branch for development is to keep the `master` branch unaffected from broken code in new feature. A developer should create a feature branch in its fork repository to develop new feature, to fix an issue, to purpose changes etc. A feature branch provides encapsulation from the main codebase. That means the `master` branch is isolated from errors caused by broken code of a new commit. It keeps the main codebase clean and stable.
+All asvin component repositories have a main branch called `master`. The `master` branch contains the stable code of the component. The main idea behind using a feature branch for development is to keep the `master` branch unaffected from broken code in new feature. A developer should create a feature branch in its fork repository to develop new feature, to fix an issue, to purpose changes etc. A feature branch provides encapsulation from the main codebase. That means the `master` branch is isolated from errors caused by broken code of a new commit. It keeps the main codebase clean and stable.
 
 How to create feature branch ?
 
@@ -87,7 +87,7 @@ With this, you have a new feature branch, where you can make changes.
 
 ## Push changes to your Forked Repository
 
-When you are done creating a new feature or fixing an issue in your feature branch, it is time to commit and push your changes to forked repository. This process will save the state in remote branch in forked repository. Later, this state will be used to create pull request to Asvin component repository.
+When you are done creating a new feature or fixing an issue in your feature branch, it is time to commit and push your changes to forked repository. This process will save the state in remote branch in forked repository. Later, this state will be used to create pull request to asvin component repository.
 
 How to push ?
 
@@ -106,25 +106,25 @@ How to push ?
   git push origin <feature_branch_name>
   ```
 
-At the end of this process you have developed a new feature or fixed an issue and pushed it to your forked repository. At this moment, your changes in the forked repository are ready to be integrated with Asvin component repository. This can be done by making a pull request to Asvin repository.
+At the end of this process you have developed a new feature or fixed an issue and pushed it to your forked repository. At this moment, your changes in the forked repository are ready to be integrated with asvin component repository. This can be done by making a pull request to asvin repository.
 
 ## Opening a Pull Request in GitHub
 
-Once you have pushed your changes to the feature branch in your forked repo, you can now open a pull request against the original Asvin component repository. This is going to be easiest of all tasks you have completed previously in this thread.
+Once you have pushed your changes to the feature branch in your forked repo, you can now open a pull request against the original asvin component repository. This is going to be easiest of all tasks you have completed previously in this thread.
 
 How to open Pull request ?
 
 - Navigate to your forked repository `https://github.com/<user-name>/<forked_repository>`.
 - For new changes, automatically it will be shown that there are some differences between forked and original repository. Click on `Compare & pull request`.
   ![pull](pull.jpg)
-- You will be navigated to original Asvin repository. Here, you can change title and comment message if you want and click on `Create pull request`.
+- You will be navigated to original asvin repository. Here, you can change title and comment message if you want and click on `Create pull request`.
   ![Create pull](open-pull.jpg)
 
-Excelente, you just open your first pull request in Asvin project. The pull request will be reviewed and merged in the original Asvin repository.
+Excelente, you just open your first pull request in asvin project. The pull request will be reviewed and merged in the original asvin repository.
 
 ## Delete Feature Branch
 
-When you are finished with your feature and your pull request is accepted and merged in the original Asvin repository, it is time to clean your forked repository. You need to delete the feature branch from your local and remote forked repository.
+When you are finished with your feature and your pull request is accepted and merged in the original asvin repository, it is time to clean your forked repository. You need to delete the feature branch from your local and remote forked repository.
 
 How to delete local and remote feature branch ?
 
@@ -142,7 +142,7 @@ How to delete local and remote feature branch ?
 
 ## Sync Your Forked Repository with Original
 
-Asvin is completely community based project. Therefore, the main codebase will keep getting commits from other developers. That means, you need to sync your forked repository with the original Asvin repository. By doing so, you will avoid merge conflicts along the way.
+asvin is completely community based project. Therefore, the main codebase will keep getting commits from other developers. That means, you need to sync your forked repository with the original asvin repository. By doing so, you will avoid merge conflicts along the way.
 
 How to sync?
 

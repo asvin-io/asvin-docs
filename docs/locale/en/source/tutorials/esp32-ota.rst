@@ -2,14 +2,14 @@
 Over-The-Air update of ESP32
 ==============================
 
-This tutorial demonstrates the process of securely updating ESP32 device firmware Over-The-Air with asvin platform.
+This tutorial demonstrates the process of securely updating ESP32 device firmware Over-The-Air with Device Security Booster.
 
 Requirements
 ############
 
 1. ESP32 board
 2. Micro USB cable
-3. asvin platform subscription 
+3. Device Security Booster subscription 
 4. PlatformIO VScode extension
 
 Setup
@@ -19,7 +19,7 @@ To get started head to `asvin's Github repository <https://github.com/asvin-io/a
 Open the folder ESP32-OTA in Visual Studio code. The code is writen under PlatformIO.
 
 1. Rename credentials_copy.h to credentials.h in the src folder.
-2. Update customer_key, device_key which can be obtained from asvin platform as shown below.
+2. Update customer_key, device_key which can be obtained from platform as shown below.
    
     .. image:: ../images/keys_edited.jpg
             :width: 400pt
@@ -32,7 +32,7 @@ Open the folder ESP32-OTA in Visual Studio code. The code is writen under Platfo
 
 OTA update procedure
 ####################
-The asvin platform provides secure OTA updates for IoT devices. The user can follow the below easy steps to update their IoT edge devices.
+The Device Security Booster provides secure OTA updates for IoT devices. The user can follow the below easy steps to update their IoT edge devices.
 
 1. *Register Device*:
    When you upload your sketch on the ESP32 board and start it, the device will start executing and calling set of defined API routes.
@@ -45,7 +45,7 @@ The asvin platform provides secure OTA updates for IoT devices. The user can fol
             :align: center
 
 2. *Device Groups*: 
-   asvin's IoT platform provides updates for a group of devices. Let us create a group called ESP32Devices. 
+   Device Security Booster provides updates for a group of devices. Let us create a group called ESP32Devices. 
    We can add our ESP device to this group . Under *Devices -> Grouped* click on *"New Device Group"*. Then give the group name and save it. 
    After this navigate back to the "Lobby", click Device Grouping and add the device to the newly created device group.         
 
@@ -76,7 +76,7 @@ The asvin platform provides secure OTA updates for IoT devices. The user can fol
    In this case we rolled out a Blink LED application. The board will call the :ref:`Rollout Success` API, 
    which is the part of the esp-ota-blink.bin file that we uploaded earlier.    
 
-7. The change in the firmware version of the device is also updated on the `asvin platform <https://app.asvin.io/>`_  .
+7. The change in the firmware version of the device is also updated on the `Device Security Booster <https://app.asvin.io/>`_  .
 
 Thus we have sucessfully completed the OTA rollout. The Complete code and files can be found
-at asvin's Github repository `Github repository <https://github.com/Asvin-io/tutorials>`_  
+at asvin's Github repository `Github repository <https://github.com/asvin-io/tutorials>`_  

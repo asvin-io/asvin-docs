@@ -2,7 +2,7 @@
 Overview
 ========
 
-The asvin platform is underpinned by multiple decentralized technologies for distributing 
+The Device Security Booster is underpinned by multiple decentralized technologies for distributing 
 security patches for IoT devices with a higher degree of security, scalability, confidentiality 
 and resiliency and  supports the full range of IoT devices and their applications. 
 The platform hides the complexities and intricacies of IoT devices to provide firmware 

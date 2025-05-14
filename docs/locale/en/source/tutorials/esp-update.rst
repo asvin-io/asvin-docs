@@ -2,8 +2,7 @@
 Over the air updates with ESP8266 (nodemcu) boards
 ========================================================
 
-In this tutorial we will see the demonstration of OTA updates using the Asvin 
-IoT platform and nodemcu board based on the ESP8266 chipset.
+In this tutorial we will see the demonstration of OTA updates using the Device Security Booster and nodemcu board based on the ESP8266 chipset.
 
     .. image:: ../images/OTA_wb.jpg
         :width: 400pt
@@ -14,7 +13,7 @@ Requirements
 
 1. nodemcu esp8266 board
 2. Micro USB cable
-3. asvin platform subscription 
+3. Device Security Booster subscription 
 4. PlatformIO VScode extension
 
 
@@ -33,7 +32,7 @@ The code is writen under PlatformIO. Import the project using VScode's PlatformI
            :width: 400pt
            :align: center
             
-    - Device & Customer keys: This will be found on the asvin platform under the settings tab. These keys will be used to generate an auth token.
+    - Device & Customer keys: This will be found on the platform under the settings tab. These keys will be used to generate an auth token.
     
 
 
@@ -46,7 +45,7 @@ The code is writen under PlatformIO. Import the project using VScode's PlatformI
 
 4. **Setting up OTA**
 
-    The asvin IoT platform provides secure OTA updates for IoT devices. Lets see how we can setup OTA updates
+    The Device Security Booster provides secure OTA updates for IoT devices. Lets see how we can setup OTA updates
 
     1.  *Register Device*:
         When you start and upload your sketch on the ESP8266 board, the board will start executing 
@@ -61,7 +60,7 @@ The code is writen under PlatformIO. Import the project using VScode's PlatformI
 
 
     2.  *Device Groups*:
-        Asvin's IoT platform provides updates for a group of devices. Let us create a group called
+        Device Security Booster provides updates for a group of devices. Let us create a group called
         OTA test. We can add our ESP device to this group . Under Devices > Device groups click on 
         *"New Device Group"*. After this navigate back to the "Just Registered" Devices, click Device 
         Grouping and add the device to the newly created device group.         
@@ -99,9 +98,9 @@ The code is writen under PlatformIO. Import the project using VScode's PlatformI
         which is the part of the esp-ota-blink.bin file that we uploaded earlier.    
 
     7.  The change in the firmware version of the device is also updated on the 
-        `asvin platform <https://app.asvin.io/>`_  .
+        `Device Security Booster <https://app.asvin.io/>`_  .
          
 
 
 Thus we have sucessfully completed the OTA rollout. The Complete code and files can be found
-at asvin's Github repository `Github repository <https://github.com/Asvin-io/tutorials>`_  
+at asvin's Github repository `Github repository <https://github.com/asvin-io/tutorials>`_  

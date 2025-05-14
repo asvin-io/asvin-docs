@@ -19,12 +19,12 @@ import sphinx_rtd_theme
 
 # -- Project information -----------------------------------------------------
 
-project = u'asvin'
-copyright = u'2021, asvin'
-author = u'asvin'
+project = u'Device Security Booster™'
+copyright = u'2025, asvin GmbH'
+author = u'asvin GmbH'
 
 # The short X.Y version
-version = u''
+version = u'0.1'
 # The full version, including alpha/beta/rc tags
 release = u'0.0.1'
 
@@ -63,7 +63,7 @@ master_doc = 'index'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+language = 'English'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -113,7 +113,7 @@ html_js_files = [
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Asvindoc'
+htmlhelp_basename = 'DeviceSecurityBoosterdoc'
 
 # translation
 locale_dirs = ['locale/']   # po files will be created in this directory
@@ -143,8 +143,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'Asvin.tex', u'Asvin Documentation',
-     u'Asvin', 'manual'),
+    (master_doc, 'device-security-booster.tex', u'Device Security Booster™ Documentation',
+     u'asvin GmbH', 'manual'),
 ]
 
 
@@ -153,7 +153,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'asvin', u'Asvin Documentation',
+    (master_doc, u'Device Security Booster', u'Device Security Booster™ Documentation',
      [author], 1)
 ]
 
@@ -164,8 +164,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'Asvin', u'Asvin Documentation',
-     author, 'Asvin', 'One line description of project.',
+    (master_doc, 'Device Security Booster', u'Device Security Booster Documentation',
+     author, 'asvin', ' Manage lifecycle of IoT devices.',
      'Miscellaneous'),
 ]
 
