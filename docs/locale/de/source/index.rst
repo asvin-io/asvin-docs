@@ -4,7 +4,7 @@
      rechts unten im Navigationsbereich.
      
 
-Plattform zur Verwaltung des Lebenszyklus von IoT-Geräten
+Device Security Booster™
 =========================================================
 
 .. image:: images/asvin-logo-transparent.png
@@ -23,8 +23,11 @@ Echtzeit-Bedrohungslandschaft für registrierte IoT-Geräte.
    getting-started/getting-started
    tutorials/tutorials
    security/security
-   architecture/architecture
+   .. architecture/architecture
+
    rest-apis
    contribution/contribution
-   glossary
-   releases/releases
+   .. glossary
+   .. releases/releases
+
+

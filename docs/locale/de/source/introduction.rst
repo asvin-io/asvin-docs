@@ -47,28 +47,28 @@ In den letzten paar Jahren gab es große Entwicklungen im Bereich der Update-Pla
 Einige Lösungen, wie z. B. Eclipse hawkBit, Mbed und Mender, adressieren das bestehende Problem, aber ihre 
 Lösungen sind auf eine bestimmte Mikrocontroller-Architektur beschränkt, Software-Stacks und Branchen sind als 
 zentralisierte Lösungen konzipiert und entwickelt, die anfällig für Single-Point-Failure sind und nicht sehr gut 
-zu skalieren. In den folgenden Abschnitten wird beschrieben, wie sich die asvin-Plattform von anderen 
+zu skalieren. In den folgenden Abschnitten wird beschrieben, wie sich die Device Security Booster von anderen 
 IoT-Update-Lösungen unterscheidet.
 
 
-Asvin Platform
+Device Security Booster
 ##############
 
-Die asvin-Plattform ist eine Cloud-Plattform der Enterprise-Klasse, die mit Distributed Ledger Technology (DLT) entwickelt 
-wurde, um Patches zu verteilen und eine Vertrauenskette für IoT-Geräte zu erzeugen. Die asvin-Plattform basiert auf **verteilten** 
+Die Device Security Booster ist eine Cloud-Plattform der Enterprise-Klasse, die mit Distributed Ledger Technology (DLT) entwickelt 
+wurde, um Patches zu verteilen und eine Vertrauenskette für IoT-Geräte zu erzeugen. Die Plattform basiert auf **verteilten** 
 und **dezentralen** Technologien und nutzt das Interplanetary Filesystem (IPFS) zur Speicherung und Verwaltung der Firmware-Dateien 
 von IoT-Geräten. Alle Firmware-Dateien und Patches sind über mehrere IPFS-Knoten verteilt, während die kritischen 
 Metadaten-Informationen der jeweiligen Geräte in einem unveränderlichen Distributed Ledger (DL) gespeichert werden, ebenso wie 
-jedes Ereignis, das auf der asvin-Plattform stattfindet. Diese Technologien erhöhen die Fehlertoleranz der Plattform und machen 
+jedes Ereignis, das auf der Plattform stattfindet. Diese Technologien erhöhen die Fehlertoleranz der Plattform und machen 
 sie sowohl leichter zugänglich als auch ausfallsicherer.
  
 Es ist eine Sache, einen funktionierenden Prototyp eines IoT-Produkts zu haben und eine andere, Millionen von intelligenten 
 Geräten zu verwalten und zu aktualisieren. Die wünschenswerteste Eigenschaft jeder IoT-Lösung ist Skalierbarkeit. Asvin bietet 
 diese Lösung - effektiv und effizient.
-Die asvin-Plattform verfügt über eine hochgradig **anpassbare** und **modulare** Architektur und wurde so konzipiert und entwickelt, 
+Die Device Security Booster verfügt über eine hochgradig **anpassbare** und **modulare** Architektur und wurde so konzipiert und entwickelt, 
 dass sie mit ihren steckbaren Modulen, die für den jeweiligen Anwendungsfall optimiert sind und so IoT-Anwendungen in verschiedenen 
 Branchen unterstützt.
-Im Gegensatz zu anderen FUOTA-Lösungen ist die asvin-Plattform eine **universelle** Lösung, die keine Einschränkungen für beliebige 
+Im Gegensatz zu anderen FUOTA-Lösungen ist die Plattform eine **universelle** Lösung, die keine Einschränkungen für beliebige 
 Hardware- und Software-Stacks mit sich bringt. asvin ermöglicht die Innovation und Vielseitigkeit jeder IoT-Anwendung, die mit Atmel 
 AVR bis ARM Cortex M7 gebaut wurde, in Anwendungen von der Landwirtschaft bis zu Finanzdienstleistungen.
 
